@@ -7,13 +7,7 @@
 					<div class="col-lg-9 col-md-9">
 						<div class="card banner_card">
 							<div id="demo" class="carousel slide" data-ride="carousel">
-								<!--
-								<ul class="carousel-indicators">
-									<li data-target="#demo" data-slide-to="0" class="active"></li>
-									<li data-target="#demo" data-slide-to="1"></li>
-									<li data-target="#demo" data-slide-to="2"></li>
-								</ul>
-								-->
+
 								<div class="carousel-inner">
 									<div class="carousel-item active">
 										<img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
@@ -359,11 +353,7 @@
 							</div> <!-- Item --> 
 						</div>
 					</div> <!-- -->
-					<!--
-					<div class="col-lg-12 text-center"> <br />
-						<a href="#" class="btn btn-primary"> View All </a>
-					</div>
-					-->
+			
 				</div> 
 			</div> 
 		</main>

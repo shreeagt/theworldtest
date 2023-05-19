@@ -44,11 +44,11 @@ img.img-upcomming {
 }
 
 
-
 div#q-cont {
-    background: rgba(236, 246, 252,0.6);
-    padding: 10px;
-	border-radius: 10px;
+  background: rgba(236, 246, 252,0.6);
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid  #aedaef;
 }
 
 ul.sub_stats.head_title {
@@ -65,7 +65,7 @@ ul.sub_stats.head_title {
 }
 
 .head_title li:nth-child(2) {
-    width: 52%;
+    width: 30%;
 }
 
 .stats_board .nav li {
@@ -78,6 +78,20 @@ ul.sub_stats.head_title {
     width: 33%;
 }
 
+/* ul.stats_list .li:nth-child(1) {
+background-color: #193684;
+} */
+
+
+.stats_list > li:nth-child(1) p.ap-team-name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stats_list > li:nth-child(1) {
+  background: -webkit-linear-gradient(90deg,#0674d6,#06579f);
+}
 
 
 .question {

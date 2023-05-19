@@ -1,5 +1,164 @@
 @include('frontend.layout.headertest')
 <link rel="stylesheet" href="{{asset('css/stylerst.css')}}?v=1.3" type="text/css">
+<style>
+   @media (max-width:675px){
+    .wrapper{
+        max-width: 300px;
+}
+}
+
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+}
+.wrapper .poll-area{
+  margin: 20px 0 15px 0;
+}
+.poll-area label{
+  display: block;
+  background: #f37224;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+}
+
+label.opt-1.selected {
+    border: 2px solid #FFCD00;
+}
+
+label.opt-2.selected {
+    border: 2px solid #01638c;
+}
+
+label.opt-3.selected {
+    border: 2px solid #AA4A44;
+}
+
+label.opt-4.selected {
+    border: 2px solid #01638c;
+}
+
+div#pstyle1::after {
+    background: #FFCD00 !important;
+}
+
+div#pstyle2::after {
+    background: #01638c !important;
+}
+
+div#pstyle3::after {
+    background:  #AA4A44 !important;
+}
+
+div#pstyle4::after {
+    background: #01638c !important;
+}
+
+label.opt-1.selected .row .circle{
+    border-color: #FFCD00 !important;
+  }
+
+  label.opt-2.selected .row .circle{
+    border-color: #01638c !important;
+  }
+
+  label.opt-3.selected .row .circle{
+    border-color: #AA4A44 !important;
+  }
+
+  label.opt-4.selected .row .circle{
+    border-color: #01638c !important;
+  }
+
+
+label.opt-1 .row .circle::after{
+    background: #FFCD00 !important;
+  }
+
+  label.opt-2 .row .circle::after{
+    background: #01638c !important;
+}
+
+  label.opt-3 .row .circle::after{
+    background: #AA4A44 !important;
+  }
+
+  label.opt-4 .row .circle::after{
+    background: #01638c !important;
+  }
+
+  label .row {
+    margin: 10px;
+    display: flex;
+    pointer-events: none;
+    justify-content: space-between;
+}
+label .row .column{
+  display: flex;
+  align-items: center;
+}
+label .row .circle{
+  height: 19px;
+  width: 19px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+label .row .circle::after {
+    content: "";
+    height: 11px;
+    width: 11px;
+    border-radius: inherit;
+    position: absolute;
+    left: 2.5px;
+    top: 2.5px;
+    display: none;
+}
+.poll-area label:hover .row .circle::after{
+  display: block;
+  background: #e6e6e6;
+}
+label.selected .row .circle::after{
+  display: block;
+}
+label .row span{
+  font-size: 16px;
+  font-weight: 500;
+}
+label .row .percent{
+  display: none;
+}
+label .progress{
+  height: 7px;
+  width: 100%;
+  position: relative;
+  background: #f0f0f0;
+  margin: 8px 0 3px 0;
+  border-radius: 30px;
+  display: none;
+  pointer-events: none;
+}
+label .progress:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  background: #ccc;
+  width: calc(1% * var(--w));
+  border-radius: inherit;
+  transition: all 0.2s ease;
+}
+label.selectall .progress,
+label.selectall .row .percent{
+  display: block;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+</style>
 <section id="">
    <main class="banner">
       <div class="container-fluid">
@@ -581,73 +740,69 @@
             <div class="col-lg-6">
                <h3 class="text-center mb-30"> POLL OF THE DAY</h3>
                <div id="q-cont">
-                  <div class="slide" id="slide1">
-                     <div class="question">
-                        Who will the leading wicket-taker in the ICC World Test Championship?
-                     </div>
-                     <div class="options">
-                        <span class="po" for="q1op1">Pat Cummins </span><span class="po op2" for="q1op2">Ravichandran Ashwin</span><br /><span class="po" for="q1op3">Mitchell Starc</span><span class="po op2" for="q1op4">Mohammed Siraj</span>
-                     </div>
-                  </div>
-                  <div class="slide" id="slide4">
-                     <div class="re">
-                        Submit
-                     </div>
-                  </div>
-               </div>
+               <div class="wrapper">
+                            <header>Who can win this match? <br></header>
+                            <div class="poll-area">
+                            <input type="checkbox" name="poll" id="opt-1">
+                            <input type="checkbox" name="poll" id="opt-2">
+                            <input type="checkbox" name="poll" id="opt-3">
+                            <input type="checkbox" name="poll" id="opt-4">
+                            <label for="opt-1" class="opt-1">
+                                <div class="row">
+                                <div class="column">
+                                    <span class="circle"></span>
+                                    <span class="text">Australia</span>
+                                </div>
+                                <span class="percent">25%</span>
+                                </div>
+                                <div class="progress" id="pstyle1" style='--w:25;'></div>
+                            </label>
+                            <label for="opt-2" class="opt-2">
+                                <div class="row">
+                                <div class="column">
+                                    <span class="circle"></span>
+                                    <span class="text">India</span>
+                                </div>
+                                <span class="percent">45%</span>
+                                </div>
+                                <div class="progress" id="pstyle2" style='--w:45;'></div>
+                            </label>
+                            <label for="opt-3" class="opt-3">
+                                <div class="row">
+                                <div class="column">
+                                    <span class="circle"></span>
+                                    <span class="text">Draw</span>
+                                </div>
+                                <span class="percent">30%</span>
+                                </div>
+                                <div class="progress" id="pstyle3" style='--w:30;'></div>
+                            </label>
+       
+                            </div>
+                        </div>
+
+            </div>
             </div>
          </div>
       </div>
    </main>
+
    <main class="">
       <div class="container">
          <div class="row justify-content-md-center">
             <div class="col-lg-12">
-               <div class="tab">
-                  <div class="tab__list">
-                     <div class="tab__item">Men's</div>
-                     <div class="tab__item">Women</div>
-                     <!-- <div class="tab__item">Women</div> -->
-                  </div>
-                  <div class="tab__content">
-                     <div class="tab__content-item tab">
-                        <div class="tab__list">
-                           <div class="tab__item">Team Ranking</div>
-                           <!-- <div class="tab__item">ODI's</div>
-                              <div class="tab__item">TTI's</div> -->
-                        </div>
-                        <div class="tab__content">
-                           <div class="tab__content-item">
-                              <div class="row">
-                                 <div class="col-md-4">
-                                    <h2>TEST</h2>
+
+            <div class="row">
+                                 <div class="col-md-12">
                                     <div class="card stats_board">
-                                       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/icon/ind.jpg" alt="flag">
-                                                <p>IND</p>
-                                             </li>
-                                          </a>
-                                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/aus.jpg" alt="">  
-                                                <p>AUS</p>
-                                             </li>
-                                          </a>
-                                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/eng.jpg" alt=""> 
-                                                <p>ENG</p>
-                                             </li>
-                                          </a>
-                                       </ul>
                                        <div class="tab-content" id="pills-tabContent">
                                           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                              <ul class="head_title">
                                                 <li> <b> POS </b> </li>
                                                 <li> <b> TEAM </b> </li>
-                                                <li> <b> PTS  </b> </li>
+                                                <li> <b> MATCHES </b> </li>
+                                                <li> <b> POINTS  </b> </li>
+                                                <li> <b> RATING  </b> </li>
                                                 <div class="clear"></div>
                                              </ul>
                                              <ul class="stats_list">
@@ -657,11 +812,18 @@
                                                          <p class="ap-team-name">1</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" /> <a href="#"> IND </a> </p>
+                                                         <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" />  India </p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">121</p>
                                                       </li>
+                                  
                                                    </ul>
                                                    <div class="clear"></div>
                                                 </li>
@@ -672,10 +834,16 @@
                                                          <p class="ap-team-name">2</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> AUS </a> </p>
+                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> Australia </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">119</p>
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -690,71 +858,10 @@
                                                          <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">118</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">4</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name">25</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">117</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h2>ODI's</h2>
-                                    <div class="card stats_board">
-                                       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/icon/ind.jpg" alt="flag">
-                                                <p>IND</p>
-                                             </li>
-                                          </a>
-                                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/aus.jpg" alt="">  
-                                                <p>AUS</p>
-                                             </li>
-                                          </a>
-                                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/eng.jpg" alt=""> 
-                                                <p>ENG</p>
-                                             </li>
-                                          </a>
-                                       </ul>
-                                       <div class="tab-content" id="pills-tabContent">
-                                          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                             <ul class="head_title">
-                                                <li> <b> POS </b> </li>
-                                                <li> <b> TEAM </b> </li>
-                                                <li> <b> PTS  </b> </li>
-                                                <div class="clear"></div>
-                                             </ul>
-                                             <ul class="stats_list">
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">1</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" /> <a href="#"> IND </a> </p>
+                                                         <p class="ap-team-name">3,031</p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">121</p>
@@ -766,92 +873,16 @@
                                                 <li>
                                                    <ul class="sub_stats head_title">
                                                       <li class="pld">
-                                                         <p class="ap-team-name">2</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> AUS </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">119</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">3</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">118</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
                                                          <p class="ap-team-name">4</p>
                                                       </li>
                                                       <li>
                                                          <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">117</p>
+                                                         <p class="ap-team-name">25</p>
                                                       </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h2>TTI's</h2>
-                                    <div class="card stats_board">
-                                       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/icon/ind.jpg" alt="flag">
-                                                <p>IND</p>
-                                             </li>
-                                          </a>
-                                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/aus.jpg" alt="">  
-                                                <p>AUS</p>
-                                             </li>
-                                          </a>
-                                          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                             <li class="nav-item" role="presentation">
-                                                <img src="/img/eng.jpg" alt=""> 
-                                                <p>ENG</p>
-                                             </li>
-                                          </a>
-                                       </ul>
-                                       <div class="tab-content" id="pills-tabContent">
-                                          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                             <ul class="head_title">
-                                                <li> <b> POS </b> </li>
-                                                <li> <b> TEAM </b> </li>
-                                                <li> <b> PTS  </b> </li>
-                                                <div class="clear"></div>
-                                             </ul>
-                                             <ul class="stats_list">
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">1</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" /> <a href="#"> IND </a> </p>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">121</p>
@@ -863,43 +894,124 @@
                                                 <li>
                                                    <ul class="sub_stats head_title">
                                                       <li class="pld">
-                                                         <p class="ap-team-name">2</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> AUS </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">119</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">3</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">118</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">4</p>
+                                                         <p class="ap-team-name">5</p>
                                                       </li>
                                                       <li>
                                                          <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">117</p>
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="clear"></div>
+                                                </li>
+                                                <!-- -->
+                                                <li>
+                                                   <ul class="sub_stats head_title">
+                                                      <li class="pld">
+                                                         <p class="ap-team-name">6</p>
+                                                      </li>
+                                                      <li>
+                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="clear"></div>
+                                                </li>
+                                                <!-- -->
+                                                <li>
+                                                   <ul class="sub_stats head_title">
+                                                      <li class="pld">
+                                                         <p class="ap-team-name">7</p>
+                                                      </li>
+                                                      <li>
+                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="clear"></div>
+                                                </li>
+                                                <!-- -->
+                                                <li>
+                                                   <ul class="sub_stats head_title">
+                                                      <li class="pld">
+                                                         <p class="ap-team-name">8</p>
+                                                      </li>
+                                                      <li>
+                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="clear"></div>
+                                                </li>
+                                                <!-- -->
+                                                <li>
+                                                   <ul class="sub_stats head_title">
+                                                      <li class="pld">
+                                                         <p class="ap-team-name">9</p>
+                                                      </li>
+                                                      <li>
+                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
+                                                      </li>
+                                                   </ul>
+                                                   <div class="clear"></div>
+                                                </li>
+                                                <!-- -->
+                                                <li>
+                                                   <ul class="sub_stats head_title">
+                                                      <li class="pld">
+                                                         <p class="ap-team-name">10</p>
+                                                      </li>
+                                                      <li>
+                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">25</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">3,031</p>
+                                                      </li>
+                                                      <li class="pts">
+                                                         <p class="ap-team-name">121</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -911,512 +1023,19 @@
                                     </div>
                                  </div>
                               </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="tab__content-item">
-                        <div class="row">
-                           <div class="col-md-4">
-                              <h2>TEST</h2>
-                              <div class="card stats_board">
-                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/icon/ind.jpg" alt="flag">
-                                          <p>IND</p>
-                                       </li>
-                                    </a>
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/aus.jpg" alt="">  
-                                          <p>AUS</p>
-                                       </li>
-                                    </a>
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/eng.jpg" alt=""> 
-                                          <p>ENG</p>
-                                       </li>
-                                    </a>
-                                 </ul>
-                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                       <ul class="head_title">
-                                          <li> <b> POS </b> </li>
-                                          <li> <b> TEAM </b> </li>
-                                          <li> <b> PTS  </b> </li>
-                                          <div class="clear"></div>
-                                       </ul>
-                                       <ul class="stats_list">
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">1</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" /> <a href="#"> IND </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">121</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">2</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> AUS </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">119</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">3</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">118</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">4</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">117</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <h2>ODI's</h2>
-                              <div class="card stats_board">
-                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/icon/ind.jpg" alt="flag">
-                                          <p>IND</p>
-                                       </li>
-                                    </a>
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/aus.jpg" alt="">  
-                                          <p>AUS</p>
-                                       </li>
-                                    </a>
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/eng.jpg" alt=""> 
-                                          <p>ENG</p>
-                                       </li>
-                                    </a>
-                                 </ul>
-                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                       <ul class="head_title">
-                                          <li> <b> POS </b> </li>
-                                          <li> <b> TEAM </b> </li>
-                                          <li> <b> PTS  </b> </li>
-                                          <div class="clear"></div>
-                                       </ul>
-                                       <ul class="stats_list">
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">1</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" /> <a href="#"> IND </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">121</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">2</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> AUS </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">119</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">3</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">118</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">4</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">117</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-4">
-                              <h2>TTI's</h2>
-                              <div class="card stats_board">
-                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/icon/ind.jpg" alt="flag">
-                                          <p>IND</p>
-                                       </li>
-                                    </a>
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/aus.jpg" alt="">  
-                                          <p>AUS</p>
-                                       </li>
-                                    </a>
-                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                       <li class="nav-item" role="presentation">
-                                          <img src="/img/eng.jpg" alt=""> 
-                                          <p>ENG</p>
-                                       </li>
-                                    </a>
-                                 </ul>
-                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                       <ul class="head_title">
-                                          <li> <b> POS </b> </li>
-                                          <li> <b> TEAM </b> </li>
-                                          <li> <b> PTS  </b> </li>
-                                          <div class="clear"></div>
-                                       </ul>
-                                       <ul class="stats_list">
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">1</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" /> <a href="#"> IND </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">121</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">2</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> AUS </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">119</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">3</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">118</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                          <li>
-                                             <ul class="sub_stats head_title">
-                                                <li class="pld">
-                                                   <p class="ap-team-name">4</p>
-                                                </li>
-                                                <li>
-                                                   <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
-                                                </li>
-                                                <li class="pts">
-                                                   <p class="ap-team-name">117</p>
-                                                </li>
-                                             </ul>
-                                             <div class="clear"></div>
-                                          </li>
-                                          <!-- -->
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="tab__content-item tab">
-                        <div class="tab__list">
-                           <div class="tab__item">Market</div>
-                           <div class="tab__item">Value</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+
+
             </div>
          </div>
       </div>
    </main>
-   <!-- <main class="">
-      <div class="container">
-      	<div class="row justify-content-md-center">
-      		<div class="col-lg-12">
-      
-      		<div class="container" style="padding-top: 100px; padding-bottom: 100px">
-      
-      <div class="row">
-      
-      <div class="">
-      <div class="table-card">
-       <div class="header">
-      <span class="title">Erros HTTP</span>
-      <div class="actions">
-        <a href="#"><i class="fa fa-cog"></i></a>
-        <a href="#"><i class="fa fa-cog"></i></a>
-        <a href="#"><i class="fa fa-cog"></i></a>
-        <a href="#"><i class="fa fa-cog"></i></a>
-      </div>
-       </div>
-       <div class="table">
-      <table class="bordered">
-      
-      
-        <tbody>
-      	<tr>
-      	  <td>1</td>
-      	  <td><span><img src="img/icon/ind.jpg"  alt=""></span>India</td>
-      	  <td>121</td>
-      
-      	</tr>
-      
-      	<tr>
-      	<td>2</td>
-      	  <td><span><img src="img/icon/aus-flag.png"  alt=""></span>Austrialia</td>
-      	  <td>121</td>
-      	</tr>
-      
-      	<tr>
-      	<td>3</td>
-      	  <td>India</td>
-      	  <td>121</td>
-      	</tr>
-      
-      	<tr>
-      	<td>4</td>
-      	  <td>India</td>
-      	  <td>121</td>
-      	</tr>
-      
-      
-      
-      
-      
-        </tbody>
-      </table>
-       </div>
-      
-       <div class="footer">
-      View Full Ranking
-       </div>
-      
-      </div>
-      </div>
-      </div>
-      
-      </div>
-      
-      		</div> 
-      	</div> 
-      </div> 
-      </main> -->
-   <!-- <main class="latest_news">
-      <div class="container-fluid">
-      	<div class="row justify-content-md-center">
-      		<div class="col-lg-12">
-      			<h3 class="text-center mb-30"> FINAL</h3>   
-      
-      			<div class="card">
-           <div class="card_title">
-             <h1>Upcoming Match</h1>
-             <p id="match_type">T20 1 of 60</p>
-           </div>
-           <div class="match_info">
-             <div class="team_name">
-               <div class="team1">
-                 <img
-                   src="https://ssl.gstatic.com/onebox/media/sports/logos/JTre94vh6WJeLmIL-Dfc1g_96x96.png"
-                   alt=""
-                 />
-                 <h3>MI</h3>
-               </div>
-               <div class="team2">
-                 <img
-                   src="https://ssl.gstatic.com/onebox/media/sports/logos/MxXIt0k-eorEn6yOhD-KBA_96x96.png"
-                   alt=""
-                 />
-                 <h3>RCB</h3>
-               </div>
-             </div>
-      
-      
-             <div class="date_time">
-               <p>9, April 2021</p>
-               <p>7.00 PM</p>
-             </div>
-           </div>
-           <div class="seeDetails">
-             <a href=""
-               >See All
-               <span><i class="fa fa-caret-down" aria-hidden="true"></i> </span
-             ></a>
-           </div>
-         </div>
-      		</div>
-      
-      
-      </div> 
-      </div> 
-      </main> -->
+
+ 
+
    <main class="in_numbers">
       <div class="container">
          <div class="row justify-content-md-center text-center">
-            <!-- <div class="col-lg-12 text-left">
-               <h3 class="white mb-30"> FINAL </h3>   
-               </div> -->
-            <!-- <div class="col-lg-6 col-md-6 col-sm-12">
-               <div id="numbers" class="carousel slide" data-ride="carousel">
-               	<ul class="carousel-indicators">
-               		<li data-target="#numbers" data-slide-to="0" class="active"></li>
-               		<li data-target="#numbers" data-slide-to="1"></li>
-               		<li data-target="#numbers" data-slide-to="2"></li>
-               	</ul>
-               	<div class="carousel-inner">
-               		<div class="carousel-item active"> <img src="/img/2010.png" class="img-fluid w-100" alt=""/> </div>
-               		<div class="carousel-item"> <img src="/img/2014.png" class="img-fluid w-100" alt=""/> </div>
-               		<div class="carousel-item"> <img src="/img/2019.png" class="img-fluid w-100" alt=""/> </div>
-               	</div>
-               </div>
-               </div> -->
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 blue">
-               <div class="card">
-               	<h1> 89 <small> Fifties </small> </h1>
-               </div>
-               </div>  -->
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 two_bg">
-               <div class="card">
-               	<h1> 156 <small> Most Dot Balls Avesh Khan </small> </h1>
-               </div>
-               </div>  -->
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 three_bg">
-               <div class="card">
-               	<div class="row">
-               		<div class="col-sm-6 col-xs-6"> <img src="/img/5443.png" class="img-fluid w-100" alt=""/> </div>
-               		<div class="col-sm-6 col-xs-6 pdl-0">
-               			<h4> Ruturaj Gaikwad </h4>
-               			<p> Total Runs <b> 635 runs </b>
-               				Strike Rate <b> 136.26 </b>
-               				Matches Played <b> 16 </b> 
-               			</p>
-               		</div>
-               	</div>
-               </div>
-               </div>  -->
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 four_bg">
-               <div class="card">
-               	<div class="row">
-               		<div class="col-sm-6 col-xs-6"> <img src="/img/157.png" class="img-fluid w-100" alt=""/> </div>
-               		<div class="col-sm-6 col-xs-6 pdl-0">
-               			<h4 class="white"> Harshal Patel </h4>
-               			<p class="white"> Total Wickets <b> 32 wickets </b>
-               				Average <b> 10.56 </b>
-               				Matches Played <b> 15 </b> 
-               			</p>
-               		</div>
-               	</div>
-               </div>
-               </div>  -->
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 five_bg">
-               <div class="card">
-               	<h1> 1548 <small> Four </small> </h1>
-               </div>
-               </div>  -->
-            <!-- <div class="col-lg-3 col-md-3 col-sm-6 six_bg">
-               <div class="card">
-               	<h1> 687 <small> Sixes </small> </h1>
-               </div>
-               </div> -->
-            <!-- <div class="col-lg-2 col-md-2 col-sm-6 seven_bg">
-               <div class="card"> <img src="/img/pic.png" class="img-fluid d-block mx-auto" alt=""/> </div> 
-               </div>  -->
-            <!-- <div class="col-lg-8 col-md-8 col-sm-6 eight_bg">
-               <div class="card">
-               	<h1> Interesting Facts <span> " Chennai Super Kings holds the record for most Fair Play awards won in IPL history. " </span> </h1>
-               </div> 
-               </div>  -->
+    
             <div class="col-lg-8 col-md-8 col-sm-6 eight_bg">
                <div class="card card-upcomming">
                   <h5 class="card-header white bg-dark">FINAL</h5>
@@ -1447,276 +1066,11 @@
                   </div>
                </div>
             </div>
-            <!-- <div class="col-lg-2 col-md-2 col-sm-6 nine_bg">
-               <div class="card"> <img src="/img/highlight.png" class="img-fluid d-block mx-auto" alt=""/> </div> 
-               </div>  -->
+
          </div>
       </div>
    </main>
-   <main class="latest_video" style="background:none;">
-      <div class="container-fluid">
-         <div class="row justify-content-md-center">
-            <div class="col-lg-12 text-left">
-               <h3 class="mb-30"> Recent Post  </h3>
-            </div>
-            <div class="col-lg-12">
-               <div class="owl-carousel" id="top_highlights">
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-               </div>
-               <!-- -->
-            </div>
-            <!-- --> 
-         </div>
-      </div>
-   </main>
-   <!-- <main class="in_numbers">
-      <div class="container">
-      	<div class="row justify-content-md-center text-center">
-      		<div class="col-lg-12 text-left">
-      			<h3 class="white mb-30"> 2021 In Numbers  </h3>   
-      		</div>
-      		<div class="col-lg-6 col-md-6 col-sm-12">
-      			<div id="numbers" class="carousel slide" data-ride="carousel">
-      				<ul class="carousel-indicators">
-      					<li data-target="#numbers" data-slide-to="0" class="active"></li>
-      					<li data-target="#numbers" data-slide-to="1"></li>
-      					<li data-target="#numbers" data-slide-to="2"></li>
-      				</ul>
-      				<div class="carousel-inner">
-      					<div class="carousel-item active"> <img src="/img/2010.png" class="img-fluid w-100" alt=""/> </div>
-      					<div class="carousel-item"> <img src="/img/2014.png" class="img-fluid w-100" alt=""/> </div>
-      					<div class="carousel-item"> <img src="/img/2019.png" class="img-fluid w-100" alt=""/> </div>
-      				</div>
-      			</div>
-      		</div>
-      		<div class="col-lg-3 col-md-3 col-sm-6 blue">
-      			<div class="card">
-      				<h1> 89 <small> Fifties </small> </h1>
-      			</div>
-      		</div> 
-      		<div class="col-lg-3 col-md-3 col-sm-6 two_bg">
-      			<div class="card">
-      				<h1> 156 <small> Most Dot Balls Avesh Khan </small> </h1>
-      			</div>
-      		</div> 
-      		<div class="col-lg-3 col-md-3 col-sm-6 three_bg">
-      			<div class="card">
-      				<div class="row">
-      					<div class="col-sm-6 col-xs-6"> <img src="/img/5443.png" class="img-fluid w-100" alt=""/> </div>
-      					<div class="col-sm-6 col-xs-6 pdl-0">
-      						<h4> Ruturaj Gaikwad </h4>
-      						<p> Total Runs <b> 635 runs </b>
-      							Strike Rate <b> 136.26 </b>
-      							Matches Played <b> 16 </b> 
-      						</p>
-      					</div>
-      				</div>
-      			</div>
-      		</div> 
-      		<div class="col-lg-3 col-md-3 col-sm-6 four_bg">
-      			<div class="card">
-      				<div class="row">
-      					<div class="col-sm-6 col-xs-6"> <img src="/img/157.png" class="img-fluid w-100" alt=""/> </div>
-      					<div class="col-sm-6 col-xs-6 pdl-0">
-      						<h4 class="white"> Harshal Patel </h4>
-      						<p class="white"> Total Wickets <b> 32 wickets </b>
-      							Average <b> 10.56 </b>
-      							Matches Played <b> 15 </b> 
-      						</p>
-      					</div>
-      				</div>
-      			</div>
-      		</div> 
-      		<div class="col-lg-3 col-md-3 col-sm-6 five_bg">
-      			<div class="card">
-      				<h1> 1548 <small> Four </small> </h1>
-      			</div>
-      		</div> 
-      		<div class="col-lg-3 col-md-3 col-sm-6 six_bg">
-      			<div class="card">
-      				<h1> 687 <small> Sixes </small> </h1>
-      			</div>
-      		</div>
-      		<div class="col-lg-2 col-md-2 col-sm-6 seven_bg">
-      			<div class="card"> <img src="/img/pic.png" class="img-fluid d-block mx-auto" alt=""/> </div> 
-      		</div> 
-      		<div class="col-lg-8 col-md-8 col-sm-6 eight_bg">
-      			<div class="card">
-      				<h1> Interesting Facts <span> " Chennai Super Kings holds the record for most Fair Play awards won in IPL history. " </span> </h1>
-      			</div> 
-      		</div> 
-      		<div class="col-lg-2 col-md-2 col-sm-6 nine_bg">
-      			<div class="card"> <img src="/img/highlight.png" class="img-fluid d-block mx-auto" alt=""/> </div> 
-      		</div> 
-      	</div> 
-      </div> 
-      </main> -->
-   <!-- <main class="latest_news">
-      <div class="container">
-      	<div class="row justify-content-md-center">
-      		<div class="col-lg-12 text-left">
-      			<h3 class="mb-30"> 2021 Leaders  </h3>   
-      		</div>
-      		<div class="col-lg-12">
-      			<div class="owl-carousel text-center leaders" id="2021_leaders">
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative one_bg">
-      							<div class="corner-logo"><img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png"></div>
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div> 
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative two_bg">
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div> 
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative three_bg">
-      							<div class="corner-logo"><img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png"></div>
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div> 
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative four_bg">
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div> 
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative five_bg">
-      							<div class="corner-logo"><img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png"></div>
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div>
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative six_bg">
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div>
-      				<div class="item">
-      					<div class="ap-slide-content relative">
-      						<div class="ap-img-box relative seven_bg">
-      							<h4> Blue Cap </h4>
-      							<img src="/img/team/1.png" class="img-fluid d-block mx-auto" />
-      						</div>
-      						<div class="ap-img-content">
-      							<h5> Manpreet <b> Gony </b> </h5>
-      							<h1> 635 <small>RUNS</small> </h1>
-      							<a href="#"> VIEW FULL LIST </a>
-      						</div>
-      					</div>
-      				</div> 
-      			</div>  
-      		</div> 
-      	</div> 
-      </div> 
-      </main> -->
+
 </section>
 @include('frontend.layout.footertest')
 <script>
@@ -1979,4 +1333,44 @@
    }
    
    tabs.forEach(tabify);
+</script>
+
+<script>
+    const options = document.querySelectorAll("label");
+for (let i = 0; i < options.length; i++) {
+  options[i].addEventListener("click", ()=>{
+    for (let j = 0; j < options.length; j++) {
+      if(options[j].classList.contains("selected")){
+        options[j].classList.remove("selected");
+      }
+    }
+
+    options[i].classList.add("selected");
+    for (let k = 0; k < options.length; k++) {
+      options[k].classList.add("selectall");
+    }
+
+    let forVal = options[i].getAttribute("for");
+    let selectInput = document.querySelector("#"+forVal);
+    let getAtt = selectInput.getAttribute("type");
+    if(getAtt == "checkbox"){
+      selectInput.setAttribute("type", "radio");
+    }else if(selectInput.checked == true){
+      options[i].classList.remove("selected");
+      selectInput.setAttribute("type", "checkbox");
+    }
+
+    let array = [];
+    for (let l = 0; l < options.length; l++) {
+      if(options[l].classList.contains("selected")){
+        array.push(l);
+      }
+    }
+    if(array.length == 0){
+      for (let m = 0; m < options.length; m++) {
+        options[m].removeAttribute("class");
+      }
+    }
+  });
+}
 </script>

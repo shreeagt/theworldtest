@@ -13,26 +13,8 @@
         <section class="latest_news">
                 <div class="container-fluid mt-4">
                 <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-12 side_filter_nav ">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-12 side_filter_nav ">
                 <aside>
-                <!-- <div class="card_bg mb-4">
-                <div class="card">
-                <div class="row right_blog_nav">
-                <div class="col-md-12 col-sm-6">
-                <div class="thumb">
-                <h3>Recent Posts </h3>
-                <ul class="recent_post">
-                <li><a href="https://shreeagt.com/blog/difference-between-jdk-jre-jvm" class="blog_head">Difference between JDK, JRE, and JVM</a></li>
-                <li><a href="https://shreeagt.com/blog/java-oops-concepts" class="blog_head">Java OOPs Concepts</a></li>
-                <li><a href="https://shreeagt.com/blog/how-to-install-NetBeans-on-MacOS" class="blog_head">How to Install NetBeans on MacOS ?</a></li>
-                <li><a href="https://shreeagt.com/blog/how-to-install-GIMP-on-MacOS" class="blog_head">How to Install GIMP on MacOS ?</a></li>
-                <li><a href="https://shreeagt.com/blog/how-to-install-Drupal-on-MacOS" class="blog_head">How to Install Drupal on MacOS ?</a></li>
-                </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div> -->
                 <div class="card_bg">
                 <div class="card">
                 <div class="row right_blog_nav">
@@ -58,10 +40,10 @@
                 </div>
                 </div>
                 </aside>
-                </div>
-                    <div class="col-md-9">
-                        <div class="row mb-4">
-                            <div class="col-md-4 mb-4">
+                </div> -->
+                    <div class="col-md-12">
+                        <div class="row mb-3">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -75,7 +57,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -89,7 +71,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -102,7 +84,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -115,7 +97,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -128,7 +110,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -141,7 +123,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -154,7 +136,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
@@ -167,7 +149,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-3 mb-4">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
