@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
 					<div class="item first_menu">
-						<a href="/" class="title">RST</a>
+						<a href="/" class="title">WTC</a>
 						<!-- <a href="#" class="title">Standings</a>
 						<a href="#" class="title">Fixtures</a> -->
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores voluptas cum eos, sapiente ullam officia tempora omnis commodi laudantium?</p>

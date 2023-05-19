@@ -58,6 +58,18 @@ Route::get('/stats', function () {
     return view('frontend.stats.stats');
 });
 
+Route::get('/polls', function () {
+    return view('frontend.polls.polls');
+});
+
+Route::get('/trivia', function () {
+    return view('frontend.trivia.trivia');
+});
+
+Route::get('/live-score', function () {
+    return view('frontend.livescore.livescore');
+});
+
 Route::get('/gallery/detail', function () {
     return view('frontend.gallery.detail');
 });

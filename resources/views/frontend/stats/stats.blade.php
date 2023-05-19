@@ -1,13 +1,81 @@
 @include('frontend.layout.headertest')
 
+<style>
+	button.tablinks.btmain {
+    background: #343a40;
+    color: #fff;
+}
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #dfe8eb;
+  width: 20%;
+  /* height: 400px; */
+  border-radius: 10px 0 0 10px;
+}
+
+button.tablinks.btmain {
+    background: #343a40;
+    color: #fff;
+}
+
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 11px 14px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    margin: 0%;
+    border-radius: 0;
+}
+
+.tab button:hover {
+  background-color: #bee9f7;
+}
+
+button.tablinks.btmain:hover{
+	background: #343a40;
+    color: #fff;
+}
+
+.tab button.active {
+  background-color: #6398a8;
+}
+
+.tabcontent {
+  float: left;
+  /* padding: 0px 12px; */
+  padding: 0px;
+  border: 1px solid #ccc;
+  width: 80%;
+  border-left: none;
+  /* height: 400px; */
+  border-radius: 0 10px 10px 0;
+}
+</style>
+
 	<section id="">
 
 
 
-
+	<div class="inner_banner">
+			<div class="container">
+				<div class="row">				
+					<div class="col-md-12">
+						<h2>Stats </h2> 
+					</div>
+				</div> <!-- Row -->
+			</div> <!-- Container -->
+		</div>
 
     
-		<main class="banner">
+		<!-- <main class="banner">
 			<div class="container">
 				<div class="row justify-content-md-center">					
 					<div class="col-lg-9 col-md-9">
@@ -207,7 +275,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -224,7 +292,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -241,7 +309,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -258,7 +326,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -277,152 +345,1290 @@
 					</div>	
 				</div>	
 			</div>
-		</main>
+		</main> -->
 
-		<main class="banner">
-			<div class="container">
-				<div class="row justify-content-md-center">					
-			   
-                <!-- partial:index.partial.html -->
-<div id="ctf">
-	<div id="ctfwrap">
-		<h1>Songs</h1>
-		<div class="row">
-			<div class="col-2">
-
-				<nav id="ctfb1" class="navbar navbar-ctfb1">
-					<ul class="nav flex-column nav-pills">
-						<li class="section">Configuration</li>
-						<li><a data-toggle="tab" href="#fields">Fields</a></li>
-						<li><a data-toggle="tab" href="#create">Create</a></li>
-						<li><a data-toggle="tab" href="#menu3">Display</a></li>
-						<li><a data-toggle="tab" href="#menu3">Views</a></li>
-						<li class="section">Options</li>
-						<li><a data-toggle="tab" href="#menu3">Authorship</a></li>
-						<li><a data-toggle="tab" href="#menu3">Workflow</a></li>
-						<li><a data-toggle="tab" href="#menu3">Permissions</a></li>
-						<li><a data-toggle="tab" href="#menu3">Import</a></li>
-						<li><a data-toggle="tab" href="#menu3">Export</a></li>
-						<li><a data-toggle="tab" href="#menu3">API</a></li>
-					</ul>
-			</div>
-
-			<div class="col-6">
-
-				<div class="tab-content">
-					<div id="home" class="tab-pane fade">
-
-					</div>
-					<div id="menu1" class="tab-pane fade">
-						<h3>Menu 1</h3>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-					<div id="fields" class="tab-pane fade">
-						<div class="page">
-							<div class="nesttabs">
-								<div class="container">
-									<div class="row">
-										<div class="col-4">
-											<div class="nav flex-column nav-pills" id=""v-pills-tab"" role="tablist" aria-orientation="vertical">
-												<a class="nav-link" id="fields-title-tab" data-toggle="pill" href="#fields-title" role="tab" aria-controls="fields-title" aria-selected="false">
-													<div class="descrip">
-														<h5 class="mb-1">Title</h5> 255 Character Text Field<br>
-														<dl class="row">
-															<dt class="col-2">tpl:</dt>
-															<dd class="col-9"><code>{field_song_title}</code></dd>
-															<dt class="col-2">css:</dt>
-															<dd class="col-9"><code>.field-song-title</code></dd>
-														</dl>
-														Example: Stairway to Heaven
-													</div>
-
-												</a>
-												<a class="nav-link" id="fields-artist-tab" data-toggle="pill" href="#fields-artist" role="tab" aria-controls="fields-artist aria-selected="false">
-													<div class="descrip">
-														<h5 class="mb-1">Artist</h5> 255 Character Text Field<br>
-														<dl class="row">
-															<dt class="col-2">tpl:</dt>
-															<dd class="col-9"><code>{field_song_title}</code></dd>
-															<dt class="col-2">css:</dt>
-															<dd class="col-9"><code>.field-song-title</code></dd>
-														</dl>
-														Example: Stairway to Heaven
-													</div>
-
-												</a>
-												<a class="nav-link" id="fields-album-tab" data-toggle="pill" href="#fields-album" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-													<div class="descrip">
-														<h5 class="mb-1">Album</h5> 255 Character Text Field<br>
-														<dl class="row">
-															<dt class="col-2">tpl:</dt>
-															<dd class="col-9"><code>{field_song_album</code></dd>
-															<dt class="col-2">css:</dt>
-															<dd class="col-9"><code>.field-song-album</code></dd>
-														</dl>
-														Example: Led Zeppelin IV
-													</div>
-
-												</a>
-											</div>
-										</div>
-										<div class="col-8 nesttabscontent">
-											<div class="tab-content" id="v-pills-tabContent">
-												<div class="tab-pane fade" id="fields-title" role="tabpanel" aria-labelledby="fields-title-tab">
-													<p>Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit
-														dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</p>
-												</div>
-												<div class="tab-pane fade" id="fields-artist" role="tabpanel" aria-labelledby="fields-artist-tab">
-													<p>Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur
-														adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</p>
-												</div>
-												<div class="tab-pane fadew" id="fields-album" role="tabpanel" aria-labelledby="fields-album-tab">
-													<p>Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia
-														dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</p>
-												</div>
-												<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-													<p>Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit
-														velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="menu3" class="tab-pane fade in active show">
-						<div class="card border-primary mb-3">
-							<div class="card-header">
-								<ul class="nav nav-pills card-header-pills">
-									<li class="nav-item">
-										<a class="nav-link active" href="#">Fields</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Link</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link disabled" href="#">Disabled</a>
-									</li>
-								</ul>
-							</div>
-							<div class="card-body">
-								<h4 class="card-title">Fields</h4>
-								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-								<a href="#" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-				
-				</div>	
-			</div>
-		</main>
 		
+		<main class="latest_news">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col-lg-12 text-left">
+					<div class="tab">
+					        <button class="tablinks btmain"> Batting </button>
+							<button class="tablinks" onclick="openTab(event, 'firstTab')" id="defaultOpen"> Most Runs </button>
+							<button class="tablinks" onclick="openTab(event, 'secondTab')"> Highest Scores </button>
+							<button class="tablinks" onclick="openTab(event, 'thirdTab')"> Best Batting Average </button>
+							<button class="tablinks" onclick="openTab(event, 'hundred')">  Most Hundreds  </button>
+							<button class="tablinks" onclick="openTab(event, 'fifties')">  Most Fifties </button>
 
+					        <button class="tablinks btmain"> Bowling </button>
+							<button class="tablinks" onclick="openTab(event, 'wickets')" >  Most Wickets </button>
+							<button class="tablinks" onclick="openTab(event, 'bowl')">  Best Bowling Average  </button>
+							<button class="tablinks" onclick="openTab(event, 'best_bowling')">  Best Bowling  </button>
+							<button class="tablinks" onclick="openTab(event, 'haul')">   Most 5 Wickets Haul   </button>
+							<button class="tablinks" onclick="openTab(event, 'b_economy')"> Best Economy  </button>
+			
+							</div>
+
+							<div id="firstTab" class="tabcontent">
+					
+
+							<div class="container table-responsive py-2"> 
+							<table class="table table-bordered table-hover">
+							<thead class="thead-dark">
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Player</th>
+								<th scope="col">Matches</th>
+								<th scope="col">Inns</th>
+								<th scope="col">Runs</th>
+								<th scope="col">Avg</th>
+								<th scope="col">Sr</th>
+								<th scope="col">4s</th>
+								<th scope="col">6s</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<th scope="row">1</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">2</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">3</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">4</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">5</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+
+
+								<tr>
+								<th scope="row">6</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">7</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">8</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">9</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+								<tr>
+								<th scope="row">10</th>
+								<td>Faf du Plessis</td>
+								<td>13</td>
+								<td>13</td>
+								<td>702</td>
+								<td>58.50</td>
+								<td>153.95</td>
+								<td>55</td>
+								<td>36</td>
+								</tr>
+
+							</tbody>
+							</table>
+							</div>
+
+						
+							</div>
+
+							<div id="secondTab" class="tabcontent">
+							<!-- <h3>Second tab title</h3> -->
+						
+							<div class="container table-responsive py-2"> 
+							<table class="table table-bordered table-hover">
+							<thead class="thead-dark">
+								<tr>
+								<th scope="col">#</th>
+								<th scope="col">Batter</th>
+								<th scope="col">Runs</th>
+								<th scope="col">Balls</th>
+								<th scope="col">Sr</th>
+								<th scope="col">Vs</th>
+								<th scope="col">4s</th>
+								<th scope="col">6s</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">5</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">7</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">8</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">9</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<th scope="row">10</th>
+									<td>Yashasvi Jaiswal</td>
+									<td>124</td>
+									<td>62</td>
+									<td>200</td>
+									<td>Mumbai Indians</td>
+									<td>16</td>
+									<td>8</td>
+								</tr>
+
+
+
+							</tbody>
+							</table>
+							</div>
+
+							</div>
+
+							<div id="thirdTab" class="tabcontent">
+							<!-- <h3>Third tab title</h3> -->
+							
+							<div class="container table-responsive py-2"> 
+							<table class="table table-bordered table-hover">
+							<thead class="thead-dark">
+								<tr>
+								<th scope="col">#</th>
+								<th scope="col">Batter</th>
+								<th scope="col">Matches</th>
+								<th scope="col">Inns</th>
+								<th scope="col">Runs</th>
+								<th scope="col">Avg</th>
+								<th scope="col">No</th>
+								<!-- <th scope="col">4s</th>
+								<th scope="col">6s</th> -->
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">5</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">7</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">8</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">9</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th scope="row">10</th>
+									<td>Prerak Mankad</td>
+									<td>3</td>
+									<td>3</td>
+									<td>64</td>
+									<td>64.00</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+							</table>
+							</div>
+
+							</div>
+
+							<div id="hundred" class="tabcontent">
+							<!-- <h3>hundred tab title</h3> -->
+						<div class="container table-responsive py-2"> 
+							<table class="table table-bordered table-hover">
+							<thead class="thead-dark">
+								<tr>
+								<th scope="col">#</th>
+								<th scope="col">Batter</th>
+								<th scope="col">Matches</th>
+								<th scope="col">Inns</th>
+								<th scope="col">Runs</th>
+								<th scope="col">H.s</th>
+								<th scope="col">100s</th>
+								<!-- <th scope="col">4s</th>
+								<th scope="col">6s</th> -->
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">5</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">7</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">8</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">9</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th scope="row">10</th>
+									<td>Shubman Gill</td>
+									<td>13</td>
+									<td>13</td>
+									<td>576</td>
+									<td>101</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+							</table>
+						</div>
+
+							</div>
+
+						<div id="fifties" class="tabcontent">
+							<div class="container table-responsive py-2"> 
+								<table class="table table-bordered table-hover">
+								<thead class="thead-dark">
+									<tr>
+									<th scope="col">#</th>
+									<th scope="col">Batter</th>
+									<th scope="col">Matches</th>
+									<th scope="col">Inns</th>
+									<th scope="col">Runs</th>
+									<th scope="col">H.s</th>
+									<th scope="col">100s</th>
+									<!-- <th scope="col">4s</th>
+									<th scope="col">6s</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">9</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">10</th>
+										<td>Shubman Gill</td>
+										<td>13</td>
+										<td>13</td>
+										<td>576</td>
+										<td>101</td>
+										<td>1</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="wickets" class="tabcontent">
+							<div class="container table-responsive py-2"> 
+								<table class="table table-bordered table-hover">
+								<thead class="thead-dark">
+									<tr>
+									<th scope="col">#</th>
+									<th scope="col">Player</th>
+									<th scope="col">Matches</th>
+									<th scope="col">Overs</th>
+									<th scope="col">Balls</th>
+									<th scope="col">Wkts</th>
+									<th scope="col">Avg</th>
+									<th scope="col">Runs</th>
+									<th scope="col">4-fers</th>
+									<th scope="col">5-fers</th>
+									<!-- <th scope="col">4s</th>
+									<th scope="col">6s</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">9</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<th scope="row">10</th>
+										<td>Mohammed Shami</td>
+										<td>13</td>
+										<td>51.0</td>
+										<td>306</td>
+										<td>23</td>
+										<td>16.70</td>
+										<td>384</td>
+										<td>2</td>
+										<td>3</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="bowl" class="tabcontent">
+							<div class="container table-responsive py-2"> 
+								<table class="table table-bordered table-hover">
+								<thead class="thead-dark">
+									<tr>
+									<th scope="col">#</th>
+									<th scope="col">Bowler	</th>
+									<th scope="col">Overs	</th>
+									<th scope="col">Matches</th>
+									<th scope="col">Wkts</th>
+									<th scope="col">Avg</th>
+							
+									<!-- <th scope="col">4s</th>
+									<th scope="col">6s</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">9</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+									<tr>
+										<th scope="row">10</th>
+										<td>Mark Wood</td>
+										<td>4</td>
+										<td>16.0</td>
+										<td>11</td>
+										<td>11.87</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="best_bowling" class="tabcontent">
+							<div class="container table-responsive py-2"> 
+								<table class="table table-bordered table-hover">
+								<thead class="thead-dark">
+									<tr>
+									<th scope="col">#</th>
+									<th scope="col">Bowler	</th>
+									<th scope="col">Vs</th>
+									<th scope="col">Ovs</th>
+									<th scope="col">Runs</th>
+									<th scope="col">Wkts</th>
+									<th scope="col">Bbi</th>
+									<th scope="col">Maidens</th>
+									<th scope="col">Econ</th>
+							
+									<!-- <th scope="col">4s</th>
+									<th scope="col">6s</th> -->
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">9</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+									<tr>
+										<th scope="row">10</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>Gujarat Titans</td>
+										<td>4.0</td>
+										<td>14</td>
+										<td>5</td>
+										<td>5-14</td>
+										<td>5</td>
+										<td>3.5</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="haul" class="tabcontent">
+							<div class="container table-responsive py-2"> 
+								<table class="table table-bordered table-hover">
+								<thead class="thead-dark">
+									<tr>
+									<th scope="col">#</th>
+									<th scope="col">Bowler	</th>
+									<th scope="col">Matches</th>
+									<th scope="col">Overs</th>
+									<th scope="col">Runs</th>
+									<th scope="col">WKT</th>
+									<th scope="col">4-fers</th>
+									<th scope="col">5-fers</th>
+							
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">9</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th scope="row">10</th>
+										<td>Bhuvneshwar Kumar</td>
+										<td>13</td>
+										<td>47.0</td>
+										<td>399</td>
+										<td>15</td>
+										<td>2</td>
+										<td>1</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="b_economy" class="tabcontent">
+							<div class="container table-responsive py-2"> 
+								<table class="table table-bordered table-hover">
+								<thead class="thead-dark">
+									<tr>
+									<th scope="col">#</th>
+									<th scope="col">Bowler	</th>
+									<th scope="col">Matches</th>
+									<th scope="col">Overs</th>
+									<th scope="col">Inns</th>
+									<th scope="col">Wkts</th>
+									<th scope="col">Eco</th>
+									<th scope="col">Avg</th>
+									<th scope="col">Sr</th>
+							
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">9</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+									<tr>
+										<th scope="row">10</th>
+										<td>Praveen Dubey</td>
+										<td>1</td>
+										<td>3.0</td>
+										<td>1</td>
+										<td>1</td>
+										<td>6.33</td>
+										<td>19.00</td>
+										<td>18.00</td>
+										
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div> 
+			</div> 
+		</main>
 
 		
 		<main class="in_numbers">
@@ -761,3 +1967,21 @@
     });
 </script>
 
+
+<script>
+	function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>

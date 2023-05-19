@@ -208,7 +208,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -225,7 +225,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -242,7 +242,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
@@ -259,7 +259,7 @@
 											</div>
 											<div class="col-sm-6 col-xs-6">
 												<p class="mb-0 blue"> Qualifier1 </p>
-												<p class="mb-0"> 10 OCT 21 </p>
+												<p class="mb-0"> 10 OCT 22</p>
 											</div>
 											<div class="col-sm-3 col-xs-3">
 												<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
