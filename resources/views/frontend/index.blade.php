@@ -902,7 +902,9 @@
             items: 4,
             pagination: true,
             stopOnHover: true,
-            navigation: false,
+            navigation: true,
+			navText: ['<', '>'],
+			
             itemsDesktop: [1280, 3],
             itemsDesktopSmall: [979, 2],
             itemsTablet: [600, 2], //3 items between 600 and 0

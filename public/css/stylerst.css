@@ -66,6 +66,7 @@ ul.sub_stats.head_title {
 
 .head_title li:nth-child(2) {
     width: 30%;
+    text-align: left;
 }
 
 .stats_board .nav li {
@@ -256,6 +257,7 @@ background-color: #193684;
       flex: 1;
       max-width: 70%;
       position: relative;
+      height:500px;
     }
     
     .video-player video {
@@ -300,17 +302,71 @@ background-color: #193684;
     .recommended-videos .video-thumbnail p {
       margin: 0;
     }
+
+
     
+    @media only screen and (min-width:768px){
+
+      .desk_text{
+        display:block;
+      }
+      .mob_text{
+        display:none;
+      }
+    }
+
+    
+
     @media screen and (max-width: 768px) {
       .video-section {
         flex-direction: column;
         align-items: center;
       }
       
+      .desk_text{
+        display:none;
+      }
+
+      .mob_text{
+        display:block;
+      }
+
       .video-player,
       .recommended-videos {
         max-width: 100%;
+        width:100%;
       }
+
+      .op, .po {
+        width: 100%;
+    }
+
+    #slide4 {
+      text-align: center;
+      padding-top: 90px;
+      font-size: 3em;
+  }
+
+  .stats_list > li:nth-child(1) p.ap-team-name {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sub_stats li p, .sub_stats li p a, .sub_stats li a {
+
+  font-size: 11px;
+
+}
+
+.banner .carousel-caption h1 {
+  font-size: 13px;
+}
+
+.banner_card p.white.mb-0 {
+  font-size: 12px;
+}
+
     }
 
 .match_scores h1 {
@@ -372,6 +428,17 @@ background-color: #193684;
     margin: 0;
 }
 
+@media only screen and (max-width: 991px){
+  .recommended-videos .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.recommended-videos .video-thumbnail {
+  display: block;
+}
+
 @media all and (max-width: 768px) {
 	#countdown  h1 {
     font-size: calc(1.5rem * var(--smaller));
@@ -380,6 +447,10 @@ background-color: #193684;
   #countdown  li {
     font-size: calc(1.125rem * var(--smaller));
   }
+
+  #countdown  li {
+    padding: 0.5em;
+}
   
   #countdown li span {
     font-size: calc(3.375rem * var(--smaller));

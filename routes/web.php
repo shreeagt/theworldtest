@@ -34,9 +34,9 @@ Route::get('/', function () {
 
 
 
-Route::get('/gallery', function () {
-    return view('frontend.gallery.indextext');
-});
+// Route::get('/gallery', function () {
+//     return view('frontend.gallery.indextext');
+// });
 
 Route::get('/faq', function () {
     return view('frontend.faq.faq');
@@ -70,7 +70,11 @@ Route::get('/live-score', function () {
     return view('frontend.livescore.livescore');
 });
 
-Route::get('/gallery/detail', function () {
+// Route::get('/gallery/detail', function () {
+//     return view('frontend.gallery.detail');
+// });
+
+Route::get('/gallery', function () {
     return view('frontend.gallery.detail');
 });
 Route::get('/venues', function () {

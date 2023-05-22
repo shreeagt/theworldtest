@@ -5,10 +5,10 @@
 			<div class="container">
 				<div class="row">				
 					<div class="col-md-12">
-						<a href="/venues" class="back_btn"> <img src="/img/icon/back_arrow.png" class="img-fluid" /> </a>
+						<!-- <a href="/venues" class="back_btn"> <img src="/img/icon/back_arrow.png" class="img-fluid" /> </a> -->
 						<div class="div">
-							<h2> Vivo IPL M55 - SRH v MI </h2> 
-							<p> 03 October, 2021 | 98 Photos </p>
+							<h2> GALLERY </h2> 
+							<!-- <p> 03 October, 2021 | 98 Photos </p> -->
 						</div>
 					</div>
 				</div> <!-- Row -->
@@ -148,8 +148,9 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-8"> <img src="/img/gallery/9S6A9400.jpg" class="img-fluid" /></div>
-					<div class="col-md-4">
+					
+					<div class="col-md-12"> <img src="/img/gallery/9S6A9400.jpg" class="img-fluid w-100" /></div>
+					<!-- <div class="col-md-4">
 					<div class="a">
 						<h5 class="white">Vivo IPL Qualifier 2 - KKR v DC</h5>
 						<p class="white">Kolkata Knight Riders team players enter to the field during the qualifier 2 match of the Vivo Indian Premier League between the Kolkata Knight Riders and the Delhi Capitals held at the Sharjah Cricket Stadium, Sharjah in the United Arab Emirates on the 13th October 2021 
@@ -162,7 +163,7 @@
 							<a href="#" class="" tabindex="0"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

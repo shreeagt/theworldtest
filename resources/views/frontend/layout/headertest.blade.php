@@ -24,6 +24,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css'> -->
 	<!-- Css Styles -->
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css'>
+
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('css/style.css')}}?v=1.3" type="text/css">
 	

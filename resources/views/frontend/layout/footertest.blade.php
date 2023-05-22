@@ -15,8 +15,8 @@
 						<h2 class="title">Home</h2>
 						<ul>
 							<li> <a href="/">HOME</a> </li>
-							<li> <a href="#">FAQ </a> </li>
-							<li> <a href="#">POLL OF THE DAY</a> </li>
+							<li> <a href="/faq">FAQ </a> </li>
+							<li> <a href="/polls">POLL OF THE DAY</a> </li>
 						
 		
 						</ul>
@@ -26,9 +26,9 @@
 					<div class="item">
 						<h2 class="title">MEDIA</h2>
 						<ul>
-							<li> <a href="#">NEWS </a> </li>
-							<li> <a href="#"> VIDEOS </a> </li> 
-							<li> <a href="#"> GALLERY </a> </li> 
+							<li> <a href="/news">NEWS </a> </li>
+							<li> <a href="/videogallery"> VIDEOS </a> </li> 
+							<li> <a href="/gallery"> GALLERY </a> </li> 
 						</ul>
 					</div>
 				</div>
@@ -36,9 +36,9 @@
 					<div class="item">
 						<h2 class="title">OTHERS</h2>
 						<ul>
-						<li> <a href="#">TRIVIA  </a> </li>
-							<li> <a href="#">STATS </a> </li>
-							<li> <a href="#">LIVE SCORE</a> </li>
+						<li> <a href="/trivia">TRIVIA  </a> </li>
+							<li> <a href="/stats">STATS </a> </li>
+							<li> <a href="/live-score">LIVE SCORE</a> </li>
 						</ul>
 					</div>
 				</div>
@@ -68,6 +68,7 @@
 <!-- Js Plugins -->
 <script src="{{asset('js/popper.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
 <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script> -->
 <script src="{{asset('js/custom.js')}}"></script>
 

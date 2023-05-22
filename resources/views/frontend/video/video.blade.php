@@ -14,6 +14,11 @@
     right: 0px;
     top: 44px;
 }
+
+.w-100 {
+    width: 100%!important;
+    max-width: inherit;
+}
 </style>
 <div class="inner_banner">
 			<div class="container">
@@ -218,182 +223,29 @@
                             </div>
                         </div>
 
-                        <!-- <div class="row mb-4">
-                        <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="row">
-                        <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
+                    
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      <div class="modal-header" style="background:#f37224;">
+        <h5 class="modal-title text-white" id="exampleModalLabel">Capping off CSK’s IPL 2021 win with Faf, Robin and Fleming</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="background: #000000;">
       <div class="video-section">
-                  <div class="video-player">
-                     <video id="mainVideo" controls="">
-                        <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                     </video>
-                     <div class="play-button" onclick="playMainVideo()">
-                        <img src="/img/icon/play-inline-wtc.png" alt="Play Button">
-                     </div>
-                  </div>
-                  <div class="recommended-videos">
-                     <div class="video_header">
-                        <h2>The NZ dressing room at the winning moment | WTC21...</h2>
-                        <p>23 JUN 2021</p>
-                     </div>
-                     <div class="video_cover">
-                        <div class="video-thumbnail" onclick="changeVideo('videotext.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>The NZ dressing room at the winning moment | WTC21...</p>
-                              <p>Wed 23 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>All seven of Kyle Jamieson's WTC21 Final wickets</p>
-                              <p>Tue 6 Jul</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Add more recommended videos here -->
+                  <div class="video-player w-100">
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/9xiTjjYw5qg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </div>
                </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
     </div>
   </div>
 </div>

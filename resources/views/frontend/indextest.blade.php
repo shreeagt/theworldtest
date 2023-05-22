@@ -7,6 +7,52 @@
 }
 }
 
+.owl-prev {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+}
+
+.owl-next {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+}
+
+.owl-buttons .owl-prev,
+.owl-buttons .owl-next {
+  width: 30px;
+  height: 30px;
+  /* background-color: #000; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f37224;
+}
+
+.owl-buttons .owl-prev:before,
+.owl-buttons .owl-next:before {
+   content: '';
+  width: 10px;
+  font-size: 15px;
+  height: 10px;
+  /* background-color: #fff; */
+  border-radius: 50%;
+  /* Add your arrow icon styles (e.g., background-image, background-position) */
+}
+
+.owl-buttons .owl-prev:before {
+  /* Add styles for the left arrow icon */
+  content: '<';
+}
+
+.owl-buttons .owl-next:before {
+  /* Add styles for the right arrow icon */
+  content: '>';
+}
+
+
 .wrapper header{
   font-size: 22px;
   font-weight: 600;
@@ -220,11 +266,11 @@ input[type="checkbox"]{
                	<div class="tab-content" id="pills-tabContent">
                		<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                			<ul class="head_title">
-               				<li> <b> TEAM </b> </li>
-               				<li> <b> PLD  </b> </li>
-               				<li> <b> NET RR  </b> </li>
-               				<li> <b> PTS  </b> </li>
-               				<li> <b> FORM </b> </li>
+               				<li> <b class="desk_text"> TEAM </b> </li>
+               				<li> <b class="desk_text"> PLD  </b> </li>
+               				<li> <b class="desk_text"> NET RR  </b> </li>
+               				<li> <b class="desk_text"> PTS  </b> </li>
+               				<li> <b class="desk_text"> FORM </b> </li>
                				<div class="clear"></div>
                			</ul> 
                			<ul class="stats_list">
@@ -374,7 +420,7 @@ input[type="checkbox"]{
                						<p class="mb-0"> 172/5 </p>
                					</div>
                				</div>
-               				<p class="mb-0"> <b> Chennai Super Kings won by 4 wickets </b> </p>
+               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
                			</div> 
                			<div class="playoffs text-center">
                				<div class="row">
@@ -391,7 +437,7 @@ input[type="checkbox"]{
                						<p class="mb-0"> 172/5 </p>
                					</div>
                				</div>
-               				<p class="mb-0"> <b> Chennai Super Kings won by 4 wickets </b> </p>
+               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
                			</div> 
                			<div class="playoffs text-center">
                				<div class="row">
@@ -408,7 +454,7 @@ input[type="checkbox"]{
                						<p class="mb-0"> 172/5 </p>
                					</div>
                				</div>
-               				<p class="mb-0"> <b> Chennai Super Kings won by 4 wickets </b> </p>
+               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
                			</div> 
                			<div class="playoffs text-center">
                				<div class="row">
@@ -425,7 +471,7 @@ input[type="checkbox"]{
                						<p class="mb-0"> 172/5 </p>
                					</div>
                				</div>
-               				<p class="mb-0"> <b> Chennai Super Kings won by 4 wickets </b> </p>
+               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
                			</div>
                		</div>
                	</div>
@@ -545,6 +591,7 @@ input[type="checkbox"]{
                <h3 class="mb-30"> News & Updates  </h3>
             </div>
             <div class="col-lg-12">
+
                <div class="owl-carousel" id="features_interviews">
                   <div class="item">
                      <div class="ap-slide-content relative">
@@ -631,11 +678,18 @@ input[type="checkbox"]{
                   </div>
                   <!-- Item -->
                </div>
+
+               <!-- <div class="custom-nav">
+                  <div class="custom-prev"><span class="arrow-left"></span></div>
+                  <div class="custom-next"><span class="arrow-right"></span></div>
+                  </div> -->
+
             </div>
          </div>
       </div>
    </main>
-   <main class="latest_video">
+
+   <!-- <main class="latest_video">
       <div class="container-fluid">
          <div class="row justify-content-md-center">
             <div class="col-lg-12 text-left">
@@ -648,6 +702,7 @@ input[type="checkbox"]{
                         <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                      </video>
+                     
                      <div class="play-button" onclick="playMainVideo()">
                         <img src="/img/icon/play-inline-wtc.png" alt="Play Button" >
                      </div>
@@ -708,14 +763,102 @@ input[type="checkbox"]{
                            </div>
                         </div>
                      </div>
-                     <!-- Add more recommended videos here -->
+                  
                   </div>
                </div>
             </div>
-            <!-- --> 
+     
+         </div>
+      </div>
+   </main> -->
+   
+   <main class="latest_video">
+      <div class="container-fluid">
+         <div class="row justify-content-md-center">
+            <div class="col-lg-12 text-left">
+               <h3 class="white mb-30"> #WTC21 FINAL - REWIND </h3>
+            </div>
+            <div class="col-lg-12">
+               <div class="video-section">
+                  <div class="video-player" >
+       
+
+                     <iframe  id="mainVideo" width="100%" height="100%" src="https://www.youtube.com/embed/h6Mv2RHqkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
+                     
+                     <!-- <div class="play-button" onclick="playMainVideo()">
+                        <img src="/img/icon/play-inline-wtc.png" alt="Play Button" >
+                     </div> -->
+                  </div>
+                  <div class="recommended-videos">
+                     <div class="video_header">
+                        <h2>The NZ dressing room at the winning moment | WTC21...</h2>
+                        <p>23 JUN 2021</p>
+                     </div>
+                     <div class="video_cover">
+                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
+                           <div>
+                              <p>The NZ dressing room at the winning moment | WTC21...</p>
+                              <p>Wed 23 Jun</p>
+                           </div>
+                           <!-- <div id="nowPlaying"></div> -->
+                        </div>
+                        <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
+                           <div>
+                              <p>All seven of Kyle Jamieson's WTC21 Final wickets</p>
+                              <p>Tue 6 Jul</p>
+                           </div>
+                        </div>
+                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
+                           <div>
+                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
+                              <p>Thu 24 Jun</p>
+                           </div>
+                        </div>
+                        <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
+                           <div>
+                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
+                              <p>Thu 24 Jun</p>
+                           </div>
+                        </div>
+                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
+                           <div>
+                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
+                              <p>Thu 24 Jun</p>
+                           </div>
+                        </div>
+                        <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
+                           <div>
+                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
+                              <p>Thu 24 Jun</p>
+                           </div>
+                        </div>
+                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
+                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
+                           <div>
+                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
+                              <p>Thu 24 Jun</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+           
          </div>
       </div>
    </main>
+
+
+   <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/h6Mv2RHqkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+
    <main class="latest_news">
       <div class="container-fluid">
          <div class="row justify-content-md-center">
@@ -798,11 +941,12 @@ input[type="checkbox"]{
                                        <div class="tab-content" id="pills-tabContent">
                                           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                              <ul class="head_title">
-                                                <li> <b> POS </b> </li>
-                                                <li> <b> TEAM </b> </li>
-                                                <li> <b> MATCHES </b> </li>
-                                                <li> <b> POINTS  </b> </li>
-                                                <li> <b> RATING  </b> </li>
+                                                <li> <b class="desk_text"> POS </b><b class="mob_text"> # </b>  </li>
+                         
+                                                <li> <b class="desk_text"> TEAM </b> <b class="mob_text"> T </b> </li>
+                                                <li> <b class="desk_text"> MATCHES </b> <b class="mob_text"> M </b> </li>
+                                                <li> <b class="desk_text"> POINTS  </b> <b class="mob_text"> P </b> </li>
+                                                <li> <b class="desk_text"> RATING  </b><b class="mob_text"> R </b>  </li>
                                                 <div class="clear"></div>
                                              </ul>
                                              <ul class="stats_list">
@@ -812,7 +956,8 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">1</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/ind.jpg" class="img-fluid" />  India </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/ind.jpg" class="img-fluid" />  India </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/ind.jpg" class="img-fluid" />  IND</p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">25</p>
@@ -834,16 +979,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">2</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> Australia </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/aus.jpg" class="img-fluid" /> Australia </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/aus.jpg" class="img-fluid" />  AUS</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">25</p>
+                                                         <p class="ap-team-name">23</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">2,679</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">116</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -855,16 +1001,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">3</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> ENG </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> England </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/eng.jpg" class="img-fluid" />  ENG</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">25</p>
+                                                         <p class="ap-team-name">36</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">4,103</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">114</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -876,16 +1023,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">4</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/sa.jpg" class="img-fluid" /> <a href="#"> South Africa </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/sa.jpg" class="img-fluid" />  SA</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">25</p>
+                                                         <p class="ap-team-name">21</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">2,182</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">104</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -897,16 +1045,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">5</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/nz.jpg" class="img-fluid" /> <a href="#"> New Zealand </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/nz.jpg" class="img-fluid" /> <a href="#"> NZ </a> </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">25</p>
+                                                         <p class="ap-team-name">23</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">2,291</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">100</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -918,16 +1067,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">6</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/pak.jpg" class="img-fluid" /> <a href="#"> Pakistan </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/pak.jpg" class="img-fluid" /> <a href="#"> PAK </a> </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">25</p>
+                                                         <p class="ap-team-name">22</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">1,902</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">86</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -939,7 +1089,8 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">7</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/srl.jpg" class="img-fluid" /> <a href="#"> Sri Lanka </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/srl.jpg" class="img-fluid" /> <a href="#"> SL</a> </p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">25</p>
@@ -960,16 +1111,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">8</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/wid.jpg" class="img-fluid" /> <a href="#"> West Indies </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/wid.jpg" class="img-fluid" /> <a href="#"> WI </a> </p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">25</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">1,906</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">76</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -981,16 +1133,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">9</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/bang.jpg" class="img-fluid" /> <a href="#"> Bangladesh </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/bang.jpg" class="img-fluid" /> <a href="#"> BAN </a> </p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">25</p>
+                                                         <p class="ap-team-name">18</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">805</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">99</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -1002,16 +1155,17 @@ input[type="checkbox"]{
                                                          <p class="ap-team-name">10</p>
                                                       </li>
                                                       <li>
-                                                         <p class="ap-team-name"> <img src="/img/aus.jpg" class="img-fluid" /> <a href="#"> SA </a> </p>
+                                                         <p class="ap-team-name desk_text"> <img src="/img/zim.jpg" class="img-fluid" /> <a href="#"> Zimbabwe </a> </p>
+                                                         <p class="ap-team-name mob_text"> <img src="/img/zim.jpg" class="img-fluid" /> <a href="#"> ZIM</a> </p>
                                                       </li>
                                                       <li class="pts">
                                                          <p class="ap-team-name">25</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
+                                                         <p class="ap-team-name">223</p>
                                                       </li>
                                                       <li class="pts">
-                                                         <p class="ap-team-name">121</p>
+                                                         <p class="ap-team-name">32</p>
                                                       </li>
                                                    </ul>
                                                    <div class="clear"></div>
@@ -1041,7 +1195,7 @@ input[type="checkbox"]{
                   <h5 class="card-header white bg-dark">FINAL</h5>
                   <div class="card-body">
                      <div class="row">
-                        <div class="col-6">
+                        <div class="col-sm-6 ">
                            <div class="text-left">
                               <h3 class="text-left main_up">Wednesday 07 June</h3>
                               <span class="time_upcomming">15:00</span><span class="text_upcomming">(YOUR TIME)</span>
@@ -1051,7 +1205,7 @@ input[type="checkbox"]{
                               <span class="tl_upcomming">10:30</span><span class="text_upcomming">WED 07 JUNE(LOCAL)</span>
                            </div>
                         </div>
-                        <div class="col-6 text-left">
+                        <div class="col-sm-6 text-left">
                            <div class="flag_cover">
                               <img src="/img/aus.jpg" class="img-upcomming" alt="flag">
                               <span class="co_name time_upcomming">AUSTRALIA</span>
@@ -1102,9 +1256,9 @@ input[type="checkbox"]{
        owl.owlCarousel({
            autoPlay: 3000,
            items: 4,
-           pagination: true,
+           pagination: false,
            stopOnHover: true,
-           navigation: false,
+            navigation:true,
            itemsDesktop: [1280, 3],
            itemsDesktopSmall: [979, 2],
            itemsTablet: [600, 2], //3 items between 600 and 0
@@ -1266,17 +1420,22 @@ input[type="checkbox"]{
 <script>
    function changeVideo(videoSrc) {
        const mainVideo = document.getElementById('mainVideo');
-       mainVideo.src = "{{ asset('video') }}" + '/' + videoSrc;
+       mainVideo.src = "https://www.youtube.com/embed" + '/' + videoSrc + "?autoplay=1";
        mainVideo.load();
+      //  mainVideo.play();
+
+      // const nowPlayingElement = document.getElementById('nowPlaying');
+      // nowPlayingElement.textContent = "Now Playing: " + videoSrc;
+
      }
    
-       function playMainVideo() {
-         const mainVideo = document.getElementById('mainVideo');
-         mainVideo.play();
-         const playButton = document.querySelector('.play-button');
-         playButton.style.display = 'none';
+   //     function playMainVideo() {
+   //       const mainVideo = document.getElementById('mainVideo');
+   //       mainVideo.play();
+   //       const playButton = document.querySelector('.play-button');
+   //       playButton.style.display = 'none';
    
-   }
+   // }
    
    
    $(window).ready(function(){
@@ -1373,4 +1532,32 @@ for (let i = 0; i < options.length; i++) {
     }
   });
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var prevButton = document.querySelector('.owl-prev');
+  var nextButton = document.querySelector('.owl-next');
+
+  // Replace text with arrow icons
+  prevButton.innerHTML = '<span class="arrow-left"></span>';
+  nextButton.innerHTML = '<span class="arrow-right"></span>';
+});
+
+
+
+// $(document).ready(function () {
+//   var owl = $('.owl-carousel');
+//   owl.owlCarousel({
+//   });
+
+
+//   $('.custom-next').click(function () {
+//     owl.trigger('next.owl.carousel');
+//   });
+
+//   $('.custom-prev').click(function () {
+//     owl.trigger('prev.owl.carousel');
+//   });
+// });
 </script>
