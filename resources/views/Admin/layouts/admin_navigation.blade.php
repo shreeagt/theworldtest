@@ -15,6 +15,14 @@
 						<li><a href="/admin/blogs/category"> <span> Blog Category </span> </a> </li> 
 					</ul>
 				</li>
+
+				<li class="expandable">
+					<div class="hitarea expandable-hitarea"> <i class="fa fa-sliders" aria-hidden="true"></i> <span>  Quize </span> <i class="fa fa-angle-down" aria-hidden="true"></i> </div>
+					<ul class="category" style="display:none;">
+						<li><a href="{{route("admin-quize.index")}}"> <span> Quize </span> </a> </li>
+						
+					</ul>
+				</li>
 			
 				<li class="expandable">
 					<div class="hitarea expandable-hitarea"> <i class="fa fa-sliders" aria-hidden="true"></i> <span>  News </span> <i class="fa fa-angle-down" aria-hidden="true"></i> </div>

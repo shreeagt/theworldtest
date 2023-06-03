@@ -803,14 +803,26 @@ input[type="checkbox"]{
                <div id="q-cont">
                   <div class="slide" id="slide1">
                      <div class="question">
-                        Who is the highest run-scorer in the ICC World Test Championship 2019-2021??
+                       @if(isset($question1) && !empty($question1->question))
+                        {{$question1->question}}
+                       @endif
                      </div>
                      <div class="options">
-                        <span class="op" for="q1op1">Virat Kohli</span><span class="op op2" for="q1op2">Kane Willaimson</span><br /><span class="op" for="q1op3">Marnus Labuschagne</span><span class="op op2" for="q1op4">Ajinkya Rahane</span>
+                        <span class="op" for="q1op1">
+                           @if(isset($question1) && !empty($question1->option1))
+                           {{$question1->option1}}
+                          @endif</span>
+                          <span class="op op2" for="q1op2">@if(isset($question1) && !empty($question1->option2))
+                           {{$question1->option2}}
+                          @endif</span><br /><span class="op" for="q1op3">@if(isset($question1) && !empty($question1->option3))
+                           {{$question1->option3}}
+                          @endif</span><span class="op op2" for="q1op4">@if(isset($question1) && !empty($question1->option4))
+                           {{$question1->option4}}
+                          @endif</span>
                      </div>
                   </div>
                   <div class="slide" id="slide4">
-                     <div class="re">
+                     <div class="re" onclick="submitquestion()">
                         Submit
                      </div>
                   </div>
@@ -1378,8 +1390,9 @@ input[type="checkbox"]{
    	var left, width, cont = "#q-cont";
    	$('.op').click(function(){
    		$('.op').css("background","#f37224");
+         $('.op').removeClass("question1");
    		$(this).css("background","#192462");
-   		// next();
+         $(this).addClass("question1");
    	});
    });
    
@@ -1388,7 +1401,7 @@ input[type="checkbox"]{
    	$('.po').click(function(){
    		$('.po').css("background","#f37224");
    		$(this).css("background","#192462");
-   		// next();
+        
    	});
    });
      
@@ -1497,4 +1510,31 @@ document.addEventListener('DOMContentLoaded', function() {
 //   });
 // });
 </script>
-
+<script>
+   function submitquestion(){
+      
+      var data = localStorage.getItem('checking');
+      if(data!="1"){        
+         localStorage.setItem('checking', 1);        
+      }else{
+         var answer = $('.question1').text();
+        
+         $.ajax({
+            headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            type: "POST",
+            url: "<?php echo route('admin-quize.resultstore') ?>", // Replace with the appropriate URL of your server-side endpoint
+            dataType: 'json',
+            data:{"answer":answer,"question_id":1},
+            success: function(data) {
+            
+            },
+            error: function() {
+               
+            }
+         });
+      }
+     
+   }
+</script>

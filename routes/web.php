@@ -124,6 +124,7 @@ Route::get('/news_ind', [NewsIndController::class, 'index'])->name('frontend.new
 
 Route::get('/', [IndextestController::class, 'index'])->name('frontend.indextest.index');
 
+Route::post('/resultstore',[IndextestController::class, 'resultstore'])->name('admin-quize.resultstore');
 
 Route::get('/admin/login','Admin\AdminController@login')->name('admin.login');
 Route::post('/admin/signup','Admin\AdminController@signUp')->name('admin.signup');
@@ -197,5 +198,17 @@ Route::group(['prefix' => '/admin','middleware'=>'admin-auth'], function () {
     Route::get('/schedules', 'Admin\scheduleController@index')->name('schedule.index');
     Route::get('/schedules/create','Admin\scheduleController@show')->name('admin-schedule.create');
     Route::post('/schedules/store','Admin\scheduleController@store')->name('schedule.store');
+
+    //Quize
+
+   
+    Route::get('/quize','Admin\QuizeController@index')->name('admin-quize.index');
+    Route::get('/quize/create','Admin\QuizeController@show')->name('admin-quize.create');
+    Route::post('/quize/store','Admin\QuizeController@store')->name('admin-quize.store');
+    Route::get('/quize/delete/{id}','Admin\QuizeController@delete')->name('admin-quize.delete');
+    Route::get('/quize/edit/{id}','Admin\QuizeController@edit')->name('admin-quize.edit');
+  
+
+
 
 });
