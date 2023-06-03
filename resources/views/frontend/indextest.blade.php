@@ -588,95 +588,31 @@ input[type="checkbox"]{
          <div class="row justify-content-md-center">
             <div class="col-lg-12 text-left">
                <!-- <h3 class="mb-30"> Features & Interviews  </h3>    -->
+               
                <h3 class="mb-30"> News & Updates  </h3>
             </div>
             <div class="col-lg-12">
 
                <div class="owl-carousel" id="features_interviews">
+                  @foreach ($blogs as $blog)
                   <div class="item">
+                     <a href="{{ route('blogs.show', $blog->id) }}">                   
                      <div class="ap-slide-content relative">
                         <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                           <div class="img-ind">
+                              <img src="{{$blog->blog_thumbnail}}" alt="blog" class="img-fluid" >
+                          </div>
                         </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
+                        <div class="thumbnail__meta">
+                           <span class="thumbnail__category">{{ $blog->blog_category}}</span>
+                           <time class="thumbnail__date-day">{{ $blog->created_at->format('d M, Y') }}</time>
+                       </div>
+                        <h5 class="thumbnail__title"><span>{{ $blog->blog_title}}</span></h5>
+                        <a href="{{ route('blogs.show', ['id' => $blog->id]) }}">Read More</a>
                      </div>
                   </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
-                  <div class="item">
-                     <div class="ap-slide-content relative">
-                        <div class="ap-img-box relative">
-                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                        </div>
-                        <div class="ap-img-content">
-                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- Item -->
+                  @endforeach
+               
                </div>
 
                <!-- <div class="custom-nav">
@@ -1561,3 +1497,4 @@ document.addEventListener('DOMContentLoaded', function() {
 //   });
 // });
 </script>
+

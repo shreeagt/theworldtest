@@ -43,214 +43,33 @@
                 </div> -->
                     <div class="col-md-12">
                         <div class="row mb-3">
+                            @foreach ($blogs as $blog)
                             <div class="col-md-3 mb-4">
+                                <a href="{{ route('blogs.show', $blog->id) }}">
                                 <div class="card">
                                     <div class="ap-slide-content relative">
                                         <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                                            <img src="{{ $blog->blog_thumbnail }}" class="img-fluid" />
                                         </div>
                                         <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                                            <div class="ap-date-wrp">
+                                                <span>{{ $blog->created_at->format('d M, Y') }}</span>
+                                            </div>
+                                            <h5 class="ap-slide-title">{{ $blog->blog_title }}</h5>
+                                            <a href="{{ route('blogs.show', ['id' => $blog->id]) }}">Read More</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        @endforeach
+                        
+                        
 
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
 
-                        <!-- <div class="row mb-4">
-                        <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="row">
-                        <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="ap-slide-content relative">
-                                        <div class="ap-img-box relative">
-                                        <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
-                                        </div>
-                                        <div class="ap-img-content">
-                                        <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
-                                        <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
+                    
                     </div>
                 </div>
             </div>

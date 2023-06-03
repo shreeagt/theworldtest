@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+//harsh
+use App\Http\Controllers\User\NewsController;
+use App\Http\Controllers\User\NewsIndController;
+use App\Http\Controllers\User\IndextestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -111,6 +114,15 @@ Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 });
 
+//harsh
+Route::get('/news', [NewsController::class, 'index'])->name('frontend.news.index');
+
+Route::get('/news_ind/{id}', [NewsController::class, 'show'])->name('blogs.show');
+
+Route::get('/news_ind', [NewsIndController::class, 'index'])->name('frontend.news.news_ind');
+
+
+Route::get('/', [IndextestController::class, 'index'])->name('frontend.indextest.index');
 
 
 Route::get('/admin/login','Admin\AdminController@login')->name('admin.login');

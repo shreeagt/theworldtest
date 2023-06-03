@@ -50,14 +50,17 @@ time.thumbnail__date-day {
                         <div class="col-md-12 col-sm-6">
                                 <div class="thumb">
                                 <h3>Latest News</h3>
-                                <div class="img-ind">
-                                        <img src="/img/ind-vs-aus.jpg" alt="blog" class="img-fluid">
+                               
+                                 <div class="img-ind">
+                                        <img src="{{$blogs["blog_thumbnail"]}}" alt="blog" class="img-fluid" >
                                     </div>
-                                    <h5 class="thumbnail__title"><span>The Fight of Ind and Aus Continue</span></h5>
+                                    <h5 class="thumbnail__title"><span>{{ $blogs["blog_title"]}}</span></h5>
                                     <div class="thumbnail__meta">
-                                        <span class="thumbnail__category">The Fight of Ind and Aus Continue</span>
-                                        <time class="thumbnail__date-day">Wed 10 May</time>
+                                        <span class="thumbnail__category">{{ $blogs["blog_category"]}}</span>
+                                        <time class="thumbnail__date-day">{{ $blogs["created_at"]->format('D d M') }}</time>
                                     </div>
+                                   
+                                    
                                     <ul class="recent_post">
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
@@ -100,15 +103,18 @@ time.thumbnail__date-day {
                 </div>
                     <div class="col-md-9">
                        
+                       
                         <div class="row">
                                 <div class="col-lg-12">
                                     <div class="img-ind">
-                                        <img src="/img/ind-vs-aus.jpg" alt="blog" class="img-fluid">
+                                        <img src="{{ $blogs["blog_thumbnail"] }}" alt="blog" class="img-fluid">
                                     </div>
-                                <h2><strong>The Fight of Ind and Aus Continue</strong></h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, fugit dolorem? Repudiandae, porro dolore nihil beatae asperiores nulla cumque accusamus.</p>
-                                </div>
-                            </div>
+                                    
+                                    <h2><strong>{{ $blogs["blog_title"] }}</strong></h2>
+                                    <p>{{$blogs["blog_description"]}}</p>
+                                    <p>{!! html_entity_decode($blogs->blog_body) !!}
+                        
+                                    </p>
 
 <hr>
                             <div class="blog_nav text-center">
@@ -124,5 +130,5 @@ time.thumbnail__date-day {
             </div>
         </section>
 
-        @include('frontend.layout.partners_logo')
+@include('frontend.layout.partners_logo')
 @include('frontend.layout.footertest')
