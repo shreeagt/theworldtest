@@ -120,33 +120,24 @@ img.hover-shadow {
 		<main class="gallery_details">
 			<div class="container-fluid">
 				<div class="row justify-content-md-center"> 
-
 					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 gallery_listing">
 						<div class="card card_border">
-							<a href="#" data-toggle="modal" data-target="#staticBackdrop"> 
-								<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor img-fluid w-100" alt=""/>
-							</a>
+							<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor img-fluid w-100" alt=""/>
 						</div>
 					</div>	<!-- -->
 					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 gallery_listing">
 						<div class="card card_border">
-							<a href="#" data-toggle="modal" data-target="#staticBackdrop"> 
-								<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor img-fluid w-100" alt=""/>
-							</a>
+							<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor img-fluid w-100" alt=""/>
 						</div>
 					</div>	<!-- -->
 					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 gallery_listing">
 						<div class="card card_border">
-							<a href="#" data-toggle="modal" data-target="#staticBackdrop"> 
-								<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor img-fluid w-100" alt=""/>
-							</a>
+							<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor img-fluid w-100" alt=""/>
 						</div>
 					</div>	<!-- -->
 					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 gallery_listing">
 						<div class="card card_border">
-							<a href="#" data-toggle="modal" data-target="#staticBackdrop"> 
-								<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor img-fluid w-100" alt=""/>
-							</a>
+							<img src="/img/gallery/9S6A9400.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor img-fluid w-100" alt=""/>
 						</div>
 					</div>	<!-- -->
 				</div>	
@@ -191,9 +182,7 @@ img.hover-shadow {
 
 <script>
 function openModal() {
-	console.log('trying Open');
   document.getElementById("myModal").style.display = "block";
-  console.log(' Opened ');
 }
 
 function closeModal() {
