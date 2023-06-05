@@ -1609,7 +1609,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                   },
                   type: "POST",
-                  url: "<?php echo url('resultstorequestion2') ?>", // Replace with the appropriate URL of your server-side endpoint
+                  url: "https://icc-wtc.matrixpanel.in/resultstorequestion2", // Replace with the appropriate URL of your server-side endpoint
                   dataType: 'json',
                   data:{"dataOptions":dataOptions},
                   success: function(result)
@@ -1626,7 +1626,7 @@ document.addEventListener('DOMContentLoaded', function() {
          function makeAjaxCall() {
             // Perform your Ajax call here
             $.ajax({
-               url: "<?php echo url('report') ?>",
+               url: "https://icc-wtc.matrixpanel.in/report",
                method: 'GET',
                dataType:"json",
                success: function(response) {
@@ -1660,7 +1660,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             type: "POST",
-            url: "<?php echo url('resultstore') ?>", // Replace with the appropriate URL of your server-side endpoint
+            url: "https://icc-wtc.matrixpanel.in/resultstore", // Replace with the appropriate URL of your server-side endpoint
             dataType: 'json',
             data:{"answer":answer,"question_id":1},
             success: function(data) {
