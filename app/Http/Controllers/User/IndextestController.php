@@ -32,7 +32,7 @@ class IndextestController extends Controller
             $quize->save();
     }
     
-    function get_browser_name($user_agent) {
+    public function get_browser_name($user_agent) {
         if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'Opera';
         elseif (strpos($user_agent, 'Edge')) return 'Edge';
         elseif (strpos($user_agent, 'Chrome')) return 'Chrome';
