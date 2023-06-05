@@ -32,6 +32,54 @@ class IndextestController extends Controller
             $quize->save();
     }
 
+    public function resultstorequestion2(Request $request)
+    {
+        $option= $request->dataOptions;
+        $array = explode("-", $option);
+        $question_id=$array[0];
+        $option=$array[1];
+        $userAgent = $_SERVER['HTTP_USER_AGENT'];
+        $browserInfo = get_browser($userAgent, true);
+        $browserName = $browserInfo['browser'];
+
+        // $browser = get_browser(null, true);
+        // print_r($browser);dd();
+
+        // $quize = new QuizeResult();
+        // $quize->question_id = $question_id;
+        // $quize->ip_address =  $request->ip();
+        // $quize->answer =$option;
+        // $quize->brower_name =$browserName;           
+        // $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
+        // $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           
+        // $quize->save();
+
+        $option1=QuizeResult::where(["answer" => "Australia"])->count();
+        $option2=QuizeResult::where(["answer" => "India"])->count();
+        $option3=QuizeResult::where(["answer" => "Draw"])->count();
+        $allcount = QuizeResult::where(["question_id" =>2])->count();
+       
+        $australia_per=($option1*100)/$allcount;
+        $india_per=($option2*100)/$allcount;
+        $draw_per=($option3*100)/$allcount;
+       echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per]);
+    }
+
+    public function report(Request $request)
+    {
+        
+
+        $option1=QuizeResult::where(["question_id" =>2,"answer" => "Australia"])->count();
+        $option2=QuizeResult::where(["question_id" =>2,"answer" => "India"])->count();
+        $option3=QuizeResult::where(["question_id" =>2,"answer" => "Draw"])->count();
+        $allcount = QuizeResult::where(["question_id" =>2])->count();
+       
+        $australia_per=($option1*100)/$allcount;
+        $india_per=($option2*100)/$allcount;
+        $draw_per=($option3*100)/$allcount;
+       echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per]);
+    }
+
 
     public function show($id)
     {

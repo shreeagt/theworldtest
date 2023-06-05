@@ -126,6 +126,12 @@ Route::get('/', [IndextestController::class, 'index'])->name('frontend.indextest
 
 Route::post('/resultstore',[IndextestController::class, 'resultstore'])->name('admin-quize.resultstore');
 
+Route::post('/resultstorequestion2',[IndextestController::class, 'resultstorequestion2'])->name('admin-quize.resultstorequestion2');
+
+
+Route::get('/report',[IndextestController::class, 'report'])->name('admin-quize.report');
+
+
 Route::get('/admin/login','Admin\AdminController@login')->name('admin.login');
 Route::post('/admin/signup','Admin\AdminController@signUp')->name('admin.signup');
 Route::group(['prefix' => '/admin','middleware'=>'admin-auth'], function () {

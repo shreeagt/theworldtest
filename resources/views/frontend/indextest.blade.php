@@ -832,39 +832,50 @@ input[type="checkbox"]{
                <h3 class="text-center mb-30"> POLL OF THE DAY</h3>
                <div id="q-cont">
                <div class="wrapper">
-                            <header>Who can win this match? <br></header>
+                           <header> @if(isset($question2) && !empty($question2->question))
+                              {{$question2->question}}
+                             @endif <br>
+                           </header>
                             <div class="poll-area">
-                            <input type="checkbox" name="poll" id="opt-1">
+                            {{-- <input type="checkbox" name="poll" id="opt-1">
                             <input type="checkbox" name="poll" id="opt-2">
                             <input type="checkbox" name="poll" id="opt-3">
-                            <input type="checkbox" name="poll" id="opt-4">
-                            <label for="opt-1" class="opt-1">
+                            <input type="checkbox" name="poll" id="opt-4"> --}}
+                            <label for="opt-1" class="opt-1 question2_label">
                                 <div class="row">
                                 <div class="column">
                                     <span class="circle"></span>
-                                    <span class="text">Australia</span>
+                                    <span class="text question2" data-options="{{$question2->quize_id."-".$question2->option1}}">
+                                       @if(isset($question2) && !empty($question2->option1))
+                                       {{$question2->option1}}
+                                      @endif
+                                    </span>
                                 </div>
-                                <span class="percent">25%</span>
+                                <span class="percent option1"></span>
                                 </div>
                                 <div class="progress" id="pstyle1" style='--w:25;'></div>
                             </label>
-                            <label for="opt-2" class="opt-2">
+                            <label for="opt-2" class="opt-2 question2_label">
                                 <div class="row">
                                 <div class="column">
                                     <span class="circle"></span>
-                                    <span class="text">India</span>
+                                    <span class="text question2" data-options="{{$question2->quize_id."-".$question2->option2}}"> @if(isset($question2) && !empty($question2->option2))
+                                       {{$question2->option2}}
+                                      @endif</span>
                                 </div>
-                                <span class="percent">45%</span>
+                                <span class="percent option1"></span>
                                 </div>
                                 <div class="progress" id="pstyle2" style='--w:45;'></div>
                             </label>
-                            <label for="opt-3" class="opt-3">
+                            <label for="opt-3" class="opt-3 question2_label">
                                 <div class="row">
                                 <div class="column">
                                     <span class="circle"></span>
-                                    <span class="text">Draw</span>
+                                    <span class="text question2" data-options="{{$question2->quize_id."-".$question2->option3}}"> @if(isset($question2) && !empty($question2->option3))
+                                       {{$question2->option3}}
+                                      @endif</span>
                                 </div>
-                                <span class="percent">30%</span>
+                                <span class="percent option1"></span>
                                 </div>
                                 <div class="progress" id="pstyle3" style='--w:30;'></div>
                             </label>
@@ -1511,13 +1522,57 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 </script>
 <script>
+    $(document).ready(function() {
+         $('.question2_label').click(function(){
+               var dataOptions = $(this).find('.question2').data('options');       
+            
+               $.ajax
+               ({ 
+                  headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                  },
+                  type: "POST",
+                  url: "<?php echo route('admin-quize.resultstorequestion2') ?>", // Replace with the appropriate URL of your server-side endpoint
+                  dataType: 'json',
+                  data:{"dataOptions":dataOptions},
+                  success: function(result)
+                  {
+                     $(".option1").html(result.australia_per+"%");
+                     $(".option2").html(result.india_per+"%");
+                     $(".option3").html(result.draw_per+"%");
+                  }
+               });
+         });
+
+         function makeAjaxCall() {
+            // Perform your Ajax call here
+            $.ajax({
+               url: "<?php echo route('admin-quize.report') ?>",
+               method: 'GET',
+               success: function(response) {
+                  // Handle the Ajax response
+                  $(".option1").html(result.australia_per+"%");
+                  $(".option2").html(result.india_per+"%");
+                  $(".option3").html(result.draw_per+"%");
+               },
+               error: function(error) {
+                  // Handle any errors that occur during the Ajax call
+                  console.error(error);
+               }
+            });
+         }
+
+         // Call the Ajax function every 5 seconds (5000 milliseconds)
+         setInterval(makeAjaxCall, 5000);
+    });
+  
+
    function submitquestion(){
       
       var data = localStorage.getItem('checking');
       if(data!="1"){        
-         localStorage.setItem('checking', 1);        
-      }else{
-         var answer = $('.question1').text();
+         localStorage.setItem('checking', 1);
+           var answer = $('.question1').text();
         
          $.ajax({
             headers: {
@@ -1533,8 +1588,9 @@ document.addEventListener('DOMContentLoaded', function() {
             error: function() {
                
             }
-         });
+         });        
       }
+      
      
    }
 </script>
