@@ -154,22 +154,22 @@ img.hover-shadow {
 
 		<div class="mySlides">
 			<div class="numbertext">1 / 4</div>
-			<img src="/img/gallery/9S6A9400.jpg" >
+			<img src="/img/gallery/9S6A9400.jpg" class="w-100">
 		</div>
 
 		<div class="mySlides">
 			<div class="numbertext">2 / 4</div>
-			<img src="/img/gallery/9S6A9400.jpg" >
+			<img src="/img/gallery/9S6A9400.jpg" class="w-100">
 		</div>
 
 		<div class="mySlides">
 			<div class="numbertext">3 / 4</div>
-			<img src="/img/gallery/9S6A9400.jpg" >
+			<img src="/img/gallery/9S6A9400.jpg" class="w-100">
 		</div>
 		
 		<div class="mySlides">
 			<div class="numbertext">4 / 4</div>
-			<img src="/img/gallery/9S6A9400.jpg" >
+			<img src="/img/gallery/9S6A9400.jpg" class="w-100">
 		</div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
