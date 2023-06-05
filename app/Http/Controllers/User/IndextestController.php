@@ -31,6 +31,17 @@ class IndextestController extends Controller
             $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           
             $quize->save();
     }
+    
+    function get_browser_name($user_agent) {
+        if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'Opera';
+        elseif (strpos($user_agent, 'Edge')) return 'Edge';
+        elseif (strpos($user_agent, 'Chrome')) return 'Chrome';
+        elseif (strpos($user_agent, 'Safari')) return 'Safari';
+        elseif (strpos($user_agent, 'Firefox')) return 'Firefox';
+        elseif (strpos($user_agent, 'MSIE') || strpos($user_agent, 'Trident/7')) return 'Internet Explorer';
+        
+        return 'Other';
+    }
 
     public function resultstorequestion2(Request $request)
     {
@@ -39,7 +50,7 @@ class IndextestController extends Controller
         $question_id=$array[0];
         $option=$array[1];
         $userAgent = $_SERVER['HTTP_USER_AGENT'];
-        $browserInfo = get_browser($userAgent, true);
+        $browserInfo = get_browser_name($userAgent, true);
         $browserName = $browserInfo['browser'];
 
         // $browser = get_browser(null, true);
