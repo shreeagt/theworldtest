@@ -1524,6 +1524,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
     $(document).ready(function() {
          $('.question2_label').click(function(){
+            var question2_local = localStorage.getItem('question2');
+            if(question2_local!="1"){  
+               localStorage.setItem('question2', 1);
                var dataOptions = $(this).find('.question2').data('options');       
             
                $.ajax
@@ -1542,6 +1545,8 @@ document.addEventListener('DOMContentLoaded', function() {
                      $(".option3").html(result.draw_per+"%");
                   }
                });
+            }
+               
          });
 
          function makeAjaxCall() {
