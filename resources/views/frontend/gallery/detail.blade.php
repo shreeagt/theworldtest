@@ -4,10 +4,11 @@
 
 /* The Modal (background) */
 .modal {
-  display: none;
+  /* display: none;
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
+  z-index: 1; */
+  padding-top: 50px;
+  padding-bottom: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -22,7 +23,7 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
@@ -60,7 +61,7 @@
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: white;!important
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
@@ -90,10 +91,6 @@
   top: 0;
 }
 
-img {
-  margin-bottom: -4px;
-}
-
 
 img.hover-shadow {
   transition: 0.3s;
@@ -102,6 +99,7 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 </style>
 	<section id="">
 		<div class="inner_banner">
