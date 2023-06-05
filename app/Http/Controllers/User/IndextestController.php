@@ -50,8 +50,7 @@ class IndextestController extends Controller
         $question_id=$array[0];
         $option=$array[1];
         $userAgent = $_SERVER['HTTP_USER_AGENT'];
-        $browserInfo = $this->get_browser_name($userAgent, true);
-        $browserName = $browserInfo['browser'];
+        $browserName = $this->get_browser_name($userAgent, true);
 
         // $browser = get_browser(null, true);
         // print_r($browser);dd();
