@@ -1,14 +1,16 @@
 *, *:after, *:before { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 html, body { height:100%;  margin:0; padding:0;  font-weight:normal;  }
 body { overflow-x:hidden !important;  }
-h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif;  padding:0; margin:0; font-weight:500; margin-bottom:10px; color:#333; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Nunito', sans-serif;  padding:0; margin:0; font-weight:500; margin-bottom:10px; color:#333; }
 h5  { font-size:18px; }
-p, li  { line-height:24px; font-size:15px; color:#666;  font-family:'Poppins'; font-weight:400; }
+p, li  { line-height:24px; font-size:15px; color:#666;  font-family:'PT Sans'; font-weight:400; }
 li  { margin-bottom:10px; }
 a { color:#000; -webkit-transition:all .2s ease-in-out; -moz-transition:all .2s ease-in-out; transition:all .2s ease-in-out; text-decoration:none; }
 a:hover,a:focus { text-decoration:none; outline:0;  } 
 .clear { clear:both; float:none !important; width:100% !important; }
 .ie6,.ie7,.ie8,.ie9, img{ border:none; }
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 .poppins { font-family:'Poppins'; }
 .thin { font-weight:200; }
@@ -65,7 +67,7 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
 .navbar-nav>li>a { color:#fff; display:block; font-size:16px; padding:8px 4px !important; text-transform:uppercase;  border-bottom:3px solid transparent; transition:all 0.4s ease 0s; position:relative; }
 .navbar .navbar-nav>li>a.active, .navbar .navbar-nav>li>a:focus, .navbar .navbar-nav>li>a:hover { color:#fff; border-bottom:3px solid#f27024; transition : all 0.4s 0s ease; }
 .navbar .navbar-nav>li>a.active { color:#f27024; border-bottom:3px solid#f27024; }
-.logo { width:100px; transition : all 0.4s 0s ease; }
+.logo { width:70px; transition : all 0.4s 0s ease; }
 
 
 
@@ -91,11 +93,14 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
 
 @media (max-width:1280px) {
 /* .logo { width:240px; } */
-.logo { width:90px; }
+.logo { width:60px; }
 .navbar .col-lg-9 { padding-left:40px; }
 }
 @media (max-width:992px) {
-.navbar { padding:15px 0; }
+    .match_scores h1 {
+        font-size: 14px;
+    }
+    .navbar { padding:15px 0; }
 .navbar-brand { display:block; padding: 0px; }
 /* .logo { width:160px; } */
 .logo { width:50px; }
@@ -106,7 +111,7 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
 }
 @media (max-width:380px) {
 /* .logo { width:140px; } */
-.logo { width:40px; }
+.logo { width:30px; }
 }
 
 .navbar-nav .dropdown-menu { padding:0px; border-radius:0px; }
@@ -124,8 +129,8 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
 
 /* Banner */
 
-.banner { background:#d4d4d6; width:100%; padding:40px 0 20px 0px; margin-top:-20px; }
-.banner_card {  background:none; border:none; }
+.banner { background:#fff; width:100%; padding:40px ; margin-top:-20px; }
+.banner_card {  background: rgba(236, 246, 252,0.6);; border:1px solid #aedaef; }
 .banner_card #demo { border-radius:10px; overflow:hidden; }
 
 @media (min-width: 992px) {
@@ -142,7 +147,7 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 2
 
 .banner .carousel-btns  { width:100px; height:50px;  position:absolute; right:10px; bottom:10px; z-index:99; }
 .banner .carousel-control-next, 
-.banner .carousel-control-prev { background:#f59622; color:#fff; width:40px; height:40px; border-radius:50%; font-size:20px; opacity:1; }
+.banner .carousel-control-prev { background:#f59622; color:#fff; width:50px; height:50px; border-radius:50%; font-size:30px; opacity:1; }
 
 .stats_board { background:#a0a0a0; padding:0px; border:none; }
 .stats_board .nav { border-bottom:1px solid#ddd; }
@@ -186,7 +191,7 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 2
 
 
 
-.match_scores { background:#333; border-top:2px solid#F6971F; padding:20px 0; }
+.match_scores { background:#000000; border-top:2px solid#F6971F; padding:20px 0; }
 .match_scores .item { position:relative; padding:0 15px; }
 .match_scores .item:after { content: "";
     width:1px; position:absolute; top:50%; right:-6px; height:80%;

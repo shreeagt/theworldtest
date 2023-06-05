@@ -1,4 +1,5 @@
 @include('frontend.layout.headertest')
+<link rel="stylesheet" href="{{asset('css/stylerst.css')}}?v=1.3" type="text/css">
 <style>
     
 .quiz,
@@ -62,7 +63,7 @@ li.quiz_list {
 				</div> <!-- Row -->
 			</div> <!-- Container -->
 		</div>
-        <main class="features_interviews">
+        {{-- <main class="features_interviews">
 			<div class="container">
 				<div class="row justify-content-md-center">
                     <div class="col-lg-3"></div>
@@ -105,7 +106,29 @@ li.quiz_list {
 				</div> 
                 <div class="col-lg-3"></div>
 			</div> 
-		</main>
+		</main> --}}
+
+    <main class="latest_news">
+      <div class="container-fluid">
+         <div class="row justify-content-md-center">
+            <div class="col-lg-6">
+               <h3 class="text-center mb-30"> TRIVIA OF THE DAY</h3>
+               <div id="q-cont">
+                  <div class="slide" id="slide1">
+                     <div class="question">
+                        Who is the highest run-scorer in the ICC World Test Championship 2019-2021??
+                     </div>
+                     <div class="options">
+                        <span class="op" for="q1op1">Virat Kohli</span><span class="op op2" for="q1op2">Kane Willaimson</span><br /><span class="op" for="q1op3">Marnus Labuschagne</span><span class="op op2" for="q1op4">Ajinkya Rahane</span>
+                     </div>
+                  </div>
+                  <div class="slide" id="slide4">
+                     <div class="re">
+                        Submit
+                     </div>
+                  </div>
+               </div>
+            </div>
 </section>
 
 

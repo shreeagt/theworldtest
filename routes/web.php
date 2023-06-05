@@ -1,10 +1,11 @@
 <?php
-
-use Illuminate\Support\Facades\Route;
-//harsh
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\User\NewsController;
 use App\Http\Controllers\User\NewsIndController;
 use App\Http\Controllers\User\IndextestController;
+use Illuminate\Support\Facades\Route;
+//harsh
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,11 @@ Route::get('/', function () {
     return view('frontend.indextest');
 });
 
+
+Route::get('/', [IndextestController::class, 'index'])->name('frontend.indextest.index');
+
+
+
 // Route::get('/gallery', function () {
 //     return view('frontend.gallery.index');
 // });
@@ -45,13 +51,13 @@ Route::get('/faq', function () {
     return view('frontend.faq.faq');
 });
 
-Route::get('/news', function () {
-    return view('frontend.news.news');
-});
+Route::get('/news', [NewsController::class, 'index'])->name('frontend.news.index');
 
-Route::get('/news_ind', function () {
-    return view('frontend.news.news_ind');
-});
+Route::get('/news_ind/{id}', [NewsController::class, 'show'])->name('blogs.show');
+
+Route::get('/news_ind', [NewsIndController::class, 'index'])->name('frontend.news.news_ind');
+
+
 
 Route::get('/videogallery', function () {
     return view('frontend.video.video');
@@ -94,7 +100,6 @@ Route::get('/teams', function () {
 Route::get('/team/detail', function () {
     return view('frontend.team.details');
 });
-
 
 
 

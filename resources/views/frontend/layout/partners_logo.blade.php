@@ -1,4 +1,4 @@
-	<main class="partners_logo">
+	{{-- <main class="partners_logo">
 		<div class="container-fluid">
 			<div class="row justify-content-md-center text-center">
 				<div class="col-lg-1 col-md-1">
@@ -27,4 +27,4 @@
 				</div>
 			</div> 
 		</div> 
-	</main>
+	</main> --}}

@@ -109,12 +109,12 @@ label .row .circle{
 }
 label .row .circle::after {
     content: "";
-    height: 11px;
-    width: 11px;
+    height: 50%;
+    width: 50%;
     border-radius: inherit;
     position: absolute;
-    left: 2.5px;
-    top: 2.5px;
+    left: 25%;
+    top: 25%;
     display: none;
 }
 .poll-area label:hover .row .circle::after{
@@ -175,7 +175,7 @@ input[type="checkbox"]{
 									<li data-target="#demo" data-slide-to="2"></li>
 								</ul>
 								-->
-								<div class="carousel-inner">
+								{{-- <div class="carousel-inner">
 									<div class="carousel-item active">
 										<img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
 										<div class="carousel-caption">
@@ -208,8 +208,8 @@ input[type="checkbox"]{
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-3 col-md-3">
+					</div> --}}
+					{{-- <div class="col-lg-3 col-md-3">
                     <div class="wrapper">
                             <header>Who can win this match? <br></header>
                             <div class="poll-area">
@@ -246,7 +246,7 @@ input[type="checkbox"]{
                                 <span class="percent">30%</span>
                                 </div>
                                 <div class="progress" id="pstyle3" style='--w:30;'></div>
-                            </label>
+                            </label> --}}
                             <!-- <label for="opt-4" class="opt-4">
                                 <div class="row">
                                 <div class="column">
@@ -257,12 +257,62 @@ input[type="checkbox"]{
                                 </div>
                                 <div class="progress" id="pstyle4" style='--w:35;'></div>
                             </label> -->
-                            </div>
+                            {{-- </div>
                         </div>
 					</div>	
 				</div>	
 			</div>
-		</main>
+		</main> --}}
+
+    <div class="col-lg-6">
+      {{-- <h3 class="text-center mb-30"> POLL OF THE DAY</h3> --}}
+      <div id="q-cont">
+      <div class="wrapper">
+                   <header>Who can win this match? <br></header>
+                   <div class="poll-area">
+                   <input type="checkbox" name="poll" id="opt-1">
+                   <input type="checkbox" name="poll" id="opt-2">
+                   <input type="checkbox" name="poll" id="opt-3">
+                   <input type="checkbox" name="poll" id="opt-4">
+                   <label for="opt-1" class="opt-1">
+                       <div class="row">
+                       <div class="column">
+                           <span class="circle"></span>
+                           <span class="text">Australia</span>
+                       </div>
+                       <span class="percent">25%</span>
+                       </div>
+                       <div class="progress" id="pstyle1" style='--w:25;'></div>
+                   </label>
+                   <label for="opt-2" class="opt-2">
+                       <div class="row">
+                       <div class="column">
+                           <span class="circle"></span>
+                           <span class="text">India</span>
+                       </div>
+                       <span class="percent">45%</span>
+                       </div>
+                       <div class="progress" id="pstyle2" style='--w:45;'></div>
+                   </label>
+                   <label for="opt-3" class="opt-3">
+                       <div class="row">
+                       <div class="column">
+                           <span class="circle"></span>
+                           <span class="text">Draw</span>
+                       </div>
+                       <span class="percent">30%</span>
+                       </div>
+                       <div class="progress" id="pstyle3" style='--w:30;'></div>
+                   </label>
+
+                   </div>
+               </div>
+
+   </div>
+   </div>
+</div>
+</div>
+</main>
 
 
 <main class="features_interviews">

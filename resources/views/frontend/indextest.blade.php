@@ -7,24 +7,25 @@
 }
 }
 
-.owl-prev {
+/* .owl-prev {
     position: absolute;
     top: 50%;
     left: 1%;
-}
+} */
 
-.owl-next {
+/* .owl-next {
     position: absolute;
     top: 50%;
     right: 1%;
-}
+} */
 
 .owl-buttons .owl-prev,
 .owl-buttons .owl-next {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 10px;
   /* background-color: #000; */
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,12 +156,12 @@ label .row .circle{
 }
 label .row .circle::after {
     content: "";
-    height: 11px;
-    width: 11px;
+    height: 50%;
+    width: 50%;
     border-radius: inherit;
     position: absolute;
-    left: 2.5px;
-    top: 2.5px;
+    left: 25%;
+    top: 25%;
     display: none;
 }
 .poll-area label:hover .row .circle::after{
@@ -224,21 +225,21 @@ input[type="checkbox"]{
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
                            <div class="carousel-caption">
                               <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-                              <p class="white mb-0"> 21 Mar, 2021 </p>
+                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
                            </div>
                         </div>
                         <div class="carousel-item">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
                            <div class="carousel-caption">
                               <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-                              <p class="white mb-0"> 21 Mar, 2021 </p>
+                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
                            </div>
                         </div>
                         <div class="carousel-item">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
                            <div class="carousel-caption">
                               <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-                              <p class="white mb-0"> 21 Mar, 2021 </p>
+                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
                            </div>
                         </div>
                      </div>
@@ -564,16 +565,16 @@ input[type="checkbox"]{
                   </div> 
                   </div> -->
             </div>
-            <div class="col-lg-6">
+             <div class="col-lg-6">
                <div id="countdown">
                   <ul class="text-center">
                      <li><span id="days"></span>days</li>
                      <li><span id="hours"></span>Hours</li>
                      <li><span id="minutes"></span>Minutes</li>
-                     <li><span id="seconds"></span>Seconds</li>
+                     {{-- <li><span id="seconds"></span>Seconds</li> --}}
                   </ul>
                </div>
-            </div>
+            </div> 
             <!--
                <div class="col-lg-12 text-center"> <br />
                	<a href="#" class="btn btn-primary"> View All </a>
@@ -612,7 +613,79 @@ input[type="checkbox"]{
                      </div>
                   </div>
                   @endforeach
-               
+                  <!-- Item -->
+                  <div class="item">
+                     <div class="ap-slide-content relative">
+                        <div class="ap-img-box relative">
+                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                        </div>
+                        <div class="ap-img-content">
+                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
+                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Item -->
+                  <div class="item">
+                     <div class="ap-slide-content relative">
+                        <div class="ap-img-box relative">
+                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                        </div>
+                        <div class="ap-img-content">
+                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
+                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Item -->
+                  <div class="item">
+                     <div class="ap-slide-content relative">
+                        <div class="ap-img-box relative">
+                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                        </div>
+                        <div class="ap-img-content">
+                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
+                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Item -->
+                  <div class="item">
+                     <div class="ap-slide-content relative">
+                        <div class="ap-img-box relative">
+                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                        </div>
+                        <div class="ap-img-content">
+                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
+                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Item -->
+                  <div class="item">
+                     <div class="ap-slide-content relative">
+                        <div class="ap-img-box relative">
+                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                        </div>
+                        <div class="ap-img-content">
+                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
+                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Item -->
+                  <div class="item">
+                     <div class="ap-slide-content relative">
+                        <div class="ap-img-box relative">
+                           <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/bcci/articles/1642825007_IPL-2022.jpg" class="img-fluid" />
+                        </div>
+                        <div class="ap-img-content">
+                           <div class="ap-date-wrp"> <span> 22 Jan, 2022 </span> <span class="ap-green-text"></span> </div>
+                           <h5 class="ap-slide-title"> 1,214 players register for IPL 2022 Player Auction </h5>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Item -->
                </div>
 
                <!-- <div class="custom-nav">
@@ -625,6 +698,7 @@ input[type="checkbox"]{
       </div>
    </main>
 
+   
    <!-- <main class="latest_video">
       <div class="container-fluid">
          <div class="row justify-content-md-center">
@@ -728,7 +802,7 @@ input[type="checkbox"]{
                   <div class="recommended-videos">
                      <div class="video_header">
                         <h2>The NZ dressing room at the winning moment | WTC21...</h2>
-                        <p>23 JUN 2021</p>
+                        {{-- <p>23 JUN 2021</p> --}}
                      </div>
                      <div class="video_cover">
                         <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
@@ -863,7 +937,7 @@ input[type="checkbox"]{
                                        {{$question2->option2}}
                                       @endif</span>
                                 </div>
-                                <span class="percent option1"></span>
+                                <span class="percent option2"></span>
                                 </div>
                                 <div class="progress" id="pstyle2" style='--w:45;'></div>
                             </label>
@@ -875,9 +949,9 @@ input[type="checkbox"]{
                                        {{$question2->option3}}
                                       @endif</span>
                                 </div>
-                                <span class="percent option1"></span>
+                                <span class="percent option3"></span>
                                 </div>
-                                <div class="progress" id="pstyle3" style='--w:30;'></div>
+                                <div class="progress" id="pstyle3" style='--w:30;'>hh</div>
                             </label>
        
                             </div>
@@ -1160,7 +1234,7 @@ input[type="checkbox"]{
                               <span class="time_upcomming">15:00</span><span class="text_upcomming">(YOUR TIME)</span>
                            </div>
                            <div class="text-left mt-4">
-                              <p class="text-left">The Oval,London</p>
+                              <p class="text-left">The Oval, London</p>
                               <span class="tl_upcomming">10:30</span><span class="text_upcomming">WED 07 JUNE(LOCAL)</span>
                            </div>
                         </div>
@@ -1175,7 +1249,7 @@ input[type="checkbox"]{
                            </div>
                         </div>
                      </div>
-                     <a href="#" class="btn btn-primary bg-dark">READ MORE</a>
+                     {{-- <a href="#" class="btn btn-primary bg-dark">READ MORE</a> --}}
                   </div>
                </div>
             </div>
@@ -1540,9 +1614,9 @@ document.addEventListener('DOMContentLoaded', function() {
                   data:{"dataOptions":dataOptions},
                   success: function(result)
                   {
-                     $(".option1").html(result.australia_per+"%");
-                     $(".option2").html(result.india_per+"%");
-                     $(".option3").html(result.draw_per+"%");
+                     $(".option1").text(result.australia_per+"%");
+                     $(".option2").text(result.india_per+"%");
+                     $(".option3").text(result.draw_per+"%");
                   }
                });
             }
@@ -1556,9 +1630,9 @@ document.addEventListener('DOMContentLoaded', function() {
                method: 'GET',
                success: function(response) {
                   // Handle the Ajax response
-                  $(".option1").html(result.australia_per+"%");
-                  $(".option2").html(result.india_per+"%");
-                  $(".option3").html(result.draw_per+"%");
+                  $(".option1").text(result.australia_per+"%");
+                  $(".option2").text(result.india_per+"%");
+                  $(".option3").text(result.draw_per+"%");
                },
                error: function(error) {
                   // Handle any errors that occur during the Ajax call

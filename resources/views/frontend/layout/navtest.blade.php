@@ -22,9 +22,9 @@
 	<li><a href="/faq"> FAQ </a></li>
 	<li><a href="/polls"> Poll of the day </a></li>
 	<li><a href="/trivia"> Trivia </a></li>
-	<li><a href="/stats"> Stats </a></li>
+	{{-- <li><a href="/stats"> Stats </a></li> --}}
 	<!-- <li><a href="#"> Live Score  </a></li> -->
-	<li><a href="/live-score"> Live Score  </a></li>
+	{{-- <li><a href="/live-score"> Live Score  </a></li> --}}
 	<!-- <li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> News </a>
 		<ul class="dropdown-menu">
