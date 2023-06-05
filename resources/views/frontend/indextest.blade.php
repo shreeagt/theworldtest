@@ -951,7 +951,7 @@ input[type="checkbox"]{
                                 </div>
                                 <span class="percent option3"></span>
                                 </div>
-                                <div class="progress" id="pstyle3" style='--w:30;'>hh</div>
+                                <div class="progress" id="pstyle3" style='--w:30;'></div>
                             </label>
        
                             </div>
