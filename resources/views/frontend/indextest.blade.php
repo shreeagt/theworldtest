@@ -1644,7 +1644,7 @@ document.addEventListener('DOMContentLoaded', function() {
          }
 
          // Call the Ajax function every 5 seconds (5000 milliseconds)
-         setInterval(makeAjaxCall, 5000);
+         setInterval(makeAjaxCall, 50000);
     });
   
 
