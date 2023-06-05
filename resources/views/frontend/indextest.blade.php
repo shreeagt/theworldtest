@@ -1628,11 +1628,13 @@ document.addEventListener('DOMContentLoaded', function() {
             $.ajax({
                url: "<?php echo route('admin-quize.report') ?>",
                method: 'GET',
+               dataType:"json",
                success: function(response) {
+                 
                   // Handle the Ajax response
-                  $(".option1").text(result.australia_per+"%");
-                  $(".option2").text(result.india_per+"%");
-                  $(".option3").text(result.draw_per+"%");
+                  $(".option1").text(response.australia_per+"%");
+                  $(".option2").text(response.india_per+"%");
+                  $(".option3").text(response.draw_per+"%");
                },
                error: function(error) {
                   // Handle any errors that occur during the Ajax call
