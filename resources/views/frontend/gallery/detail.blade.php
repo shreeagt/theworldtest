@@ -61,7 +61,7 @@
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;!important
+  color: white;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
@@ -172,8 +172,8 @@ img.hover-shadow {
 			<img src="/img/gallery/9S6A9400.jpg" class="w-100">
 		</div>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusSlides(-1)" style="background-color:white">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" style="background-color:white">&#10095;</a>
 
   </div>
 </div>
@@ -208,7 +208,5 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-//   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
