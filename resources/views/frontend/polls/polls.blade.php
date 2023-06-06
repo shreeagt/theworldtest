@@ -178,143 +178,58 @@ input[type="checkbox"]{
             <h3 class="text-center mb-30"> POLL OF THE DAY</h3>
 						<div class="card banner_card">
 							<div id="demo" class="carousel slide" data-ride="carousel">
-								<!--
-								<ul class="carousel-indicators">
-									<li data-target="#demo" data-slide-to="0" class="active"></li>
-									<li data-target="#demo" data-slide-to="1"></li>
-									<li data-target="#demo" data-slide-to="2"></li>
-								</ul>
-								-->
-								{{-- <div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
-										<div class="carousel-caption">
-											<h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-											<p class="white mb-0"> 21 Mar, 2021 </p>											
-										</div> 
-									</div>
-									<div class="carousel-item">
-										<img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
-										<div class="carousel-caption">
-											<h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-											<p class="white mb-0"> 21 Mar, 2021 </p>											
-										</div>  
-									</div>  
-									<div class="carousel-item">
-										<img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
-										<div class="carousel-caption">
-											<h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-											<p class="white mb-0"> 21 Mar, 2021 </p>											
-										</div> 
-									</div>  
-								</div>
-								<div class="carousel-btns">
-									<a class="carousel-control-prev" href="#demo" data-slide="prev">
-										<i class="fa fa-angle-left" aria-hidden="true"></i>
-									</a>
-									<a class="carousel-control-next" href="#demo" data-slide="next">
-										<i class="fa fa-angle-right" aria-hidden="true"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div> --}}
-					{{-- <div class="col-lg-3 col-md-3">
-                    <div class="wrapper">
-                            <header>Who can win this match? <br></header>
-                            <div class="poll-area">
-                            <input type="checkbox" name="poll" id="opt-1">
-                            <input type="checkbox" name="poll" id="opt-2">
-                            <input type="checkbox" name="poll" id="opt-3">
-                            <input type="checkbox" name="poll" id="opt-4">
-                            <label for="opt-1" class="opt-1">
-                                <div class="row">
-                                <div class="column">
-                                    <span class="circle"></span>
-                                    <span class="text">Australia</span>
-                                </div>
-                                <span class="percent">25%</span>
-                                </div>
-                                <div class="progress" id="pstyle1" style='--w:25;'></div>
-                            </label>
-                            <label for="opt-2" class="opt-2">
-                                <div class="row">
-                                <div class="column">
-                                    <span class="circle"></span>
-                                    <span class="text">India</span>
-                                </div>
-                                <span class="percent">45%</span>
-                                </div>
-                                <div class="progress" id="pstyle2" style='--w:45;'></div>
-                            </label>
-                            <label for="opt-3" class="opt-3">
-                                <div class="row">
-                                <div class="column">
-                                    <span class="circle"></span>
-                                    <span class="text">Draw</span>
-                                </div>
-                                <span class="percent">30%</span>
-                                </div>
-                                <div class="progress" id="pstyle3" style='--w:30;'></div>
-                            </label> --}}
-                            <!-- <label for="opt-4" class="opt-4">
-                                <div class="row">
-                                <div class="column">
-                                    <span class="circle"></span>
-                                    <span class="text">Draw</span>
-                                </div>
-                                <span class="percent">35%</span>
-                                </div>
-                                <div class="progress" id="pstyle4" style='--w:35;'></div>
-                            </label> -->
-                            {{-- </div>
-                        </div>
-					</div>	
-				</div>	
-			</div>
-		</main> --}}
+								
 
     <div class="col-lg-6">
      
       <div id="q-cont">
       <div class="wrapper">
-                   <header>Who can win this match? <br></header>
+                   <header>@if(isset($question2) && !empty($question2->question))
+                    {{$question2->question}}
+                   @endif <br></header>
                    <div class="poll-area">
-                   <input type="checkbox" name="poll" id="opt-1">
+                   {{-- <input type="checkbox" name="poll" id="opt-1">
                    <input type="checkbox" name="poll" id="opt-2">
                    <input type="checkbox" name="poll" id="opt-3">
-                   <input type="checkbox" name="poll" id="opt-4">
-                   <label for="opt-1" class="opt-1">
+                   <input type="checkbox" name="poll" id="opt-4"> --}}
+                   <label for="opt-1" class="opt-1 question2_label">
                        <div class="row">
                        <div class="column">
                            <span class="circle"></span>
-                           <span class="text">Australia</span>
+                           <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option1}}"> @if(isset($question2) && !empty($question2->option1))
+                            {{$question2->option1}}
+                           @endif</span>
                        </div>
-                       <span class="percent">25%</span>
+                       <span class="percent option1"></span>
                        </div>
                        <div class="progress" id="pstyle1" style='--w:25;'></div>
                    </label>
-                   <label for="opt-2" class="opt-2">
+                   <label for="opt-2" class="opt-2 question2_label">
                        <div class="row">
                        <div class="column">
                            <span class="circle"></span>
-                           <span class="text">India</span>
+                           <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option2}}">@if(isset($question2) && !empty($question2->option2))
+                            {{$question2->option2}}
+                           @endif</span>
                        </div>
-                       <span class="percent">45%</span>
+                       <span class="percent option2">45%</span>
                        </div>
                        <div class="progress" id="pstyle2" style='--w:45;'></div>
                    </label>
-                   <label for="opt-3" class="opt-3">
+                   <label for="opt-3" class="opt-3 question2_label">
                        <div class="row">
                        <div class="column">
                            <span class="circle"></span>
-                           <span class="text">Draw</span>
+                           <span class="text question2"  data-options="{{$question2->poll_id."-".$question2->option3}}" >
+                            @if(isset($question2) && !empty($question2->option3))
+                            {{$question2->option3}}
+                           @endif</span>
                        </div>
-                       <span class="percent">30%</span>
+                       <span class="percent option3"></span>
                        </div>
                        <div class="progress" id="pstyle3" style='--w:30;'></div>
                    </label>
-
+                   <span class="question2answer"></span>
                    </div>
                </div>
 
@@ -377,4 +292,82 @@ for (let i = 0; i < options.length; i++) {
     }
   });
 }
+</script>
+<script>
+  // localStorage.clear();
+  var APP_URL = {!! json_encode(url('/')) !!};
+  
+   $(document).ready(function() {
+        $('.question2_label').click(function(){
+           var question2_local = localStorage.getItem('question2');
+              var question2_answer = localStorage.getItem('question2');
+           if(question2_local!="1"){  
+              localStorage.setItem('question2', 1);
+              var dataOptions = $(this).find('.question2').data('options');       
+           
+              $.ajax
+              ({ 
+                 headers: {
+                       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 },
+                 type: "POST",
+                 url: APP_URL+"/resultstorequestion2", 
+                 // url: "https://icc-wtc.matrixpanel.in/resultstorequestion2", // Replace with the appropriate URL of your server-side endpoint
+                 dataType: 'json',
+                 data:{"dataOptions":dataOptions},
+                 success: function(result)
+                 {
+                    $(".option1").text(result.australia_per+"%");
+                    $(".option2").text(result.india_per+"%");
+                    $(".option3").text(result.draw_per+"%");
+                    $(".circle").css('display', 'none');
+                   
+                    localStorage.setItem('question2_answer',result.answer);
+                    $(".question2answer").text("Your answer is "+result.answer);
+                 }
+              });
+           }
+              
+        });
+
+        function makeAjaxCall() {            
+           // Perform your Ajax call here
+           $id={{$question2->poll_id}};
+           $.ajax({
+              url: APP_URL+"/report/"+$id,
+              // url: "https://icc-wtc.matrixpanel.in/report",
+              method: 'GET',
+              dataType:"json",
+              success: function(response) {                 
+                 // Handle the Ajax response
+                 $(".option1").text(response.australia_per+"%");
+                 $(".option2").text(response.india_per+"%");
+                 $(".option3").text(response.draw_per+"%");
+              },
+              error: function(error) {
+                 // Handle any errors that occur during the Ajax call
+                 console.error(error);
+              }
+           });
+        }
+
+        // Call the Ajax function every 5 seconds (5000 milliseconds)
+        setInterval(makeAjaxCall, 5000);
+   });
+ 
+
+ 
+  
+
+  var question2_local = localStorage.getItem('question2');
+  if(question2_local==1){
+     $(".circle").css('display', 'none');
+  }
+  let question2_text_local = localStorage.getItem('question2_answer');
+  if(question2_text_local!="" && question2_text_local!=null){
+     $(".question2answer").text("Your answer is "+question2_text_local);
+  }
+
+  
+                    
 </script>

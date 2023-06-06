@@ -67,13 +67,14 @@ Route::get('/stats', function () {
     return view('frontend.stats.stats');
 });
 
-Route::get('/polls', function () {
-    return view('frontend.polls.polls');
-});
 
-Route::get('/trivia', function () {
-    return view('frontend.trivia.trivia');
-});
+Route::get('/polls', [IndextestController::class, 'pollindex']);
+
+// Route::get('/trivia', function () {
+//     return view('frontend.trivia.trivia');
+// });
+Route::get('/trivia', [IndextestController::class, 'triviaindex']);
+
 
 Route::get('/live-score', function () {
     return view('frontend.livescore.livescore');
@@ -134,7 +135,7 @@ Route::post('/resultstore',[IndextestController::class, 'resultstore'])->name('a
 Route::post('/resultstorequestion2',[IndextestController::class, 'resultstorequestion2'])->name('admin-quize.resultstorequestion2');
 
 
-Route::get('/report',[IndextestController::class, 'report'])->name('admin-quize.report');
+Route::get('/report/{poll_id}',[IndextestController::class, 'report'])->name('admin-quize.report');
 
 
 Route::get('/admin/login','Admin\AdminController@login')->name('admin.login');
@@ -219,7 +220,12 @@ Route::group(['prefix' => '/admin','middleware'=>'admin-auth'], function () {
     Route::get('/quize/delete/{id}','Admin\QuizeController@delete')->name('admin-quize.delete');
     Route::get('/quize/edit/{id}','Admin\QuizeController@edit')->name('admin-quize.edit');
   
-
+    Route::get('/poll','Admin\QuizeController@pollindex')->name('admin-poll.index');
+    Route::get('/poll/create','Admin\QuizeController@pollshow')->name('admin-poll.create');
+    Route::post('/poll/store','Admin\QuizeController@pollstore')->name('admin-poll.store');
+    Route::get('/poll/delete/{id}','Admin\QuizeController@polldelete')->name('admin-poll.delete');
+    Route::get('/poll/edit/{id}','Admin\QuizeController@polledit')->name('admin-poll.edit');
+  
 
 
 });
