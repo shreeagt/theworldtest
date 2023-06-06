@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{asset('css/stylerst.css')}}?v=1.3" type="text/css">
 <style>
  .ap-img-content .video_play {
-    /* background: #f59622; */
+    /* background: #817464; */
     padding-top: 15px;
     width: 50px;
     height: 50px;

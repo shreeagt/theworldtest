@@ -1,6 +1,6 @@
 
 	<footer>
-		<div class="container">
+		{{-- <div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
 					<div class="item first_menu">
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">

@@ -52,9 +52,9 @@
                                             <img src="{{ $blog->blog_thumbnail }}" class="img-fluid" />
                                         </div>
                                         <div class="ap-img-content">
-                                            <div class="ap-date-wrp">
+                                            {{-- <div class="ap-date-wrp">
                                                 <span>{{ $blog->created_at->format('d M, Y') }}</span>
-                                            </div>
+                                            </div> --}}
                                             <h5 class="ap-slide-title">{{ $blog->blog_title }}</h5>
                                             <a href="{{ route('blogs.show', ['id' => $blog->id]) }}">Read More</a>
                                         </div>

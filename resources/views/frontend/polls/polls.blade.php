@@ -16,7 +16,7 @@
 }
 .poll-area label{
   display: block;
-  background: #f37224;
+  background: #817464;
   margin-bottom: 10px;
   padding: 8px 15px;
   border: 2px solid #e6e6e6;
@@ -161,11 +161,21 @@ input[type="checkbox"]{
 </style>
 
 <section>
+  <div class="inner_banner">
+    <div class="container">
+      <div class="row">				
+        <div class="col-md-12">
+          <h2>POLL OF THE DAY </h2> 
+        </div>
+      </div> <!-- Row -->
+    </div> <!-- Container -->
+  </div>
 
 <main class="banner">
 			<div class="container">
 				<div class="row justify-content-md-center">					
-					<div class="col-lg-9 col-md-9">
+					<div class="col-lg-6 col-md-6">
+            <h3 class="text-center mb-30"> POLL OF THE DAY</h3>
 						<div class="card banner_card">
 							<div id="demo" class="carousel slide" data-ride="carousel">
 								<!--
@@ -265,7 +275,7 @@ input[type="checkbox"]{
 		</main> --}}
 
     <div class="col-lg-6">
-      {{-- <h3 class="text-center mb-30"> POLL OF THE DAY</h3> --}}
+     
       <div id="q-cont">
       <div class="wrapper">
                    <header>Who can win this match? <br></header>

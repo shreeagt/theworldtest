@@ -49,25 +49,25 @@ time.thumbnail__date-day {
                         <div class="row right_blog_nav">
                         <div class="col-md-12 col-sm-6">
                                 <div class="thumb">
-                                <h3>Latest News</h3>
+                                {{-- <h3>Latest News</h3> --}}
                                
-                                 <div class="img-ind">
+                                 {{-- <div class="img-ind">
                                         <img src="{{$blogs["blog_thumbnail"]}}" alt="blog" class="img-fluid" >
                                     </div>
                                     <h5 class="thumbnail__title"><span>{{ $blogs["blog_title"]}}</span></h5>
                                     <div class="thumbnail__meta">
                                         <span class="thumbnail__category">{{ $blogs["blog_category"]}}</span>
                                         <time class="thumbnail__date-day">{{ $blogs["created_at"]->format('D d M') }}</time>
-                                    </div>
+                                    </div> --}}
                                    
                                     
-                                    <ul class="recent_post">
+                                    {{-- <ul class="recent_post">
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
                                         <li><a href="#" class="blog_head">The Fight of Ind and Aus Continue</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div> 
                         </div>
@@ -101,7 +101,7 @@ time.thumbnail__date-day {
                 </aside>
 
                 </div>
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                        
                        
                         <div class="row">

@@ -6,143 +6,78 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Blog;
 use App\Model\Quize;
-use App\Model\Poll;
-use App\Model\PollResult;
 use App\Model\QuizeResult;
 use Carbon\Carbon;
-use DB;
 class IndextestController extends Controller
 {
     public function index()
     {
       
-        $question1 = Quize::where(["status"=>"Active"])->first();
-        $question2 = Poll::where(["status"=>"Active"])->first();
+        $question1 = Quize::where(["quize_id"=>1])->first();
+        $question2 = Quize::where(["quize_id"=>2])->first();
         $blogs = Blog::all();
         return view('frontend.indextest', compact('blogs',"question1","question2"));
     }
 
     public function resultstore(Request $request)
     {
-        $option= $request->answer;
-        $array = explode("-", $option);
-        $quize_id=$array[0];
-        $option=$array[1];
-
-        $userAgent = $_SERVER['HTTP_USER_AGENT'];
-        $browserName = $this->get_browser_name($userAgent, true);
-        $quize = new QuizeResult();
-        $quize->question_id = $quize_id;
-        $quize->ip_address =  $request->ip();
-        $quize->answer = $option;
-        $quize->brower_name =$browserName;           
-        $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
-        $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           
-        $quize->save();
-        $getanswer =Quize::where(["quize_id"=>$quize_id])->first();
-        if($option==$getanswer->answer){
-            echo json_encode("1");
-        }else{
-            echo json_encode("0");
-        }
-       
-    }
-    
-    public function get_browser_name($user_agent) {
-        if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'Opera';
-        elseif (strpos($user_agent, 'Edge')) return 'Edge';
-        elseif (strpos($user_agent, 'Chrome')) return 'Chrome';
-        elseif (strpos($user_agent, 'Safari')) return 'Safari';
-        elseif (strpos($user_agent, 'Firefox')) return 'Firefox';
-        elseif (strpos($user_agent, 'MSIE') || strpos($user_agent, 'Trident/7')) return 'Internet Explorer';
-        
-        return 'Other';
+      
+            $quize = new QuizeResult();
+            $quize->question_id = $request->question_id;
+            $quize->ip_address =  $request->ip();
+            $quize->answer = $request->answer;
+            $quize->brower_name =$_SERVER['HTTP_USER_AGENT'];           
+            $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
+            $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           
+            $quize->save();
     }
 
     public function resultstorequestion2(Request $request)
     {
         $option= $request->dataOptions;
         $array = explode("-", $option);
-        $poll_id=$array[0];
+        $question_id=$array[0];
         $option=$array[1];
         $userAgent = $_SERVER['HTTP_USER_AGENT'];
-        $browserName = $this->get_browser_name($userAgent, true);
+        $browserInfo = get_browser($userAgent, true);
+        $browserName = $browserInfo['browser'];
 
-        $quize = new PollResult();
-        $quize->poll_id = $poll_id;
-        $quize->ip_address =  $request->ip();
-        $quize->answer =$option;
-        $quize->brower_name =$browserName;           
-        $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
-        $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           
-        $quize->save();   
+        // $browser = get_browser(null, true);
+        // print_r($browser);dd();
 
-        $get_data = Poll::where(["poll_id"=>$poll_id])->first();
-        $result = DB::select("SELECT COUNT(poll_result_id) AS answer_cnt, answer, poll_id FROM poll_of_the_day_result WHERE poll_id = $poll_id GROUP BY answer");
-        $allcount=0;
-        $main=[];
-        
-        foreach($result as $list){
-            $allcount= $allcount+$list->answer_cnt;
-            if($get_data->option1==$list->answer){               
-                $main[$list->answer]=$list->answer_cnt;
-            }                
-            elseif($get_data->option2==$list->answer){                
-                $main[$list->answer]=$list->answer_cnt;
-            }elseif($get_data->option3==$list->answer){
-                $main[$list->answer]=$list->answer_cnt;
-            }
-            
-        }  
-        $anwser="";
-        if($allcount!=0){
-            $australia_per=((isset($main[$get_data->option1]) && !empty($main[$get_data->option1]) ?$main[$get_data->option1]:0)*100)/$allcount;
-            $india_per=((isset($main[$get_data->option2]) && !empty($main[$get_data->option2]) ?$main[$get_data->option2]:0)*100)/$allcount;
-            $draw_per=((isset($main[$get_data->option3]) && !empty($main[$get_data->option3]) ?$main[$get_data->option3]:0)*100)/$allcount;
-            $anwser=$option;
-        }else{
-            $australia_per=0;
-            $india_per=0;
-            $draw_per=0;
-        }
+        // $quize = new QuizeResult();
+        // $quize->question_id = $question_id;
+        // $quize->ip_address =  $request->ip();
+        // $quize->answer =$option;
+        // $quize->brower_name =$browserName;           
+        // $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
+        // $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           
+        // $quize->save();
 
-        echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per,"answer"=>$option]);
+        $option1=QuizeResult::where(["answer" => "Australia"])->count();
+        $option2=QuizeResult::where(["answer" => "India"])->count();
+        $option3=QuizeResult::where(["answer" => "Draw"])->count();
+        $allcount = QuizeResult::where(["question_id" =>2])->count();
+       
+        $australia_per=($option1*100)/$allcount;
+        $india_per=($option2*100)/$allcount;
+        $draw_per=($option3*100)/$allcount;
+       echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per]);
     }
 
-    public function report($poll_id=0)
+    public function report(Request $request)
     {
+        
 
-        $get_data = Poll::where(["poll_id"=>$poll_id])->first();
-        $result = DB::select("SELECT COUNT(poll_result_id) AS answer_cnt, answer, poll_id FROM poll_of_the_day_result WHERE poll_id = $poll_id GROUP BY answer");
-        $allcount=0;
-        $main=[];
-        
-        foreach($result as $list){
-            $allcount= $allcount+$list->answer_cnt;
-            if($get_data->option1==$list->answer){               
-                $main[$list->answer]=$list->answer_cnt;
-            }                
-            elseif($get_data->option2==$list->answer){                
-                $main[$list->answer]=$list->answer_cnt;
-            }elseif($get_data->option3==$list->answer){
-                $main[$list->answer]=$list->answer_cnt;
-            }            
-        }
-        
-        if($allcount!=0){
-            $australia_per=((isset($main[$get_data->option1]) && !empty($main[$get_data->option1]) ?$main[$get_data->option1]:0)*100)/$allcount;
-            $india_per=((isset($main[$get_data->option2]) && !empty($main[$get_data->option2]) ?$main[$get_data->option2]:0)*100)/$allcount;
-            $draw_per=((isset($main[$get_data->option3]) && !empty($main[$get_data->option3]) ?$main[$get_data->option3]:0)*100)/$allcount;
-        }else{
-            $australia_per=0;
-            $india_per=0;
-            $draw_per=0;
-        }
-        
+        $option1=QuizeResult::where(["question_id" =>2,"answer" => "Australia"])->count();
+        $option2=QuizeResult::where(["question_id" =>2,"answer" => "India"])->count();
+        $option3=QuizeResult::where(["question_id" =>2,"answer" => "Draw"])->count();
+        $allcount = QuizeResult::where(["question_id" =>2])->count();
        
-        
-        echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per]);
-       
+        $australia_per=($option1*100)/$allcount;
+        $india_per=($option2*100)/$allcount;
+        $draw_per=($option3*100)/$allcount;
+       echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per]);
     }
 
 

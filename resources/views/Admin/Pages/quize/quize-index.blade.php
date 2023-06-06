@@ -3,7 +3,7 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-sm-8">
-        <h2> Quize Page </h2>
+        <h2> Blogs Page </h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"> <a href="dashboard"> Home </a>  </li>
             <li class="breadcrumb-item"><a href="{{route('admin-quize.create')}}" >Add Quize</a></li>
