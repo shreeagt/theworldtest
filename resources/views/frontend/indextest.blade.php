@@ -261,9 +261,9 @@ input[type="checkbox"]{
              <div class="col-lg-6">
                <div id="countdown">
                   <ul class="text-center">
-                     <li><span id="days"></span>days</li>
-                     <li><span id="hours"></span>Hours</li>
-                     <li><span id="minutes"></span>Minutes</li>
+                     <li><span id="days"></span><span>days</span></li>
+                     <li><span id="hours"></span><span>Hours</span></li>
+                     <li><span id="minutes"></span><span>Minutes</span></li>
                      {{-- <li><span id="seconds"></span>Seconds</li> --}}
                   </ul>
                </div>
@@ -441,7 +441,7 @@ input[type="checkbox"]{
                </div>
             </div>
             <div class="col-lg-6">
-               <h3 class="text-center mb-30"> POLL OF THE DAY</h3>
+               <h3 class="text-center mb-30 pt60"> POLL OF THE DAY</h3>
                <div id="q-cont">
                <div class="wrapper">
                            <header> @if(isset($question2) && !empty($question2->question))

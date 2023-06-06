@@ -180,7 +180,7 @@ input[type="checkbox"]{
 							<div id="demo" class="carousel slide" data-ride="carousel">
 								
 
-    <div class="col-lg-6">
+    <div class="col-lg-12">
      
       <div id="q-cont">
       <div class="wrapper">
