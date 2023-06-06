@@ -3,6 +3,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\User\NewsController;
 use App\Http\Controllers\User\NewsIndController;
 use App\Http\Controllers\User\IndextestController;
+use App\Http\Controllers\Admin\PhotosController;
+use App\Http\Controllers\Admin\videosController;
 use Illuminate\Support\Facades\Route;
 //harsh
 
@@ -62,6 +64,8 @@ Route::get('/news_ind', [NewsIndController::class, 'index'])->name('frontend.new
 Route::get('/videogallery', function () {
     return view('frontend.video.video');
 });
+Route::get('/videogallery', [videosController::class, 'showVideos'])->name('showVideos.gallery');
+
 
 Route::get('/stats', function () {
     return view('frontend.stats.stats');
@@ -84,9 +88,13 @@ Route::get('/live-score', function () {
 //     return view('frontend.gallery.detail');
 // });
 
-Route::get('/gallery', function () {
-    return view('frontend.gallery.detail');
-});
+// Route::get('/gallery', function () {
+//     return view('frontend.gallery.detail');
+// });
+
+Route::get('/gallery', [PhotosController::class, 'showGallery'])->name('show.gallery');
+
+
 Route::get('/venues', function () {
     return view('frontend.venues.index');
 });
@@ -226,6 +234,20 @@ Route::group(['prefix' => '/admin','middleware'=>'admin-auth'], function () {
     Route::get('/poll/delete/{id}','Admin\QuizeController@polldelete')->name('admin-poll.delete');
     Route::get('/poll/edit/{id}','Admin\QuizeController@polledit')->name('admin-poll.edit');
   
+    //add om
+    Route::get('/photos/category/gallery', 'Admin\PhotosController@indexgallery')->name('admin-photos-category-gallery.index');
+    Route::get('/photos/category/gallery/create', 'Admin\PhotosController@creategallery')->name('admin-photos-category-gallery.create');
+    Route::post('/photos/category/gallery/create', 'Admin\PhotosController@insertgallery')->name('admin-photos-category-gallery.insert');
+    Route::delete('/photos/category/gallery/{id}', 'Admin\PhotosController@destroy')->name('admin-photos-category-gallery.destroy');
+    Route::get('/photos/category/gallery/{id}/edit', 'Admin\PhotosController@editgallery')->name('admin-photos-category-gallery.edit');
+    Route::put('/photos/category/gallery/{id}', 'Admin\PhotosController@updategallery')->name('admin-photos-category-gallery.update');
+    
+    Route::get('/videos/category/insert', 'Admin\videosController@Youtube')->name('admin-videos-category.Youtube');
+    Route::get('/videos/category/insert/youtube', 'Admin\videosController@AddYoutube')->name('admin-videos-category.AddYoutube');
+    Route::post('/videos/category/insert/youtube', 'Admin\videosController@insertyoutube')->name('admin-videos-category.addyoutube');
+    Route::delete('videos/category/insert/youtube/{id}', 'Admin\videosController@deleteVideo')->name('admin-videos-category.deleteVideo');
+    Route::get('/videos/category/edit/{id}', 'Admin\videosController@editVideo')->name('admin-videos-category.editVideo');
+    Route::put('/videos/category/{video}', 'Admin\videosController@updateVideo')->name('admin-videos-category.updateVideo');
 
 
 });

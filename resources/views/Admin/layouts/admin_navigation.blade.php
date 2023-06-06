@@ -23,6 +23,14 @@
 						
 					</ul>
 				</li>
+
+				<li class="expandable">
+					<div class="hitarea expandable-hitarea"> <i class="fa fa-sliders" aria-hidden="true"></i> <span> Poll Of Day </span> <i class="fa fa-angle-down" aria-hidden="true"></i> </div>
+					<ul class="category" style="display:none;">
+						<li><a href="{{route("admin-poll.index")}}"> <span> Poll Of Day </span> </a> </li>
+						
+					</ul>
+				</li>
 			
 				<li class="expandable">
 					<div class="hitarea expandable-hitarea"> <i class="fa fa-sliders" aria-hidden="true"></i> <span>  News </span> <i class="fa fa-angle-down" aria-hidden="true"></i> </div>
@@ -36,14 +44,17 @@
 					<div class="hitarea expandable-hitarea"> <i class="fa fa-sliders" aria-hidden="true"></i> <span>  Videos </span> <i class="fa fa-angle-down" aria-hidden="true"></i> </div>
 					<ul class="category" style="display:none;">
 						<li><a href="/admin/videos"> <span> Videos </span> </a> </li>
-						<li><a href="/admin/videos/category"> <span> Videos Category </span> </a> </li> 
+						<li><a href="/admin/videos/category"> <span> Videos Category </span> </a> </li>
+						<li><a href="/admin/videos/category/insert"> <span>Add Youtube Videos</span> </a> </li> 
 					</ul>
 				</li>
+				
 				<li class="expandable">
 					<div class="hitarea expandable-hitarea"> <i class="fa fa-sliders" aria-hidden="true"></i> <span>  Photos </span> <i class="fa fa-angle-down" aria-hidden="true"></i> </div>
 					<ul class="category" style="display:none;">
 						<li><a href="/admin/photos"> <span> Photos </span> </a> </li>
 						<li><a href="/admin/photos/category"> <span> Photos Category </span> </a> </li> 
+						<li><a href="/admin/photos/category/gallery"> <span> Gallery </span> </a> </li> 
 					</ul>
 				</li>
 				<li> <div class="hitarea expandable-hitarea"><a href="/admin/teams"><i class="fa fa-sliders" aria-hidden="true"></i> <span> Teams </span> </a></div> </li>

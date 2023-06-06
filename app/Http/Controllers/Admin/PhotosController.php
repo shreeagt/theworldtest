@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Photos;
 use App\Model\PhotoCategory;
+use App\Model\GalleryCatergory;
 use Carbon\Carbon;
 class PhotosController extends Controller
 {
@@ -240,4 +241,70 @@ class PhotosController extends Controller
       $photos_categories=PhotoCategory::get();
       return view('admin.Pages.photos.category-index',['photos_categories'=>$photos_categories]);
     }
+    public function indexgallery() {
+        $gallery = GalleryCatergory::all();
+        return view('gallery', ['gallery' => $gallery]);
+    }
+    public function creategallery() {
+        return view ('creategallery');
+    }
+    public function insertgallery(Request $request) 
+    {
+        $g_catergory = new GalleryCatergory;
+        $g_catergory->gallerytitle = $request->input('gallerytitle');
+    
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/gallery/', $filename);
+            $g_catergory->image = $filename; 
+        } else {
+            $g_catergory->image = '';
+        }
+    
+        $g_catergory->save();
+    
+        return view('creategallery')->with('creategallery', $g_catergory);
+    }
+    public function showgallery()
+    {
+       
+        $gallery = GalleryCatergory::all(); // Assuming you have a Gallery model
+
+        return view('frontend.gallery.detail', ['gallery' => $gallery]);
+    }
+    public function destroy($id)
+    {
+        $gallery = GalleryCatergory::find($id);
+        // Perform any necessary deletion logic
+        $gallery->delete();
+        return redirect()->back()->with('success', 'Gallery item deleted successfully.');
+    }
+    public function editgallery($id)
+    {
+        $gallery = GalleryCatergory::find($id);
+        return view('editgallery', ['gallery' => $gallery]);
+    }
+    public function updategallery(Request $request, $id)
+    {
+        $gallery = GalleryCatergory::find($id);
+    
+        // Update the fields you want to edit
+        $gallery->gallerytitle = $request->input('gallerytitle');
+    
+        // Check if a new image was uploaded and update the image field
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('uploads/gallery/', $filename);
+            $gallery->image = $filename; 
+        }
+    
+        $gallery->save();
+    
+        return redirect()->back()->with('success', 'Gallery item updated successfully.');
+    }
+
 }

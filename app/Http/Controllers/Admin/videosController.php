@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Videos;
 use App\Model\VideoCategory;
+use App\Model\Youtube;
 use Carbon\Carbon;
 class videosController extends Controller
 {
@@ -177,4 +178,74 @@ class videosController extends Controller
         $video_categories=VideoCategory::get();
         return view('admin.Pages.videos.category-index',['video_categories'=>$video_categories]);
       }
+
+      public function Youtube(){
+        $youtubevideos = Youtube::all();
+        return view('Youtube', ['youtubevideos' => $youtubevideos]);
+    }
+      public function AddYoutube() {
+        return view('AddYoutube');
+      }
+      public function insertyoutube(Request $request)
+      {
+          $video = new Youtube();
+          $video->videotitle = $request->input('videotitle');
+          $video->description = $request->input('description');
+          $video->videourl = $request->input('videourl');
+          $video->video_id = $request->input('video_id');
+
+          if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('youtube/gallery/', $filename);
+            $video->image = $filename; 
+        } else {
+            $video->image = '';
+        }
+          $video->save();
+      }
+      public function showVideos()
+      {
+          $youtubevideos = Youtube::all(); 
+        //   dd($youtubevideos);
+          return view('frontend.video.video', compact('youtubevideos'));
+      }
+      public function deleteVideo($id)
+      {
+          $video = Youtube::find($id);
+          $video->delete();
+      
+          return redirect()->back()->with('success', 'Video deleted successfully');
+      }
+      public function editVideo($id)
+      {
+          $video = Youtube::find($id);
+          return view('editvideo', compact('video'));
+      }
+      public function updateVideo(Request $request, $id)
+      {
+          $video = Youtube::find($id);
+          $video->videotitle = $request->input('videotitle');
+          $video->description = $request->input('description');
+          $video->videourl = $request->input('videourl');
+          $video->video_id = $request->input('video_id');
+      
+          if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('youtube/gallery/', $filename);
+            $video->image = $filename; 
+        } else {
+            $video->image = '';
+        
+          }
+      
+          $video->save();
+      
+          // Redirect or perform any other necessary logic
+      }
+
+
 }
