@@ -1206,6 +1206,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 </script>
 <script>
+   // localStorage.clear();
    var APP_URL = {!! json_encode(url('/')) !!};
    
     $(document).ready(function() {
@@ -1270,9 +1271,9 @@ document.addEventListener('DOMContentLoaded', function() {
    function submitquestion(){
       
       var data = localStorage.getItem('checking');
-      var result_comment = localStorage.getItem('result');
-      if(data!="1"){        
-         localStorage.setItem('checking', 1);
+     
+      if(data!="1"){       
+         
             var answer = $('.question1').data('text');        
             $.ajax({
                headers: {
@@ -1285,13 +1286,15 @@ document.addEventListener('DOMContentLoaded', function() {
                data:{"answer":answer},
                success: function(data) {
                   if(data==1){
+                     localStorage.setItem('checking', 1);
                      $(".success_comment").css('display', 'block');
                      $(".failure_comment").css('display', 'none');
-                     localStorage.setItem('result', 1);
+                   
                   }else{
+                     localStorage.setItem('checking', 2);
                      $(".success_comment").css('display', 'none');
                      $(".failure_comment").css('display', 'block');;
-                     localStorage.setItem('result', 2);
+                    
                   }  
                   $(".trivia_button").hide();
                },
@@ -1303,8 +1306,8 @@ document.addEventListener('DOMContentLoaded', function() {
       
      
    }
-   var result = localStorage.getItem('result');
-  
+
+   var result = localStorage.getItem('checking');  
    if(result==1){ 
       $(".trivia_button").hide();   
       $(".success_comment").css('display', 'block');
