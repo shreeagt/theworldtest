@@ -213,33 +213,27 @@ input[type="checkbox"]{
             <div class="col-lg-12 col-md-12">
                <div class="card banner_card">
                   <div id="demo" class="carousel slide" data-ride="carousel">
-                     <!--
-                        <ul class="carousel-indicators">
-                        	<li data-target="#demo" data-slide-to="0" class="active"></li>
-                        	<li data-target="#demo" data-slide-to="1"></li>
-                        	<li data-target="#demo" data-slide-to="2"></li>
-                        </ul>
-                        -->
+                    
                      <div class="carousel-inner">
                         <div class="carousel-item active">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
                            <div class="carousel-caption">
                               <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
+                             
                            </div>
                         </div>
                         <div class="carousel-item">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
                            <div class="carousel-caption">
                               <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
+                             
                            </div>
                         </div>
                         <div class="carousel-item">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto d-block w-100" alt=""/>
                            <div class="carousel-caption">
                               <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1>
-                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
+                             
                            </div>
                         </div>
                      </div>
@@ -254,234 +248,7 @@ input[type="checkbox"]{
                   </div>
                </div>
             </div>
-            <!-- <div class="col-lg-3 col-md-3">
-               <div class="card stats_board"> 
-               	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-               		<li class="nav-item" role="presentation">
-               			<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"> Standings </a>
-               		</li>
-               		<li class="nav-item" role="presentation">
-               			<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"> Playoffs </a>
-               		</li>
-               	</ul>
-               	<div class="tab-content" id="pills-tabContent">
-               		<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-               			<ul class="head_title">
-               				<li> <b class="desk_text"> TEAM </b> </li>
-               				<li> <b class="desk_text"> PLD  </b> </li>
-               				<li> <b class="desk_text"> NET RR  </b> </li>
-               				<li> <b class="desk_text"> PTS  </b> </li>
-               				<li> <b class="desk_text"> FORM </b> </li>
-               				<div class="clear"></div>
-               			</ul> 
-               			<ul class="stats_list">
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li> 
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li> 
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li>
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li>
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li> 
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li> 
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li>
-               				<li>
-               					<ul class="sub_stats head_title">
-               						<li> <p class="ap-team-name"> <img src="/img/DCroundsmall.png" class="img-fluid" /> <a href="#"> DC </a> </p> </li>
-               						<li class="pld"> <p class="ap-team-name">14</p> </li>
-               						<li class="netrr"> <p class="ap-team-name">+0.481</p> </li>
-               						<li class="pts"> <p class="ap-team-name">20</p> </li>
-               						<li class="formm">
-               							<p class="ap-wkt-wrp">
-               								<span class="ap-red">L</span>
-               								<span class="ap-green">W</span>
-               								<span class="ap-green">W</span>
-               							</p>
-               						</li>
-               					</ul>
-               					<div class="clear"></div>
-               				</li> 
-               			</ul>
-               		</div>
-               		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-               			<div class="playoffs text-center">
-               				<div class="row">
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               					<div class="col-sm-6 col-xs-6">
-               						<p class="mb-0 blue"> Qualifier1 </p>
-               						<p class="mb-0"> 10 OCT 22</p>
-               					</div>
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               				</div>
-               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
-               			</div> 
-               			<div class="playoffs text-center">
-               				<div class="row">
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               					<div class="col-sm-6 col-xs-6">
-               						<p class="mb-0 blue"> Qualifier1 </p>
-               						<p class="mb-0"> 10 OCT 22</p>
-               					</div>
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               				</div>
-               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
-               			</div> 
-               			<div class="playoffs text-center">
-               				<div class="row">
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               					<div class="col-sm-6 col-xs-6">
-               						<p class="mb-0 blue"> Qualifier1 </p>
-               						<p class="mb-0"> 10 OCT 22</p>
-               					</div>
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               				</div>
-               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
-               			</div> 
-               			<div class="playoffs text-center">
-               				<div class="row">
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               					<div class="col-sm-6 col-xs-6">
-               						<p class="mb-0 blue"> Qualifier1 </p>
-               						<p class="mb-0"> 10 OCT 22</p>
-               					</div>
-               					<div class="col-sm-3 col-xs-3">
-               						<img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" />
-               						<p class="mb-0"> 172/5 </p>
-               					</div>
-               				</div>
-               				<p class="mb-0"> <b class="desk_text"> Chennai Super Kings won by 4 wickets </b> </p>
-               			</div>
-               		</div>
-               	</div>
-               	<ul class="nav nav-pills">
-               		<li> <a class="nav-link active" href="#pills-home" > View Full Table </a> </li>
-               		<li> <a class="nav-link" href="#pills-profile"> <i class="fa fa-twitter"></i> Tweet </a> </li>
-               	</ul>
-               </div>	
-               </div>	 -->
+          
          </div>
       </div>
    </main>
@@ -490,80 +257,7 @@ input[type="checkbox"]{
          <div class="row justify-content-md-center align-items-center">
             <div class="col-lg-6">
                <h1 class="text-center">Test Cricket Goes live in</h1>
-               <!-- <div class="owl-carousel" id="match_scores">
-                  <div class="item">
-                  	<div class="row" style="margin-bottom:20px;">
-                  		<div class="col-sm-6 col-xs-6"> <p class="mb-0 si-no-txt"> 1st Semi-Final </p> </div>
-                  		<div class="col-sm-6 col-xs-6 text-right"> <p class="mb-0 si-date-txt">17 March, 2021&nbsp;|&nbsp;19:00 </p> </div>
-                  	</div>
-                  	<div class="row stst">
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" /> </div>
-                  		<div class="col-sm-6 col-xs-6">
-                  			<ul>
-                  				<li class="si-team-win"> <p> <span class="si-score">218/3 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  				<li class="si-vs-txt"> <p class="mb-0">vs</p> </li>
-                  				<li class="si-team-lose"> <p> <span class="si-score">206/6 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  			</ul>
-                  		</div>
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" /> </div>
-                  	</div>
-                  	<p class="si-mat-venue text-center"> India Legends beat West Indies Legends by 12 runs </p>
-                  </div> 
-                  <div class="item">
-                  	<div class="row" style="margin-bottom:20px;">
-                  		<div class="col-sm-6 col-xs-6"> <p class="mb-0 si-no-txt"> 2nd Semi-Final </p> </div>
-                  		<div class="col-sm-6 col-xs-6 text-right"> <p class="mb-0 si-date-txt">17 March, 2021&nbsp;|&nbsp;19:00 </p> </div>
-                  	</div>
-                  	<div class="row stst">
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" /> </div>
-                  		<div class="col-sm-6 col-xs-6">
-                  			<ul>
-                  				<li class="si-team-win"> <p> <span class="si-score">218/3 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  				<li class="si-vs-txt"> <p class="mb-0">vs</p> </li>
-                  				<li class="si-team-lose"> <p> <span class="si-score">206/6 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  			</ul>
-                  		</div>
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" /> </div>
-                  	</div>
-                  	<p class="si-mat-venue text-center"> India Legends beat West Indies Legends by 12 runs </p>
-                  </div> 
-                  <div class="item">
-                  	<div class="row" style="margin-bottom:20px;">
-                  		<div class="col-sm-6 col-xs-6"> <p class="mb-0 si-no-txt"> 3rd Semi-Final </p> </div>
-                  		<div class="col-sm-6 col-xs-6 text-right"> <p class="mb-0 si-date-txt">17 March, 2021&nbsp;|&nbsp;19:00 </p> </div>
-                  	</div>
-                  	<div class="row stst">
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" /> </div>
-                  		<div class="col-sm-6 col-xs-6">
-                  			<ul>
-                  				<li class="si-team-win"> <p> <span class="si-score">218/3 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  				<li class="si-vs-txt"> <p class="mb-0">vs</p> </li>
-                  				<li class="si-team-lose"> <p> <span class="si-score">206/6 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  			</ul>
-                  		</div>
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" /> </div>
-                  	</div>
-                  	<p class="si-mat-venue text-center"> India Legends beat West Indies Legends by 12 runs </p>
-                  </div> 
-                  <div class="item">
-                  	<div class="row" style="margin-bottom:20px;">
-                  		<div class="col-sm-6 col-xs-6"> <p class="mb-0 si-no-txt"> 2nd Semi-Final </p> </div>
-                  		<div class="col-sm-6 col-xs-6 text-right"> <p class="mb-0 si-date-txt">17 March, 2021&nbsp;|&nbsp;19:00 </p> </div>
-                  	</div>
-                  	<div class="row stst">
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2023.png" class="img-fluid" /> </div>
-                  		<div class="col-sm-6 col-xs-6">
-                  			<ul>
-                  				<li class="si-team-win"> <p> <span class="si-score">218/3 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  				<li class="si-vs-txt"> <p class="mb-0">vs</p> </li>
-                  				<li class="si-team-lose"> <p> <span class="si-score">206/6 </span> <span class="si-overs">(20.0 Overs)</span> </p> </li>
-                  			</ul>
-                  		</div>
-                  		<div class="col-sm-3 col-xs-3"> <img src="https://www.worldseriest20.com/static-assets/images/flags/2026.png" class="img-fluid" /> </div>
-                  	</div>
-                  	<p class="si-mat-venue text-center"> India Legends beat West Indies Legends by 12 runs </p>
-                  </div> 
-                  </div> -->
+           
             </div>
              <div class="col-lg-6">
                <div id="countdown">
@@ -571,15 +265,10 @@ input[type="checkbox"]{
                      <li><span id="days"></span>days</li>
                      <li><span id="hours"></span>Hours</li>
                      <li><span id="minutes"></span>Minutes</li>
-                     {{-- <li><span id="seconds"></span>Seconds</li> --}}
+                    
                   </ul>
                </div>
-            </div> 
-            <!--
-               <div class="col-lg-12 text-center"> <br />
-               	<a href="#" class="btn btn-primary"> View All </a>
-               </div>
-               -->
+            </div>           
          </div>
       </div>
    </main>
@@ -688,100 +377,12 @@ input[type="checkbox"]{
                   <!-- Item -->
                </div>
 
-               <!-- <div class="custom-nav">
-                  <div class="custom-prev"><span class="arrow-left"></span></div>
-                  <div class="custom-next"><span class="arrow-right"></span></div>
-                  </div> -->
-
+              
             </div>
          </div>
       </div>
    </main>
 
-   
-   <!-- <main class="latest_video">
-      <div class="container-fluid">
-         <div class="row justify-content-md-center">
-            <div class="col-lg-12 text-left">
-               <h3 class="white mb-30"> #WTC21 FINAL - REWIND </h3>
-            </div>
-            <div class="col-lg-12">
-               <div class="video-section">
-                  <div class="video-player">
-                     <video id="mainVideo" controls>
-                        <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                     </video>
-                     
-                     <div class="play-button" onclick="playMainVideo()">
-                        <img src="/img/icon/play-inline-wtc.png" alt="Play Button" >
-                     </div>
-                  </div>
-                  <div class="recommended-videos">
-                     <div class="video_header">
-                        <h2>The NZ dressing room at the winning moment | WTC21...</h2>
-                        <p>23 JUN 2021</p>
-                     </div>
-                     <div class="video_cover">
-                        <div class="video-thumbnail" onclick="changeVideo('videotext.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>The NZ dressing room at the winning moment | WTC21...</p>
-                              <p>Wed 23 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>All seven of Kyle Jamieson's WTC21 Final wickets</p>
-                              <p>Tue 6 Jul</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('dummy.mp4')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                     </div>
-                  
-                  </div>
-               </div>
-            </div>
-     
-         </div>
-      </div>
-   </main> -->
-   
    <main class="latest_video">
       <div class="container-fluid">
          <div class="row justify-content-md-center">
@@ -882,24 +483,36 @@ input[type="checkbox"]{
                        @endif
                      </div>
                      <div class="options">
-                        <span class="op" for="q1op1">
+                        <span class="op" for="q1op1" data-text="{{$question1->quize_id."-".$question1->option1}}">
                            @if(isset($question1) && !empty($question1->option1))
                            {{$question1->option1}}
                           @endif</span>
-                          <span class="op op2" for="q1op2">@if(isset($question1) && !empty($question1->option2))
+                          <span class="op op2" for="q1op2" data-text="{{$question1->quize_id."-".$question1->option2}}">@if(isset($question1) && !empty($question1->option2))
                            {{$question1->option2}}
-                          @endif</span><br /><span class="op" for="q1op3">@if(isset($question1) && !empty($question1->option3))
+                          @endif</span><br />
+                          <span class="op" for="q1op3" data-text="{{$question1->quize_id."-".$question1->option3}}">@if(isset($question1) && !empty($question1->option3))
                            {{$question1->option3}}
-                          @endif</span><span class="op op2" for="q1op4">@if(isset($question1) && !empty($question1->option4))
+                          @endif</span><span class="op op2" for="q1op4" data-text="{{$question1->quize_id."-".$question1->option4}}">@if(isset($question1) && !empty($question1->option4))
                            {{$question1->option4}}
                           @endif</span>
                      </div>
                   </div>
                   <div class="slide" id="slide4">
-                     <div class="re" onclick="submitquestion()">
+                     <div class="re trivia_button" onclick="submitquestion()">
                         Submit
                      </div>
-                  </div>
+                     <span class="success_comment" style="display: none;">
+                        @if(isset($question1) && !empty($question1->question))
+                        {{$question1->success_comment}}
+                        @endif
+                     </span>
+                     <span class="failure_comment" style="display: none;">
+                        @if(isset($question1) && !empty($question1->question))
+                        {{$question1->failure_comment}}
+                        @endif
+                     </span>
+
+                  </div>                  
                </div>
             </div>
             <div class="col-lg-6">
@@ -911,15 +524,12 @@ input[type="checkbox"]{
                              @endif <br>
                            </header>
                             <div class="poll-area">
-                            {{-- <input type="checkbox" name="poll" id="opt-1">
-                            <input type="checkbox" name="poll" id="opt-2">
-                            <input type="checkbox" name="poll" id="opt-3">
-                            <input type="checkbox" name="poll" id="opt-4"> --}}
+                          
                             <label for="opt-1" class="opt-1 question2_label">
                                 <div class="row">
                                 <div class="column">
                                     <span class="circle"></span>
-                                    <span class="text question2" data-options="{{$question2->quize_id."-".$question2->option1}}">
+                                    <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option1}}">
                                        @if(isset($question2) && !empty($question2->option1))
                                        {{$question2->option1}}
                                       @endif
@@ -933,7 +543,7 @@ input[type="checkbox"]{
                                 <div class="row">
                                 <div class="column">
                                     <span class="circle"></span>
-                                    <span class="text question2" data-options="{{$question2->quize_id."-".$question2->option2}}"> @if(isset($question2) && !empty($question2->option2))
+                                    <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option2}}"> @if(isset($question2) && !empty($question2->option2))
                                        {{$question2->option2}}
                                       @endif</span>
                                 </div>
@@ -945,7 +555,7 @@ input[type="checkbox"]{
                                 <div class="row">
                                 <div class="column">
                                     <span class="circle"></span>
-                                    <span class="text question2" data-options="{{$question2->quize_id."-".$question2->option3}}"> @if(isset($question2) && !empty($question2->option3))
+                                    <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option3}}"> @if(isset($question2) && !empty($question2->option3))
                                        {{$question2->option3}}
                                       @endif</span>
                                 </div>
@@ -953,7 +563,7 @@ input[type="checkbox"]{
                                 </div>
                                 <div class="progress" id="pstyle3" style='--w:30;'></div>
                             </label>
-       
+                            <span class="question2answer"></span>
                             </div>
                         </div>
 
@@ -1596,9 +1206,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 </script>
 <script>
+   var APP_URL = {!! json_encode(url('/')) !!};
+   
     $(document).ready(function() {
          $('.question2_label').click(function(){
             var question2_local = localStorage.getItem('question2');
+               var question2_answer = localStorage.getItem('question2');
             if(question2_local!="1"){  
                localStorage.setItem('question2', 1);
                var dataOptions = $(this).find('.question2').data('options');       
@@ -1609,7 +1222,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                   },
                   type: "POST",
-                  url: "https://icc-wtc.matrixpanel.in/resultstorequestion2", // Replace with the appropriate URL of your server-side endpoint
+                  url: APP_URL+"/resultstorequestion2", 
+                  // url: "https://icc-wtc.matrixpanel.in/resultstorequestion2", // Replace with the appropriate URL of your server-side endpoint
                   dataType: 'json',
                   data:{"dataOptions":dataOptions},
                   success: function(result)
@@ -1617,20 +1231,25 @@ document.addEventListener('DOMContentLoaded', function() {
                      $(".option1").text(result.australia_per+"%");
                      $(".option2").text(result.india_per+"%");
                      $(".option3").text(result.draw_per+"%");
+                     $(".circle").css('display', 'none');
+                    
+                     localStorage.setItem('question2_answer',result.answer);
+                     $(".question2answer").text("Your answer is "+result.answer);
                   }
                });
             }
                
          });
 
-         function makeAjaxCall() {
+         function makeAjaxCall() {            
             // Perform your Ajax call here
+            $id={{$question2->poll_id}};
             $.ajax({
-               url: "https://icc-wtc.matrixpanel.in/report",
+               url: APP_URL+"/report/"+$id,
+               // url: "https://icc-wtc.matrixpanel.in/report",
                method: 'GET',
                dataType:"json",
-               success: function(response) {
-                 
+               success: function(response) {                 
                   // Handle the Ajax response
                   $(".option1").text(response.australia_per+"%");
                   $(".option2").text(response.india_per+"%");
@@ -1644,34 +1263,67 @@ document.addEventListener('DOMContentLoaded', function() {
          }
 
          // Call the Ajax function every 5 seconds (5000 milliseconds)
-         setInterval(makeAjaxCall, 50000);
+         setInterval(makeAjaxCall, 5000);
     });
   
 
    function submitquestion(){
       
       var data = localStorage.getItem('checking');
+      var result_comment = localStorage.getItem('result');
       if(data!="1"){        
          localStorage.setItem('checking', 1);
-           var answer = $('.question1').text();
-        
-         $.ajax({
-            headers: {
-                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            type: "POST",
-            url: "https://icc-wtc.matrixpanel.in/resultstore", // Replace with the appropriate URL of your server-side endpoint
-            dataType: 'json',
-            data:{"answer":answer,"question_id":1},
-            success: function(data) {
-            
-            },
-            error: function() {
-               
-            }
-         });        
+            var answer = $('.question1').data('text');        
+            $.ajax({
+               headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+               },
+               type: "POST",
+               // url: "https://icc-wtc.matrixpanel.in/resultstore", // Replace with the appropriate URL of your server-side endpoint
+               url: APP_URL+"/resultstore",
+               dataType: 'json',
+               data:{"answer":answer},
+               success: function(data) {
+                  if(data==1){
+                     $(".success_comment").css('display', 'block');
+                     $(".failure_comment").css('display', 'none');
+                     localStorage.setItem('result', 1);
+                  }else{
+                     $(".success_comment").css('display', 'none');
+                     $(".failure_comment").css('display', 'block');;
+                     localStorage.setItem('result', 2);
+                  }  
+                  $(".trivia_button").hide();
+               },
+               error: function() {
+                  
+               }
+            });       
       }
       
      
    }
+   var result = localStorage.getItem('result');
+  
+   if(result==1){ 
+      $(".trivia_button").hide();   
+      $(".success_comment").css('display', 'block');
+      $(".failure_comment").css('display', 'none');
+   }else if(result==2){
+      $(".trivia_button").hide();
+      $(".success_comment").css('display', 'none');
+      $(".failure_comment").css('display', 'block');;
+   }
+
+   var question2_local = localStorage.getItem('question2');
+   if(question2_local==1){
+      $(".circle").css('display', 'none');
+   }
+   let question2_text_local = localStorage.getItem('question2_answer');
+   if(question2_text_local!="" && question2_text_local!=null){
+      $(".question2answer").text("Your answer is "+question2_text_local);
+   }
+
+   
+                     
 </script>

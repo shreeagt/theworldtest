@@ -2,10 +2,10 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-sm-8">
-      <h2> Quize Page </h2>
+      <h2> Poll Page </h2>
       <ol class="breadcrumb">
           <li class="breadcrumb-item"> <a href="dashboard"> Home </a>  </li>
-          <li class="breadcrumb-item">  <a href="{{route('admin-quize.create')}}">Add Quize</a></li>
+          <li class="breadcrumb-item">  <a href="{{route('admin-poll.create')}}">Add Quize</a></li>
          
       </ol>
   </div>
@@ -17,11 +17,11 @@
 </div>
 <div class="wrapper wrapper-content">
 <div class="animated fadeInUp">
-<form action="{{route('admin-quize.store')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('admin-poll.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
   @if (isset($quize_details))
   
-  <input hidden value="{{$quize_details->quize_id}}" name="quize_id"/>
+  <input hidden value="{{$quize_details->poll_id}}" name="poll_id"/>
   @endif
 
 
@@ -53,20 +53,7 @@
         <label for="exampleInputPassword1">Option4</label>
         <input type="text" class="form-control" name="option4" required  placeholder="Enter Option" value="{{isset($quize_details)?$quize_details->option4:''}}">
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Answer</label>
-        <input type="text" class="form-control" name="answer" required  placeholder="Enter Comment" value="{{isset($quize_details)?$quize_details->answer:''}}">
-      </div>
      
-      <div class="form-group">
-        <label for="exampleInputPassword1">Success Comment</label>
-        <input type="text" class="form-control" name="success_comment" required  placeholder="Enter Comment" value="{{isset($quize_details)?$quize_details->success_comment:''}}">
-      </div>
-
-      <div class="form-group">
-        <label for="exampleInputPassword1">Failure Comment</label>
-        <input type="text" class="form-control" name="failure_comment" required  placeholder="Enter comment" value="{{isset($quize_details)?$quize_details->failure_comment:''}}">
-      </div>
 
     
       <div class="form-group">

@@ -3,10 +3,10 @@
 
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-sm-8">
-        <h2> Quize Page </h2>
+        <h2> Poll of day Page </h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"> <a href="dashboard"> Home </a>  </li>
-            <li class="breadcrumb-item"><a href="{{route('admin-quize.create')}}" >Add Quize</a></li>
+            <li class="breadcrumb-item"><a href="{{route('admin-poll.create')}}" >Add Poll</a></li>
         </ol>
     </div>
     <div class="col-sm-4">
@@ -45,11 +45,11 @@
                     <td>{{$list->option4}}</td>                   
                     <td>{{Carbon\Carbon::parse($list->created_at)->format('M d, Y')}}</td>
                     <td>
-                        <a href="{{route('admin-quize.delete',$list->quize_id)}}" style="color: white;" class="btn btn-danger">Delete</a>
+                        <a href="{{route('admin-poll.delete',$list->poll_id)}}" style="color: white;" class="btn btn-danger">Delete</a>
                         
                     </td>
                     <td>
-                        <a href="{{route('admin-quize.edit',$list->quize_id)}}" style="color: white;" class="btn btn-success">Edit</a>
+                        <a href="{{route('admin-poll.edit',$list->poll_id)}}" style="color: white;" class="btn btn-success">Edit</a>
                     </td>
                 </tr>
                 @endforeach
