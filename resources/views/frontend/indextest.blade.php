@@ -990,20 +990,10 @@ input[type="checkbox"]{
        const mainVideo = document.getElementById('mainVideo');
        mainVideo.src = "https://www.youtube.com/embed" + '/' + videoSrc + "?autoplay=1";
        mainVideo.load();
-      //  mainVideo.play();
-
-      // const nowPlayingElement = document.getElementById('nowPlaying');
-      // nowPlayingElement.textContent = "Now Playing: " + videoSrc;
-
+      
      }
    
-   //     function playMainVideo() {
-   //       const mainVideo = document.getElementById('mainVideo');
-   //       mainVideo.play();
-   //       const playButton = document.querySelector('.play-button');
-   //       playButton.style.display = 'none';
    
-   // }
    
    
    $(window).ready(function(){
