@@ -213,29 +213,17 @@ input[type="checkbox"]{
             <div class="col-lg-12 col-md-12">
                <div class="card banner_card">
                   <div id="demo" class="carousel slide" data-ride="carousel">
-                     <!--
-                        <ul class="carousel-indicators">
-                        	<li data-target="#demo" data-slide-to="0" class="active"></li>
-                        	<li data-target="#demo" data-slide-to="1"></li>
-                        	<li data-target="#demo" data-slide-to="2"></li>
-                        </ul>
-                        -->
+                     
                      <div class="carousel-inner">
                         <div class="carousel-item active">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto w-100 d-none d-lg-block" alt=""/>
                            <img src="/img/homeslider/slide_1_mob.jpg" class="img-fluid mx-auto  w-100 d-block d-lg-none  " alt="banner"/>
-                           {{-- <div class="carousel-caption">
-                              <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1> --}}
-                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
-                           {{-- </div> --}}
+                         
                         </div>
                         <div class="carousel-item">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto w-100 d-none d-lg-block" alt=""/>
                            <img src="/img/homeslider/slide_1_mob.jpg" class="img-fluid mx-auto  w-100 d-block d-lg-none  " alt="banner"/>
-                           {{-- <div class="carousel-caption">
-                              <h1 class="white"> Tendulkar lifts the inaugural RSWS trophy - India Legends </h1> --}}
-                              {{-- <p class="white mb-0"> 21 Mar, 2021 </p> --}}
-                           {{-- </div> --}}
+                          
                         </div>
                         <div class="carousel-item">
                            <img src="/img/homeslider/slide_1.jpg" class="img-fluid mx-auto w-100 d-none d-lg-block" alt=""/>
@@ -292,9 +280,7 @@ input[type="checkbox"]{
                                    <img src="{{ $blog->blog_thumbnail }}" class="img-fluid" />
                                </div>
                                <div class="ap-img-content">
-                                   {{-- <div class="ap-date-wrp">
-                                       <span>{{ $blog->created_at->format('d M, Y') }}</span>
-                                   </div> --}}
+                                  
                                    <h5 class="ap-slide-title">{{ $blog->blog_title }}</h5>
                                    <a href="{{ route('blogs.show', ['id' => $blog->id]) }}">Read More</a>
                                </div>
@@ -323,14 +309,12 @@ input[type="checkbox"]{
 
                      <iframe  id="mainVideo" width="100%" height="100%" src="https://www.youtube.com/embed/h6Mv2RHqkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
-                     <!-- <div class="play-button" onclick="playMainVideo()">
-                        <img src="/img/icon/play-inline-wtc.png" alt="Play Button" >
-                     </div> -->
+                    
                   </div>
                   <div class="recommended-videos">
                      <div class="video_header">
                         <h2>The NZ dressing room at the winning moment | WTC21...</h2>
-                        {{-- <p>23 JUN 2021</p> --}}
+                        
                      </div>
                      <div class="video_cover">
                         <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
@@ -339,7 +323,7 @@ input[type="checkbox"]{
                               <p>The NZ dressing room at the winning moment | WTC21...</p>
                               <p>Wed 23 Jun</p>
                            </div>
-                           <!-- <div id="nowPlaying"></div> -->
+                           
                         </div>
                         <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
                            <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
@@ -462,7 +446,7 @@ input[type="checkbox"]{
                                 </div>
                                 <span class="percent option1"></span>
                                 </div>
-                                <div class="progress" id="pstyle1" style='--w:25;'></div>
+                                <div class="progress" id="pstyle1" ></div>
                             </label>
                             <label for="opt-2" class="opt-2 question2_label">
                                 <div class="row">
@@ -474,7 +458,7 @@ input[type="checkbox"]{
                                 </div>
                                 <span class="percent option2"></span>
                                 </div>
-                                <div class="progress" id="pstyle2" style='--w:45;'></div>
+                                <div class="progress" id="pstyle2" ></div>
                             </label>
                             <label for="opt-3" class="opt-3 question2_label">
                                 <div class="row">
@@ -486,7 +470,7 @@ input[type="checkbox"]{
                                 </div>
                                 <span class="percent option3"></span>
                                 </div>
-                                <div class="progress" id="pstyle3" style='--w:30;'></div>
+                                <div class="progress" id="pstyle3"></div>
                             </label>
                             <span class="question2answer"></span>
                             </div>
@@ -502,7 +486,7 @@ input[type="checkbox"]{
       <div class="container">
          <div class="row justify-content-md-center">
             <div class="col-lg-12">
-
+               <h1>Test Team Rankings</h1>
                <div class="row">
                   <div class="col-md-12">
                      <div class="card stats_board">
@@ -1108,7 +1092,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
    // localStorage.clear();
    var APP_URL = {!! json_encode(url('/')) !!};
-   console.log(APP_URL);
+ 
     $(document).ready(function() {
          $('.question2_label').click(function(){
             var question2_local = localStorage.getItem('question2');
@@ -1130,8 +1114,11 @@ document.addEventListener('DOMContentLoaded', function() {
                   success: function(result)
                   {
                      $(".option1").text(result.australia_per+"%");
+                     $("#pstyle1")[0].style.setProperty("--w", result.australia_per);
                      $(".option2").text(result.india_per+"%");
+                     $("#pstyle2")[0].style.setProperty("--w", result.india_per);
                      $(".option3").text(result.draw_per+"%");
+                     $("#pstyle3")[0].style.setProperty("--w", result.draw_per);
                      $(".circle").css('display', 'none');
                     
                      localStorage.setItem('question2_answer',result.answer);
@@ -1153,8 +1140,11 @@ document.addEventListener('DOMContentLoaded', function() {
                success: function(response) {                 
                   // Handle the Ajax response
                   $(".option1").text(response.australia_per+"%");
+                  $("#pstyle1")[0].style.setProperty("--w", response.australia_per);
                   $(".option2").text(response.india_per+"%");
+                  $("#pstyle2")[0].style.setProperty("--w", response.india_per);
                   $(".option3").text(response.draw_per+"%");
+                  $("#pstyle3")[0].style.setProperty("--w", response.draw_per);
                },
                error: function(error) {
                   // Handle any errors that occur during the Ajax call
@@ -1171,10 +1161,11 @@ document.addEventListener('DOMContentLoaded', function() {
    function submitquestion(){
       
       var data = localStorage.getItem('checking');
-     
+      
       if(data!="1"){       
         
-            var answer = $('.question1').data('text');        
+            var answer = $('.question1').data('text'); 
+            var text = $('.question1').text();        
             $.ajax({
                headers: {
                      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -1185,13 +1176,15 @@ document.addEventListener('DOMContentLoaded', function() {
                dataType: 'json',
                data:{"answer":answer},
                success: function(data) {
-                  console.log("dfdsf"+data);
+                  
                   if(data==1){
                      localStorage.setItem('checking', 1);
+                     localStorage.setItem('selectvalue',text);
                      $(".success_comment").css('display', 'block');
                      $(".failure_comment").css('display', 'none');
                    
                   }else{
+                     localStorage.setItem('selectvalue',text);
                      localStorage.setItem('checking', 2);
                      $(".success_comment").css('display', 'none');
                      $(".failure_comment").css('display', 'block');;
@@ -1212,12 +1205,35 @@ document.addEventListener('DOMContentLoaded', function() {
    }
 
    var result = localStorage.getItem('checking');  
-   
+   var selectvalue = localStorage.getItem('selectvalue'); 
    if(result==1){ 
+      if(selectvalue!=''){
+         $(".op").each(function() {
+            var text = $(this).text();
+
+            // Check the text condition and add background color if it is correct
+            if (text === selectvalue) {
+               $(this).css("background", "#192462");
+            } 
+         });
+      }
+     
+      // $(this).css("background","#192462");
       $(".trivia_button").hide();   
       $(".success_comment").css('display', 'block');
       $(".failure_comment").css('display', 'none');
    }else if(result==2){
+      if(selectvalue!=''){
+         $(".op").each(function() {
+            var text = $(this).text();
+
+            // Check the text condition and add background color if it is correct
+            if (text === selectvalue) {
+               $(this).css("background", "#192462");
+            } 
+         });
+      }
+      // $(this).css("background","#192462");
       $(".trivia_button").hide();
       $(".success_comment").css('display', 'none');
       $(".failure_comment").css('display', 'block');;

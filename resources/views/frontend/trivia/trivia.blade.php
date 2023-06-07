@@ -167,7 +167,7 @@ li.quiz_list {
   function submitquestion(){
      
      var data = localStorage.getItem('checking');
-    
+     var text = $('.question1').text();
      if(data!="1"){       
        
            var answer = $('.question1').data('text');        
@@ -184,10 +184,12 @@ li.quiz_list {
                  console.log("dfdsf"+data);
                  if(data==1){
                     localStorage.setItem('checking', 1);
+                    localStorage.setItem('selectvalue',text);
                     $(".success_comment").css('display', 'block');
                     $(".failure_comment").css('display', 'none');
                   
                  }else{
+                    localStorage.setItem('selectvalue',text);
                     localStorage.setItem('checking', 2);
                     $(".success_comment").css('display', 'none');
                     $(".failure_comment").css('display', 'block');;
@@ -208,11 +210,31 @@ li.quiz_list {
   }
 
   var result = localStorage.getItem('checking');
+  var selectvalue = localStorage.getItem('selectvalue'); 
+  
   if(result==1){ 
+    if(selectvalue!=''){
+         $(".op").each(function() {
+            var text = $(this).text().trim();           
+            // Check the text condition and add background color if it is correct
+            if (text === selectvalue) {
+               $(this).css("background", "#192462");
+            } 
+         });
+      }
      $(".trivia_button").hide();   
      $(".success_comment").css('display', 'block');
      $(".failure_comment").css('display', 'none');
   }else if(result==2){
+    if(selectvalue!=''){
+         $(".op").each(function() {
+            var text = $(this).text().trim();
+            // Check the text condition and add background color if it is correct
+            if (text === selectvalue) {
+               $(this).css("background", "#192462");
+            } 
+         });
+      }
      $(".trivia_button").hide();
      $(".success_comment").css('display', 'none');
      $(".failure_comment").css('display', 'block');;

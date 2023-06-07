@@ -198,7 +198,7 @@ input[type="checkbox"]{
                        </div>
                        <span class="percent option1"></span>
                        </div>
-                       <div class="progress" id="pstyle1" style='--w:25;'></div>
+                       <div class="progress" id="pstyle1" ></div>
                    </label>
                    <label for="opt-2" class="opt-2 question2_label">
                        <div class="row">
@@ -208,9 +208,9 @@ input[type="checkbox"]{
                             {{$question2->option2}}
                            @endif</span>
                        </div>
-                       <span class="percent option2">45%</span>
+                       <span class="percent option2"></span>
                        </div>
-                       <div class="progress" id="pstyle2" style='--w:45;'></div>
+                       <div class="progress" id="pstyle2" ></div>
                    </label>
                    <label for="opt-3" class="opt-3 question2_label">
                        <div class="row">
@@ -223,7 +223,7 @@ input[type="checkbox"]{
                        </div>
                        <span class="percent option3"></span>
                        </div>
-                       <div class="progress" id="pstyle3" style='--w:30;'></div>
+                       <div class="progress" id="pstyle3" ></div>
                    </label>
                    <span class="question2answer"></span>
                    </div>
@@ -310,8 +310,11 @@ for (let i = 0; i < options.length; i++) {
                  success: function(result)
                  {
                     $(".option1").text(result.australia_per+"%");
+                    $("#pstyle1")[0].style.setProperty("--w", result.australia_per);
                     $(".option2").text(result.india_per+"%");
+                    $("#pstyle2")[0].style.setProperty("--w", result.india_per);
                     $(".option3").text(result.draw_per+"%");
+                    $("#pstyle3")[0].style.setProperty("--w", result.draw_per);
                     $(".circle").css('display', 'none');
                    
                     localStorage.setItem('question2_answer',result.answer);
@@ -333,8 +336,13 @@ for (let i = 0; i < options.length; i++) {
               success: function(response) {                 
                  // Handle the Ajax response
                  $(".option1").text(response.australia_per+"%");
+                 $("#pstyle1")[0].style.setProperty("--w", response.australia_per);
                  $(".option2").text(response.india_per+"%");
+                 $("#pstyle2")[0].style.setProperty("--w", response.india_per);
                  $(".option3").text(response.draw_per+"%");
+                 $("#pstyle3")[0].style.setProperty("--w", response.draw_per);
+
+                 
               },
               error: function(error) {
                  // Handle any errors that occur during the Ajax call

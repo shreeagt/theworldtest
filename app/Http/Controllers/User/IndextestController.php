@@ -154,9 +154,8 @@ class IndextestController extends Controller
             $draw_per=0;
         }
         
-       
-        
-        echo json_encode(["australia_per"=>$australia_per,"india_per"=>$india_per,"draw_per"=>$draw_per]);
+        echo json_encode(["australia_per"=>round($australia_per),"india_per"=>round($india_per),"draw_per"=>round($draw_per)]);
+  
        
     }
 
