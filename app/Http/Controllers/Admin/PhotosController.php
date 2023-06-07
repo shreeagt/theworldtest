@@ -271,8 +271,8 @@ class PhotosController extends Controller
     {
        
         $gallery = GalleryCatergory::all(); // Assuming you have a Gallery model
-
-        return view('frontend.gallery.detail', ['gallery' => $gallery]);
+        $count = GalleryCatergory::all()->count();
+        return view('frontend.gallery.detail', ['gallery' => $gallery,"count"=>$count]);
     }
     public function destroy($id)
     {
