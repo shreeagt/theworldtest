@@ -208,7 +208,7 @@ class videosController extends Controller
       public function showVideos()
       {
           $youtubevideos = Youtube::all(); 
-        //   dd($youtubevideos);
+       
           return view('frontend.video.video', compact('youtubevideos'));
       }
       public function deleteVideo($id)
