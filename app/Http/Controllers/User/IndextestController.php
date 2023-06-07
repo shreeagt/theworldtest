@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\Blog;
 use App\Model\Quize;
 use App\Model\Poll;
+use App\Model\Youtube;
 use App\Model\PollResult;
 use App\Model\QuizeResult;
 use Carbon\Carbon;
@@ -18,8 +19,9 @@ class IndextestController extends Controller
       
         $question1 = Quize::where(["status"=>"Active"])->first();
         $question2 = Poll::where(["status"=>"Active"])->first();
+        $video = Youtube::where(["home_status"=>"1"])->get();
         $blogs = Blog::all();
-        return view('frontend.indextest', compact('blogs',"question1","question2"));
+        return view('frontend.indextest', compact('blogs',"question1","question2",'video'));
     }
 
     public function triviaindex()

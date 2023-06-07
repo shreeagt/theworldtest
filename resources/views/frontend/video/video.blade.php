@@ -38,7 +38,7 @@
 			<div class="container">
 				<div class="row">				
 					<div class="col-md-12">
-						<h2>Videos</h2> 
+						<h2>All Video </h2> 
 					</div>
 				</div> <!-- Row -->
 			</div> <!-- Container -->
@@ -47,10 +47,10 @@
         <section class="latest_news">
                 <div class="container-fluid mt-4">
                 <div class="row">
-                
+               
                     <div class="col-md-12 ">
                         <div class="row mb-4">
-                            
+                           
                             @foreach ($youtubevideos as $video)
                             <div class="col-md-3 mb-4">
                                 <div class="card">
@@ -61,10 +61,10 @@
                                             </div>
                                             <div class="ap-img-content">
                                                 <span class="video_play"> <img src="/img/play.png" class="img-fluid"> </span>
-                                                {{-- <div class="ap-date-wrp row">
+                                                <div class="ap-date-wrp row">
                                                     <span class="col-sm-6 col-xs-6 text-left">5 June 2023</span>
                                                     <span class="col-sm-6 col-xs-6 text-right"><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                </div> --}}
+                                                </div>
                                                 <h5 class="ap-slide-title">{{ $video->description }}</h5>
                                             </div>
                                         </div>
@@ -74,7 +74,9 @@
                             @endforeach
 
 
-                           
+                         
+                        
+
                         </div>
 
                     
@@ -83,12 +85,12 @@
             </div>
         </section>
 
-    
+ 
 @foreach ($youtubevideos as $video)
 <div class="modal fade" id="exampleModal{{ $video->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="background:#817464;">
+                <div class="modal-header" style="background:#f37224;">
                     <h5 class="modal-title text-white" id="exampleModalLabel">{{ $video->description }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>

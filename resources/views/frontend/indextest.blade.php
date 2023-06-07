@@ -300,73 +300,46 @@ input[type="checkbox"]{
       <div class="container-fluid">
          <div class="row justify-content-md-center">
             <div class="col-lg-12 text-left">
-               <h3 class="white mb-30"> #WTC21 FINAL - REWIND </h3>
+               <h3 class="white mb-30"> #VIDEO </h3>
             </div>
             <div class="col-lg-12">
                <div class="video-section">
                   <div class="video-player" >
        
 
-                     <iframe  id="mainVideo" width="100%" height="100%" src="https://www.youtube.com/embed/h6Mv2RHqkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
+                     <iframe  id="mainVideo" width="100%" height="100%" src="{{$video[0]->videourl }}" title="{{$video[0]->videotitle}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
                     
                   </div>
                   <div class="recommended-videos">
                      <div class="video_header">
-                        <h2>The NZ dressing room at the winning moment | WTC21...</h2>
+                        <h2>Videos</h2>
                         
                      </div>
                      <div class="video_cover">
-                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail">
-                           <div>
-                              <p>The NZ dressing room at the winning moment | WTC21...</p>
-                              <p>Wed 23 Jun</p>
-                           </div>
-                           
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
+                       
+                       
+                        {{-- <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
                            <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
                            <div>
                               <p>All seven of Kyle Jamieson's WTC21 Final wickets</p>
-                              <p>Tue 6 Jul</p>
-                           </div>
+                              {{-- <p>Tue 6 Jul</p> --}}
+                           {{-- </div> --}}
+                        {{-- </div> --}} 
+                        
+                       @foreach ($video as $item)
+                              
+                       <div class="video-thumbnail" onclick="changeVideo('<?php echo  $item->video_id ?>')">
+                        <img src="{{ asset('/youtube/gallery/' . $item->image) }}" alt="Video Thumbnail" >
+                        <div>
+                           <p>All seven of Kyle Jamieson's WTC21 Final wickets</p>
+                           
                         </div>
-                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('Dy8hv0XrPWM')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
-                        <div class="video-thumbnail" onclick="changeVideo('RCTKC37k17s')">
-                           <img src="/img/thumbnail.jpg" alt="Video Thumbnail" >
-                           <div>
-                              <p>Royal Stag Make It Large Moment | WTC21 Final</p>
-                              <p>Thu 24 Jun</p>
-                           </div>
-                        </div>
+                     </div>
+                           
+                       @endforeach
+
+                        
                      </div>
                      
                   </div>

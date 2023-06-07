@@ -177,9 +177,9 @@ class videosController extends Controller
     public function showCategory(){
         $video_categories=VideoCategory::get();
         return view('admin.Pages.videos.category-index',['video_categories'=>$video_categories]);
-      }
+    }
 
-      public function Youtube(){
+    public function Youtube(){
         $youtubevideos = Youtube::all();
         return view('Youtube', ['youtubevideos' => $youtubevideos]);
     }
@@ -188,22 +188,30 @@ class videosController extends Controller
       }
       public function insertyoutube(Request $request)
       {
-          $video = new Youtube();
-          $video->videotitle = $request->input('videotitle');
-          $video->description = $request->input('description');
-          $video->videourl = $request->input('videourl');
-          $video->video_id = $request->input('video_id');
+        $video = new Youtube();
+        $video->videotitle = $request->input('videotitle');
+        $video->description = $request->input('description');
+        $video->videourl = $request->input('videourl');
+        $video->video_id = $request->input('video_id');
 
-          if ($request->hasFile('photo')) {
+        if(!empty($request->hasFile('photo'))) {
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
             $file->move('youtube/gallery/', $filename);
             $video->image = $filename; 
-        } else {
+        }else {
             $video->image = '';
         }
-          $video->save();
+        if(!empty($request->input('home_status'))){
+            $video->home_status=1;
+        }else{
+            $video->home_status=0;
+        }
+        $video->save();
+
+        return redirect()->route('admin-videos-category.Youtube');
+
       }
       public function showVideos()
       {
@@ -225,26 +233,34 @@ class videosController extends Controller
       }
       public function updateVideo(Request $request, $id)
       {
-          $video = Youtube::find($id);
-          $video->videotitle = $request->input('videotitle');
-          $video->description = $request->input('description');
-          $video->videourl = $request->input('videourl');
-          $video->video_id = $request->input('video_id');
-      
-          if ($request->hasFile('photo')) {
+        $video = Youtube::find($id);
+        $video->videotitle = $request->input('videotitle');
+        $video->description = $request->input('description');
+        $video->videourl = $request->input('videourl');
+        $video->video_id = $request->input('video_id');
+    
+        if (!empty($request->hasFile('photo'))) {
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
             $file->move('youtube/gallery/', $filename);
             $video->image = $filename; 
-        } else {
-            $video->image = '';
-        
-          }
+           
+        } 
+        else {
+          
+            $video->image = '';        
+        }
+
+        if(!empty($request->input('home_status'))){
+            $video->home_status=1;
+        }else{
+            $video->home_status=0;
+        }
       
-          $video->save();
-      
-          // Redirect or perform any other necessary logic
+        $video->save();      
+        // Redirect or perform any other necessary logic
+        return redirect()->route('admin-videos-category.Youtube');
       }
 
 

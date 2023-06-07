@@ -29,6 +29,11 @@
                 <input type="file" name="photo" class="form-control-file">
                 <img src="{{ asset('/youtube/gallery/' . $video->image) }}" alt="Video Thumbnail" width="100">
             </div>
+            <div class="form-group">
+                <input type="radio" name="home_status" value="1" <?php if ($video->home_status === 1) echo 'checked'; ?>>
+                <label for="femaleRadio">Home Page Display</label>
+               
+            </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>

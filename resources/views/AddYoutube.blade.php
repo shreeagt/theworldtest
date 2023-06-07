@@ -29,6 +29,10 @@
     </div>
     <label for="videothumbnail">Add Video Thumbnail</label>
     <input type="file" name="photo">
+    <div class="form-group">
+        <input type="radio" name="home_status" value="1" id="">
+        <label for="femaleRadio">Home Page Display</label>       
+    </div>
     <input type="submit">
 </form>
 @endsection
