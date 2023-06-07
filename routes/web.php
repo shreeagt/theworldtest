@@ -61,9 +61,6 @@ Route::get('/news_ind', [NewsIndController::class, 'index'])->name('frontend.new
 
 
 
-// Route::get('/videogallery', function () {
-//     return view('frontend.video.video');
-// });
 Route::get('/videogallery', [videosController::class, 'showVideos'])->name('showVideos.gallery');
 
 

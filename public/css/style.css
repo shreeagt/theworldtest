@@ -68,7 +68,7 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
 .navbar-nav>li>a { color:#fff; display:block; font-size:16px; padding:8px 4px !important; text-transform:uppercase;  border-bottom:3px solid transparent; transition:all 0.4s ease 0s; position:relative; }
 .navbar .navbar-nav>li>a.active, .navbar .navbar-nav>li>a:focus, .navbar .navbar-nav>li>a:hover { color:#fff; border-bottom:3px solid#817464; transition : all 0.4s 0s ease; }
 .navbar .navbar-nav>li>a.active { color:#817464; border-bottom:3px solid#817464; }
-.logo { width:100px; transition : all 0.4s 0s ease; }
+.logo { width:120px; transition : all 0.4s 0s ease; }
 
 
 
@@ -94,7 +94,7 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
 
 @media (max-width:1280px) {
 /* .logo { width:240px; } */
-.logo { width:100px; }
+.logo { width:100%; }
 .navbar .col-lg-9 { padding-left:40px; }
 }
 @media (max-width:992px) {
@@ -104,14 +104,14 @@ box-shadow: 0px 0px 22px 7px rgba(168,168,168,0.50);
     .navbar { padding:15px 0; }
 .navbar-brand { display:block; padding: 0px; }
 /* .logo { width:160px; } */
-.logo { width:100px; }
+.logo { width:100%; }
 .top-menu { display:none !important; }
 .banner { margin-top:70px; }
 .nav_height { margin-top:62px; }
 }
 @media (max-width:380px) {
 /* .logo { width:140px; } */
-.logo { width:100px; }
+.logo { width:100%; }
 }
 
 .navbar-nav .dropdown-menu { padding:0px; border-radius:0px; }
@@ -658,6 +658,13 @@ button.navbar-toggler.navbar-toggler-right.collapsed {
 
 button.navbar-toggler.navbar-toggler-right {
     background: #000000;
+}
+/* add css sachhidanand */
+.success_comment{
+    font-size: 1rem;
+}
+.failure_comment{
+    font-size: 1rem;
 }
 
 /* Owl Carousel */

@@ -174,6 +174,7 @@ label.selected .row .circle::after{
 label .row span{
   font-size: 16px;
   font-weight: 500;
+  color: #f0f0f0;
 }
 label .row .percent{
   display: none;
@@ -958,7 +959,7 @@ input[type="checkbox"]{
    $(window).ready(function(){
    	var left, width, cont = "#q-cont";
    	$('.op').click(function(){
-   		$('.op').css("background","#f37224");
+   		$('.op').css("background","#817464");
          $('.op').removeClass("question1");
    		$(this).css("background","#192462");
          $(this).addClass("question1");

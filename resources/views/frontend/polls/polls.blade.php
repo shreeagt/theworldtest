@@ -127,6 +127,7 @@ label.selected .row .circle::after{
 label .row span{
   font-size: 16px;
   font-weight: 500;
+  color: #f0f0f0;
 }
 label .row .percent{
   display: none;

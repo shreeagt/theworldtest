@@ -1,5 +1,5 @@
 
-	<footer>
+	<footer class="fixed-bottom">
 		
 		<div class="footer-bottom">
 			<div class="container">
@@ -10,7 +10,7 @@
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 						<a href="#">Terms and Conditions</a>
 					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 text-right">
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 						<a href="#">Privacy Policy</a>
 					</div>
 				</div>
