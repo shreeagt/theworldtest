@@ -62,8 +62,8 @@
                                             <div class="ap-img-content">
                                                 <span class="video_play"> <img src="/img/play.png" class="img-fluid"> </span>
                                                 <div class="ap-date-wrp row">
-                                                    <span class="col-sm-6 col-xs-6 text-left">5 June 2023</span>
-                                                    <span class="col-sm-6 col-xs-6 text-right"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                                    {{-- <span class="col-sm-6 col-xs-6 text-left">5 June 2023</span>
+                                                    <span class="col-sm-6 col-xs-6 text-right"><i class="fa fa-eye" aria-hidden="true"></i></span> --}}
                                                 </div>
                                                 <h5 class="ap-slide-title">{{ $video->description }}</h5>
                                             </div>

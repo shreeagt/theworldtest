@@ -307,7 +307,9 @@ input[type="checkbox"]{
                   <div class="video-player" >
        
 
-                     <iframe  id="mainVideo" width="100%" height="100%" src="{{$video[0]->videourl }}" title="{{$video[0]->videotitle}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
+                     <iframe  id="mainVideo" width="100%" height="100%" src="<?(isset($video[0]) && !empty( $video[0]->videourl) )
+                     echo $video[0]->videourl  ?>" title="<?(isset($video[0]) && !empty( $video[0]->videotitle) )
+                     echo $video[0]->videotitle  ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
                     
                   </div>
