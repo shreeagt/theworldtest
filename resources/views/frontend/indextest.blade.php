@@ -307,12 +307,11 @@ input[type="checkbox"]{
                <div class="video-section">
                   <div class="video-player" >
        
-
-                     <iframe  id="mainVideo" width="100%" height="100%" src="<?(isset($video[0]) && !empty( $video[0]->videourl) )
-                     echo $video[0]->videourl  ?>" title="<?(isset($video[0]) && !empty( $video[0]->videotitle) )
+                     <?php if(isset($video)){?>
+                     <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo $video[0]->videourl  ?>" title="<?php
                      echo $video[0]->videotitle  ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
-                    
+                    <?php }?>
                   </div>
                   <div class="recommended-videos">
                      <div class="video_header">
