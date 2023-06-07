@@ -163,10 +163,10 @@ li.quiz_list {
 <script>
   // localStorage.clear();
   var APP_URL = {!! json_encode(url('/')) !!}; 
-
+  let quize_id={{$question1->quize_id}};
   function submitquestion(){
      
-     var data = localStorage.getItem('checking');
+     var data = localStorage.getItem(quize_id);
      var text = $('.question1').text();
      if(data!="1"){       
        
@@ -183,14 +183,14 @@ li.quiz_list {
               success: function(data) {
                  console.log("dfdsf"+data);
                  if(data==1){
-                    localStorage.setItem('checking', 1);
+                    localStorage.setItem(quize_id, 1);
                     localStorage.setItem('selectvalue',text);
                     $(".success_comment").css('display', 'block');
                     $(".failure_comment").css('display', 'none');
                   
                  }else{
                     localStorage.setItem('selectvalue',text);
-                    localStorage.setItem('checking', 2);
+                    localStorage.setItem(quize_id, 2);
                     $(".success_comment").css('display', 'none');
                     $(".failure_comment").css('display', 'block');;
                    
@@ -209,28 +209,31 @@ li.quiz_list {
     
   }
 
-  var result = localStorage.getItem('checking');
-  var selectvalue = localStorage.getItem('selectvalue'); 
-  
+  var result = localStorage.getItem(quize_id);
+  var selectvalue = localStorage.getItem('selectvalue').trim(); 
+
   if(result==1){ 
     if(selectvalue!=''){
-         $(".op").each(function() {
-            var text = $(this).text().trim();           
-            // Check the text condition and add background color if it is correct
-            if (text === selectvalue) {
-               $(this).css("background", "#192462");
-            } 
-         });
-      }
+        $(".op").each(function() {
+          var text = $(this).text().trim();
+          console.log(text,selectvalue);       
+          // Check the text condition and add background color if it is correct
+          if (text == selectvalue) {           
+              $(this).css("background", "#192462");
+          } 
+        });
+    }
      $(".trivia_button").hide();   
      $(".success_comment").css('display', 'block');
      $(".failure_comment").css('display', 'none');
   }else if(result==2){
     if(selectvalue!=''){
-         $(".op").each(function() {
-            var text = $(this).text().trim();
+      
+         $(".op").each(function() {           
+            var text = $(this).text().trim();            
             // Check the text condition and add background color if it is correct
-            if (text === selectvalue) {
+            if (text == selectvalue) {
+             
                $(this).css("background", "#192462");
             } 
          });

@@ -239,17 +239,14 @@ class videosController extends Controller
         $video->videourl = $request->input('videourl');
         $video->video_id = $request->input('video_id');
     
-        if (!empty($request->hasFile('photo'))) {
+        if(!empty($request->hasFile('photo'))) {
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
             $file->move('youtube/gallery/', $filename);
             $video->image = $filename; 
-           
-        } 
-        else {
-          
-            $video->image = '';        
+        }else {
+            $video->image = '';
         }
 
         if(!empty($request->input('home_status'))){

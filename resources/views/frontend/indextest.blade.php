@@ -1066,6 +1066,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script>
    // localStorage.clear();
+   let quize_id={{$question1->quize_id}};
    var APP_URL = {!! json_encode(url('/')) !!};
  
     $(document).ready(function() {
@@ -1135,7 +1136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
    function submitquestion(){
       
-      var data = localStorage.getItem('checking');
+      var data = localStorage.getItem(quize_id);
       
       if(data!="1"){       
         
@@ -1153,14 +1154,14 @@ document.addEventListener('DOMContentLoaded', function() {
                success: function(data) {
                   
                   if(data==1){
-                     localStorage.setItem('checking', 1);
+                     localStorage.setItem(quize_id, 1);
                      localStorage.setItem('selectvalue',text);
                      $(".success_comment").css('display', 'block');
                      $(".failure_comment").css('display', 'none');
                    
                   }else{
                      localStorage.setItem('selectvalue',text);
-                     localStorage.setItem('checking', 2);
+                     localStorage.setItem(quize_id, 2);
                      $(".success_comment").css('display', 'none');
                      $(".failure_comment").css('display', 'block');;
                     
@@ -1179,13 +1180,14 @@ document.addEventListener('DOMContentLoaded', function() {
      
    }
 
-   var result = localStorage.getItem('checking');  
-   var selectvalue = localStorage.getItem('selectvalue'); 
-   if(result==1){ 
+   var result = localStorage.getItem(quize_id); 
+  
+   var selectvalue = localStorage.getItem('selectvalue').trim(); 
+   if(result==1){     
       if(selectvalue!=''){
          $(".op").each(function() {
             var text = $(this).text();
-
+              
             // Check the text condition and add background color if it is correct
             if (text === selectvalue) {
                $(this).css("background", "#192462");
@@ -1213,6 +1215,7 @@ document.addEventListener('DOMContentLoaded', function() {
       $(".success_comment").css('display', 'none');
       $(".failure_comment").css('display', 'block');;
    }
+
 
    var question2_local = localStorage.getItem('question2');
    if(question2_local==1){
