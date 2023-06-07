@@ -210,8 +210,8 @@ input[type="checkbox"]{
    <main class="banner">
       <div class="container-fluid">
          <div class="row justify-content-md-center">
-            <div class="col-lg-12 col-md-12">
-               <div class="card banner_card">
+            <div >
+               <div class="card banner_card" class="col-lg-12 col-md-12">
                   <div id="demo" class="carousel slide" data-ride="carousel">
                      
                      <div class="carousel-inner">
