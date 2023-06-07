@@ -1108,7 +1108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
    // localStorage.clear();
    var APP_URL = {!! json_encode(url('/')) !!};
-   
+   console.log(APP_URL);
     $(document).ready(function() {
          $('.question2_label').click(function(){
             var question2_local = localStorage.getItem('question2');
