@@ -12,6 +12,7 @@ use App\User;
 class AdminController extends Controller
 {
     public function login(){
+        dd("55");
         if(Auth::check())
         {
             return redirect()->route('admin-blogs.index');
