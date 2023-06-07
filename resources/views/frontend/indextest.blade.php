@@ -1186,10 +1186,10 @@ document.addEventListener('DOMContentLoaded', function() {
    if(result==1){     
       if(selectvalue!=''){
          $(".op").each(function() {
-            var text = $(this).text();
+            var text = $(this).text().trim();
               
             // Check the text condition and add background color if it is correct
-            if (text === selectvalue) {
+            if (text == selectvalue) {
                $(this).css("background", "#192462");
             } 
          });
@@ -1202,7 +1202,7 @@ document.addEventListener('DOMContentLoaded', function() {
    }else if(result==2){
       if(selectvalue!=''){
          $(".op").each(function() {
-            var text = $(this).text();
+            var text = $(this).text().trim();
 
             // Check the text condition and add background color if it is correct
             if (text === selectvalue) {
