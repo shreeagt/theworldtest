@@ -239,7 +239,7 @@ input[type="checkbox"]{
          </div>
       </div>
    </main>
-   <main class="match_scores">
+   {{-- <main class="match_scores">
       <div class="container-fluid">
          <div class="row justify-content-md-center align-items-center">
             <div class="col-lg-6">
@@ -252,14 +252,14 @@ input[type="checkbox"]{
                      <li><span id="days"></span><span>days</span></li>
                      <li><span id="hours"></span><span>Hours</span></li>
                      <li><span id="minutes"></span><span>Minutes</span></li>
-                     {{-- <li><span id="seconds"></span>Seconds</li> --}}
+                     
                   </ul>
                </div>
             </div> 
            
          </div>
       </div>
-   </main>
+   </main> --}}
    <main class="features_interviews">
       <!-- <div class="container"> -->
       <div class="container-fluid">
