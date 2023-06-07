@@ -180,18 +180,14 @@ input[type="checkbox"]{
 							<div id="demo" class="carousel slide" data-ride="carousel">
 								
 
-    <div class="col-lg-12">
-     
+    <div class="col-lg-12">     
       <div id="q-cont">
-      <div class="wrapper">
+        <div class="wrapper">
                    <header>@if(isset($question2) && !empty($question2->question))
                     {{$question2->question}}
                    @endif <br></header>
                    <div class="poll-area">
-                   {{-- <input type="checkbox" name="poll" id="opt-1">
-                   <input type="checkbox" name="poll" id="opt-2">
-                   <input type="checkbox" name="poll" id="opt-3">
-                   <input type="checkbox" name="poll" id="opt-4"> --}}
+                   
                    <label for="opt-1" class="opt-1 question2_label">
                        <div class="row">
                        <div class="column">
@@ -233,8 +229,8 @@ input[type="checkbox"]{
                    </div>
                </div>
 
-   </div>
-   </div>
+      </div>
+    </div>
 </div>
 </div>
 </main>
@@ -244,11 +240,7 @@ input[type="checkbox"]{
 			<div class="container">
 				<div class="row justify-content-md-center">
 					<div class="col-lg-12 text-left">
-
-                
-                    
-		
-				</div> 
+				  </div> 
 			</div> 
 		</main>
         </section>

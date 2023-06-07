@@ -443,7 +443,7 @@ input[type="checkbox"]{
             <div class="col-lg-6">
                <h3 class="text-center mb-30 pt60"> POLL OF THE DAY</h3>
                <div id="q-cont">
-               <div class="wrapper">
+                  <div class="wrapper">
                            <header> @if(isset($question2) && !empty($question2->question))
                               {{$question2->question}}
                              @endif <br>
@@ -492,7 +492,7 @@ input[type="checkbox"]{
                             </div>
                         </div>
 
-            </div>
+               </div>
             </div>
          </div>
       </div>
@@ -503,248 +503,248 @@ input[type="checkbox"]{
          <div class="row justify-content-md-center">
             <div class="col-lg-12">
 
-            <div class="row">
-                                 <div class="col-md-12">
-                                    <div class="card stats_board">
-                                       <div class="tab-content" id="pills-tabContent">
-                                          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                             <ul class="head_title">
-                                                <li> <b class="desk_text"> POS </b><b class="mob_text"> # </b>  </li>
-                         
-                                                <li> <b class="desk_text"> TEAM </b> <b class="mob_text"> T </b> </li>
-                                                <li> <b class="desk_text"> MATCHES </b> <b class="mob_text"> M </b> </li>
-                                                <li> <b class="desk_text"> POINTS  </b> <b class="mob_text"> P </b> </li>
-                                                <li> <b class="desk_text"> RATING  </b><b class="mob_text"> R </b>  </li>
-                                                <div class="clear"></div>
-                                             </ul>
-                                             <ul class="stats_list">
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">1</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/ind.jpg" class="img-fluid" />  India </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/ind.jpg" class="img-fluid" />  IND</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">25</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">121</p>
-                                                      </li>
-                                  
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">2</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/aus.jpg" class="img-fluid" /> Australia </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/aus.jpg" class="img-fluid" />  AUS</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">23</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">2,679</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">116</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">3</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> England </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/eng.jpg" class="img-fluid" />  ENG</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">36</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">4,103</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">114</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">4</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/sa.jpg" class="img-fluid" /> <a href="#"> South Africa </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/sa.jpg" class="img-fluid" />  SA</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">21</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">2,182</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">104</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">5</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/nz.jpg" class="img-fluid" /> <a href="#"> New Zealand </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/nz.jpg" class="img-fluid" /> <a href="#"> NZ </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">23</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">2,291</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">100</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">6</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/pak.jpg" class="img-fluid" /> <a href="#"> Pakistan </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/pak.jpg" class="img-fluid" /> <a href="#"> PAK </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">22</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">1,902</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">86</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">7</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/srl.jpg" class="img-fluid" /> <a href="#"> Sri Lanka </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/srl.jpg" class="img-fluid" /> <a href="#"> SL</a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">25</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">3,031</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">121</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">8</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/wid.jpg" class="img-fluid" /> <a href="#"> West Indies </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/wid.jpg" class="img-fluid" /> <a href="#"> WI </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">25</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">1,906</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">76</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">9</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/bang.jpg" class="img-fluid" /> <a href="#"> Bangladesh </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/bang.jpg" class="img-fluid" /> <a href="#"> BAN </a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">18</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">805</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">99</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                                <li>
-                                                   <ul class="sub_stats head_title">
-                                                      <li class="pld">
-                                                         <p class="ap-team-name">10</p>
-                                                      </li>
-                                                      <li>
-                                                         <p class="ap-team-name desk_text"> <img src="/img/zim.jpg" class="img-fluid" /> <a href="#"> Zimbabwe </a> </p>
-                                                         <p class="ap-team-name mob_text"> <img src="/img/zim.jpg" class="img-fluid" /> <a href="#"> ZIM</a> </p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">25</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">223</p>
-                                                      </li>
-                                                      <li class="pts">
-                                                         <p class="ap-team-name">32</p>
-                                                      </li>
-                                                   </ul>
-                                                   <div class="clear"></div>
-                                                </li>
-                                                <!-- -->
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="card stats_board">
+                        <div class="tab-content" id="pills-tabContent">
+                           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                              <ul class="head_title">
+                                 <li> <b class="desk_text"> POS </b><b class="mob_text"> # </b>  </li>
+            
+                                 <li> <b class="desk_text"> TEAM </b> <b class="mob_text"> T </b> </li>
+                                 <li> <b class="desk_text"> MATCHES </b> <b class="mob_text"> M </b> </li>
+                                 <li> <b class="desk_text"> POINTS  </b> <b class="mob_text"> P </b> </li>
+                                 <li> <b class="desk_text"> RATING  </b><b class="mob_text"> R </b>  </li>
+                                 <div class="clear"></div>
+                              </ul>
+                              <ul class="stats_list">
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">1</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/ind.jpg" class="img-fluid" />  India </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/ind.jpg" class="img-fluid" />  IND</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">25</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">3,031</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">121</p>
+                                       </li>
+                     
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">2</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/aus.jpg" class="img-fluid" /> Australia </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/aus.jpg" class="img-fluid" />  AUS</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">23</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">2,679</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">116</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">3</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/eng.jpg" class="img-fluid" /> <a href="#"> England </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/eng.jpg" class="img-fluid" />  ENG</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">36</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">4,103</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">114</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">4</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/sa.jpg" class="img-fluid" /> <a href="#"> South Africa </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/sa.jpg" class="img-fluid" />  SA</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">21</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">2,182</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">104</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">5</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/nz.jpg" class="img-fluid" /> <a href="#"> New Zealand </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/nz.jpg" class="img-fluid" /> <a href="#"> NZ </a> </p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">23</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">2,291</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">100</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">6</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/pak.jpg" class="img-fluid" /> <a href="#"> Pakistan </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/pak.jpg" class="img-fluid" /> <a href="#"> PAK </a> </p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">22</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">1,902</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">86</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">7</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/srl.jpg" class="img-fluid" /> <a href="#"> Sri Lanka </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/srl.jpg" class="img-fluid" /> <a href="#"> SL</a> </p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">25</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">3,031</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">121</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">8</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/wid.jpg" class="img-fluid" /> <a href="#"> West Indies </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/wid.jpg" class="img-fluid" /> <a href="#"> WI </a> </p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">25</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">1,906</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">76</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">9</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/bang.jpg" class="img-fluid" /> <a href="#"> Bangladesh </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/bang.jpg" class="img-fluid" /> <a href="#"> BAN </a> </p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">18</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">805</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">99</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                                 <li>
+                                    <ul class="sub_stats head_title">
+                                       <li class="pld">
+                                          <p class="ap-team-name">10</p>
+                                       </li>
+                                       <li>
+                                          <p class="ap-team-name desk_text"> <img src="/img/zim.jpg" class="img-fluid" /> <a href="#"> Zimbabwe </a> </p>
+                                          <p class="ap-team-name mob_text"> <img src="/img/zim.jpg" class="img-fluid" /> <a href="#"> ZIM</a> </p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">25</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">223</p>
+                                       </li>
+                                       <li class="pts">
+                                          <p class="ap-team-name">32</p>
+                                       </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                 </li>
+                                 <!-- -->
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
 
             </div>

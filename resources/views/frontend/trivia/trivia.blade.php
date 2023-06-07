@@ -163,7 +163,6 @@ li.quiz_list {
 <script>
   // localStorage.clear();
   var APP_URL = {!! json_encode(url('/')) !!}; 
- 
 
   function submitquestion(){
      
@@ -208,8 +207,7 @@ li.quiz_list {
     
   }
 
-  var result = localStorage.getItem('checking');  
-  
+  var result = localStorage.getItem('checking');
   if(result==1){ 
      $(".trivia_button").hide();   
      $(".success_comment").css('display', 'block');
