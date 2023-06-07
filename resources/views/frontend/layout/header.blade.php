@@ -9,6 +9,7 @@
 
 	<title> WorldSeriesT20 </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv='cache-control' content='no-cache'> 
 	<meta http-equiv='expires' content='0'> 
