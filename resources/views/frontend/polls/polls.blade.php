@@ -185,52 +185,53 @@ input[type="checkbox"]{
     <div class="col-lg-12">     
       <div id="q-cont">
         <div class="wrapper">
+                @if(isset($question2) && !empty($question2->question))
                    <header>@if(isset($question2) && !empty($question2->question))
                     {{$question2->question}}
                    @endif <br></header>
                    <div class="poll-area">
                    
-                   <label for="opt-1" class="opt-1 question2_label">
-                       <div class="row">
-                       <div class="column">
-                           <span class="circle"></span>
-                           <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option1}}"> @if(isset($question2) && !empty($question2->option1))
-                            {{$question2->option1}}
-                           @endif</span>
-                       </div>
-                       <span class="percent option1"></span>
-                       </div>
-                       <div class="progress" id="pstyle1" ></div>
-                   </label>
-                   <label for="opt-2" class="opt-2 question2_label">
-                       <div class="row">
-                       <div class="column">
-                           <span class="circle"></span>
-                           <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option2}}">@if(isset($question2) && !empty($question2->option2))
-                            {{$question2->option2}}
-                           @endif</span>
-                       </div>
-                       <span class="percent option2"></span>
-                       </div>
-                       <div class="progress" id="pstyle2" ></div>
-                   </label>
-                   <label for="opt-3" class="opt-3 question2_label">
-                       <div class="row">
-                       <div class="column">
-                           <span class="circle"></span>
-                           <span class="text question2"  data-options="{{$question2->poll_id."-".$question2->option3}}" >
-                            @if(isset($question2) && !empty($question2->option3))
-                            {{$question2->option3}}
-                           @endif</span>
-                       </div>
-                       <span class="percent option3"></span>
-                       </div>
-                       <div class="progress" id="pstyle3" ></div>
-                   </label>
-                   <span class="question2answer"></span>
-                   </div>
-               </div>
-
+                      <label for="opt-1" class="opt-1 question2_label">
+                          <div class="row">
+                          <div class="column">
+                              <span class="circle"></span>
+                              <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option1}}"> @if(isset($question2) && !empty($question2->option1))
+                                {{$question2->option1}}
+                              @endif</span>
+                          </div>
+                          <span class="percent option1"></span>
+                          </div>
+                          <div class="progress" id="pstyle1" ></div>
+                      </label>
+                      <label for="opt-2" class="opt-2 question2_label">
+                          <div class="row">
+                          <div class="column">
+                              <span class="circle"></span>
+                              <span class="text question2" data-options="{{$question2->poll_id."-".$question2->option2}}">@if(isset($question2) && !empty($question2->option2))
+                                {{$question2->option2}}
+                              @endif</span>
+                          </div>
+                          <span class="percent option2"></span>
+                          </div>
+                          <div class="progress" id="pstyle2" ></div>
+                      </label>
+                      <label for="opt-3" class="opt-3 question2_label">
+                          <div class="row">
+                          <div class="column">
+                              <span class="circle"></span>
+                              <span class="text question2"  data-options="{{$question2->poll_id."-".$question2->option3}}" >
+                                @if(isset($question2) && !empty($question2->option3))
+                                {{$question2->option3}}
+                              @endif</span>
+                          </div>
+                          <span class="percent option3"></span>
+                          </div>
+                          <div class="progress" id="pstyle3" ></div>
+                      </label>
+                      <span class="question2answer"></span>
+                      </div>
+                  </div>
+                  @endif
       </div>
     </div>
 </div>
