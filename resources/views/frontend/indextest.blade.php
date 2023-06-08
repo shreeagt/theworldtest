@@ -291,7 +291,7 @@ input[type="checkbox"]{
                   <div class="video-player" >
        
                     
-                     <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo "https://www.youtube.com/embed".$video[0]->video_id  ?>" title="<?php
+                     <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo "https://www.youtube.com/embed/".$video[0]->video_id  ?>" title="<?php
                      echo $video[0]->videotitle  ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
                   </div>
