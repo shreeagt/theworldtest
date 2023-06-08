@@ -291,10 +291,9 @@ input[type="checkbox"]{
                   <div class="video-player" >
        
                     
-                     <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo $video[0]->videourl  ?>" title="<?php
+                     <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo "https://www.youtube.com/embed/".$video[0]->video_id  ?>" title="<?php
                      echo $video[0]->videotitle  ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
-                   
                   </div>
                   <div class="recommended-videos">
                      <div class="video_header">
@@ -440,7 +439,7 @@ input[type="checkbox"]{
       </div>
    </main>
 
-   <main class="">
+   <div style="padding-bottom:40px">
       <div class="container">
          <div class="row justify-content-md-center">
             <div class="col-lg-12">
@@ -692,7 +691,7 @@ input[type="checkbox"]{
             </div>
          </div>
       </div>
-   </main>
+   </div>
 
  
 
