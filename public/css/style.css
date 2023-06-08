@@ -29,6 +29,10 @@ main { padding:100px 0; }
 .pt-50 { padding-top:50px; }
 .pdl-0 { padding-left:0px; }
 
+
+.blog_nav {
+    padding-bottom: 44px;
+}
 section {  }
 .relative { position:relative; }
 .white { color:#fff; }
