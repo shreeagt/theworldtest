@@ -439,7 +439,7 @@ input[type="checkbox"]{
       </div>
    </main>
 
-   <main class="">
+   <div style="padding-bottom:40px">
       <div class="container">
          <div class="row justify-content-md-center">
             <div class="col-lg-12">
@@ -691,7 +691,7 @@ input[type="checkbox"]{
             </div>
          </div>
       </div>
-   </main>
+   </div>
 
  
 
