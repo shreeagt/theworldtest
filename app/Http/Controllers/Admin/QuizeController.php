@@ -55,6 +55,7 @@ class QuizeController extends Controller
            $quize->option3 = $request->option3;
            $quize->option4 = $request->option4;
            $quize->answer = $request->answer;
+           $quize->status = $request->status;
            $quize->success_comment = $request->success_comment;
            $quize->failure_comment = $request->failure_comment;
           
@@ -70,6 +71,7 @@ class QuizeController extends Controller
             $quize->option3 = $request->option3;
             $quize->option4 = $request->option4;
             $quize->answer = $request->answer;
+            $quize->status = $request->status;
             $quize->success_comment = $request->success_comment;
             $quize->failure_comment = $request->failure_comment;
             $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();           

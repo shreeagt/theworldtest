@@ -51,6 +51,30 @@
         <label for="exampleInputPassword1">Option4</label>
         <input type="text" class="form-control" name="option4" required  placeholder="Enter Option" value="{{isset($quize_details)?$quize_details->option4:''}}">
       </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Answer</label>
+        <input type="text" class="form-control" name="answer" required  placeholder="Enter Option" value="{{isset($quize_details)?$quize_details->answer:''}}">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Success Comment</label>
+        <input type="text" class="form-control" name="success_comment" required  placeholder="Enter Option" value="{{isset($quize_details)?$quize_details->success_comment:''}}">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Failure Comment</label>
+        <input type="text" class="form-control" name="failure_comment" required  placeholder="Enter Option" value="{{isset($quize_details)?$quize_details->failure_comment:''}}">
+      </div>
+
+      <div class="form-group">
+        <label for="editor">Status</label>
+        <select name="category_status" class="form-control" required>
+          <option  value="Active">Active</option>
+          <option  value="Inactive">Inactive</option>        
+        </select>
+      </div>
+
      
 
     
