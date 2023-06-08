@@ -33,6 +33,13 @@ main { padding:100px 0; }
 .blog_nav {
     padding-bottom: 44px;
 }
+
+.img-ind {
+    padding-bottom: 44px;
+}
+
+
+
 section {  }
 .relative { position:relative; }
 .white { color:#fff; }
