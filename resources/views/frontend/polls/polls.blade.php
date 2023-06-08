@@ -245,7 +245,7 @@ input[type="checkbox"]{
 					<div class="col-lg-12 text-left">
 				  </div> 
 			</div> 
-		</main>>--
+		</main>-->
         </section>
 @include('frontend.layout.footertest')
 
