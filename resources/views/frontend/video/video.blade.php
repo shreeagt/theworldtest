@@ -37,7 +37,7 @@
 <div class="inner_banner">
     <div class="container">
         <div class="row">				
-            <div class="col-md-12"><h2>All Video </h2></div>
+            <div class="col-md-12"><h2>Videos </h2></div>
         </div> <!-- Row -->
     </div> <!-- Container -->
 </div>
