@@ -243,27 +243,7 @@ input[type="checkbox"]{
          </div>
       </div>
    </main>
-   {{-- <main class="match_scores">
-      <div class="container-fluid">
-         <div class="row justify-content-md-center align-items-center">
-            <div class="col-lg-6">
-               <h1 class="text-center">Test Cricket Goes live in</h1>
-          
-            </div>
-             <div class="col-lg-6">
-               <div id="countdown">
-                  <ul class="text-center">
-                     <li><span id="days"></span><span>days</span></li>
-                     <li><span id="hours"></span><span>Hours</span></li>
-                     <li><span id="minutes"></span><span>Minutes</span></li>
-                     
-                  </ul>
-               </div>
-            </div> 
-           
-         </div>
-      </div>
-   </main> --}}
+   
    <main class="features_interviews">
       <!-- <div class="container"> -->
       <div class="container-fluid">
@@ -310,11 +290,11 @@ input[type="checkbox"]{
                <div class="video-section">
                   <div class="video-player" >
        
-                     <?php if($countvideo>0){?>
+                    
                      <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo $video[0]->videourl  ?>" title="<?php
                      echo $video[0]->videotitle  ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
-                    <?php }?>
+                   
                   </div>
                   <div class="recommended-videos">
                      <div class="video_header">
