@@ -38,7 +38,7 @@
 	<div class="fixed-social">
 		<div class="social">
 			<ul>
-				<li> <a href="#" target="_blank"> <i class="fa fa-youtube-play"></i> </a> </li>
+                {{-- <li> <a href="#" target="_blank"> <i class="fa fa-youtube-play"></i> </a> </li>     --}}
 				<li> <a href="https://www.facebook.com/worldtestchampionship23" target="_blank"> <i class="fa fa-facebook"></i> </a> </li>
 				{{-- <li> <a href="#" target="_blank"> <i class="fa fa-twitter"></i> </a> </li> --}}
 				<li> <a href="https://instagram.com/worldtestchampionship23?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"> <i class="fa fa-instagram"></i> </a> </li>
