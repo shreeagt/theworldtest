@@ -316,7 +316,7 @@ input[type="checkbox"]{
                        <div class="video-thumbnail" onclick="changeVideo('<?php echo  $item->video_id ?>')">
                         <img src="{{ asset('/youtube/gallery/' . $item->image) }}" alt="Video Thumbnail" >
                         <div>
-                           <p>All seven of Kyle Jamieson's WTC21 Final wickets</p>
+                           <p>{{ $item->description }}</p>
                            
                         </div>
                      </div>
