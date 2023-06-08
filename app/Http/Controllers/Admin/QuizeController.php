@@ -91,8 +91,7 @@ class QuizeController extends Controller
            $quize->option2 = $request->option2;
            $quize->option3 = $request->option3;
            $quize->option4 = $request->option4;
-           $quize->success_comment = $request->success_comment;
-           $quize->failure_comment = $request->failure_comment;
+           $quize->status = $request->status;
            $quize->updated_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
            
            $quize->save();
@@ -105,8 +104,7 @@ class QuizeController extends Controller
             $quize->option3 = $request->option3;
             $quize->option4 = $request->option4;
             $quize->created_at = Carbon::now('Asia/Kolkata')->toDateTimeString();
-            $quize->success_comment = $request->success_comment;
-            $quize->failure_comment = $request->failure_comment;           
+            $quize->status = $request->status;           
             $quize->save();
         }
         return redirect()->route('admin-poll.index');

@@ -58,7 +58,7 @@
     
       <div class="form-group">
         <label for="editor">Status</label>
-        <select name="category_status" class="form-control" required>
+        <select name="status" class="form-control" required>
           <option value="">Select Status</option>
           <option  value="Active" {{(isset($quize_details->status) && ($quize_details->status=="Active"))? "selected":""}}>Active</option>
           <option  value="Inactive" {{(isset($quize_details->status) && ($quize_details->status=="Inactive"))? "selected":""}}>Inactive</option>
