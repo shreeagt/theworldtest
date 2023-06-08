@@ -167,7 +167,7 @@ input[type="checkbox"]{
     <div class="container">
       <div class="row">				
         <div class="col-md-12">
-          <h2>POLL OF THE DAY </h2> 
+          <h2>Poll Of The Day </h2> 
         </div>
       </div> <!-- Row -->
     </div> <!-- Container -->

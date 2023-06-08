@@ -108,7 +108,7 @@ img.hover-shadow {
 					<div class="col-md-12">
 						<!-- <a href="/venues" class="back_btn"> <img src="/img/icon/back_arrow.png" class="img-fluid" /> </a> -->
 						<div class="div">
-							<h2> GALLERY </h2> 
+							<h2> Gallery </h2> 
 							<!-- <p> 03 October, 2021 | 98 Photos </p> -->
 						</div>
 					</div>
