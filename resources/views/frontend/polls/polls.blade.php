@@ -8,8 +8,9 @@
 }
 
 .wrapper header{
-  font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
+font-family: 'PT Sans', sans-serif;
+font-size: 22px;
 }
 .wrapper .poll-area{
   margin: 20px 0 15px 0;

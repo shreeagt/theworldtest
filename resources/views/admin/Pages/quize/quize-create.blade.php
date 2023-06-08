@@ -69,7 +69,7 @@
 
       <div class="form-group">
         <label for="editor">Status</label>
-        <select name="category_status" class="form-control" required>
+        <select  name="status" class="form-control" required>
           <option  value="Active">Active</option>
           <option  value="Inactive">Inactive</option>        
         </select>

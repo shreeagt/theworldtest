@@ -101,6 +101,7 @@ background-color: #193684;
   font-size: 25px;
   text-align: center;
   margin-bottom: 10px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .question:before {
