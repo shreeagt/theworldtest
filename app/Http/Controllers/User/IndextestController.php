@@ -20,8 +20,10 @@ class IndextestController extends Controller
         $question1 = Quize::where(["status"=>"Active"])->first();
         $question2 = Poll::where(["status"=>"Active"])->first();
         $video = Youtube::where(["home_status"=>"1"])->orderBy('id', 'DESC')->get();
+        $countvideo = Youtube::where(["home_status"=>"1"])->orderBy('id', 'DESC')->count();
+        
         $blogs = Blog::all();
-        return view('frontend.indextest', compact('blogs',"question1","question2",'video'));
+        return view('frontend.indextest', compact('blogs',"question1","question2",'video','countvideo'));
     }
 
     public function triviaindex()
