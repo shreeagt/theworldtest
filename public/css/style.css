@@ -685,14 +685,14 @@ html, body { overflow-x:hidden !important;  }
 
 }
 
-button.navbar-toggler.navbar-toggler-right.collapsed {
+/*button.navbar-toggler.navbar-toggler-right.collapsed {
     background: aliceblue;
 }
 
 
 button.navbar-toggler.navbar-toggler-right {
     background: #000000;
-}
+}*/
 /* add css sachhidanand */
 .success_comment{
     font-size: 1rem;
