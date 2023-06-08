@@ -5,7 +5,7 @@
         <h2 class="m-0 font-weight-bold text-primary">Edit Video Details</h2>
     </div>
     <div class="card-body">
-        <form action="{{ route('admin-videos-category.updateVideo', $video->id) }}" method="POST">
+        <form action="{{ route('admin-videos-category.updateVideo', $video->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-group">
