@@ -175,7 +175,7 @@ input[type="checkbox"]{
 <main class="banner">
 			<div class="container">
 				<div class="row justify-content-md-center">					
-					<div class="col-lg-6 col-md-6">
+					<div class="col-lg-6 ">
             {{-- <h3 class="text-center mb-30"> POLL OF THE DAY</h3> --}}
 						<div class="card banner_card">
 							<div id="demo" class="carousel slide" data-ride="carousel">
