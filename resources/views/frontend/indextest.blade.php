@@ -301,13 +301,13 @@ input[type="checkbox"]{
       <div class="container-fluid">
          <div class="row justify-content-md-center">
             <div class="col-lg-12 text-left">
-               <h3 class="white mb-30"> #VIDEO </h3>
+               <h3 class="white mb-30"> Video Gallery </h3>
             </div>
             <div class="col-lg-12">
                <div class="video-section">
                   <div class="video-player" >
        
-                     <?php if(isset($video)){?>
+                     <?php if($countvideo>0){?>
                      <iframe  id="mainVideo" width="100%" height="100%" src="<?php  echo $video[0]->videourl  ?>" title="<?php
                      echo $video[0]->videotitle  ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoplay allowfullscreen></iframe>
                      
@@ -729,7 +729,7 @@ input[type="checkbox"]{
                            </div>
                            <div class="text-left mt-4">
                               <p class="text-left">The Oval, London</p>
-                              <span class="tl_upcomming">10:30</span><span class="text_upcomming">WED 07 JUNE(LOCAL)</span>
+                              <span class="tl_upcomming">10:30</span><span class="text_upcomming">WED 07 JUNE (LOCAL)</span>
                            </div>
                         </div>
                         <div class="col-sm-6 text-left">

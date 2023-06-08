@@ -69,7 +69,7 @@ li.quiz_list {
       <div class="container-fluid">
          <div class="row justify-content-md-center">
             <div class="col-lg-6">
-               <h3 class="text-center mb-30"> TRIVIA OF THE DAY</h3>
+               {{-- <h3 class="text-center mb-30"> TRIVIA OF THE DAY</h3> --}}
                <div id="q-cont">
                   <div class="slide" id="slide1">
                      <div class="question">
