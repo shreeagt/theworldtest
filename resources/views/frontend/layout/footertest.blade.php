@@ -1,5 +1,5 @@
 
-	<footer >
+	<footer  class="footer-desktop">
 		
 		<div class="footer-bottom">
 			<div class="container">
@@ -8,7 +8,7 @@
 						<p> © 2023 World Test Championship - All Rights Reserved. Powered by The Times of India </p>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-						<a href="#">Terms and Conditions</a>
+						<a href="#">T&C</a>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 						<a href="#">Privacy Policy</a>

@@ -374,6 +374,20 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 2
 .partners_logo .umpire p { margin-bottom:50px; }
 .partners_logo .col-lg-8 p { margin-bottom:44px; }
 .partners_logo .col-lg-8 a { margin:0 3px; }
+/* footer css for desktop */
+@media (max-width:1280px) {    
+    .footer-desktop { position: fixed;
+      bottom: 0;
+      width:100%;
+    }   
+}
+
+@media (max-width:1366px) {    
+    .footer-desktop { position: fixed;
+      bottom: 0;
+      width:100%;
+    }   
+}
 
 @media (min-width: 995px) {
 .partners_logo .col-lg-1 { -ms-flex: 0 0 12%; flex: 0 0 12%; max-width: 12%; }
@@ -563,7 +577,7 @@ footer { background:#000;  position:relative;  border-top:1px solid#ddd; }
 
 footer:before { content:''; background:url(../img/team-vector-l.webp) 50% 0 no-repeat; background-size:cover;  left:0px; bottom:80px; z-index:0; }
 /* width:263px; height:267px; position:absolute; sachhidanadn */
-footer:after { content:''; background:url(../img/team-vector-r.webp) 50% 0 no-repeat; background-size:cover; width:263px; height:267px; position:absolute; right:0px; bottom:80px; z-index:0; }
+footer:after { content:''; background:url(../img/team-vector-r.webp) 50% 0 no-repeat; background-size:cover; width:263px; height:26px; position:absolute; right:0px; bottom:80px; z-index:0; }
 
 footer h2 { font-size:20px; color:#fff; padding-left:30px; position:relative; }
 footer h2:before { content: ""; position:absolute; top:50%; transform:translateY(-50%); left:0; height:2px; width:20px; background-color:#817464; }

@@ -7,7 +7,7 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 
-	<title> rsT20 </title>
+	<title> World Test Championship 2023 - IND vs AUS </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv='cache-control' content='no-cache'> 
@@ -39,9 +39,9 @@
 		<div class="social">
 			<ul>
 				<li> <a href="#" target="_blank"> <i class="fa fa-youtube-play"></i> </a> </li>
-				<li> <a href="#" target="_blank"> <i class="fa fa-facebook"></i> </a> </li>
+				<li> <a href="https://www.facebook.com/worldtestchampionship23" target="_blank"> <i class="fa fa-facebook"></i> </a> </li>
 				{{-- <li> <a href="#" target="_blank"> <i class="fa fa-twitter"></i> </a> </li> --}}
-				<li> <a href="#" target="_blank"> <i class="fa fa-instagram"></i> </a> </li>
+				<li> <a href="https://instagram.com/worldtestchampionship23?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"> <i class="fa fa-instagram"></i> </a> </li>
 				{{-- <li> <a href="#" target="_blank"> <i class="fa fa-apple"></i> </a> </li> --}}
 				{{-- <li> <a href="#" target="_blank"> <i class="fa fa-android"></i> </a>  </li> --}}
 			</ul>
