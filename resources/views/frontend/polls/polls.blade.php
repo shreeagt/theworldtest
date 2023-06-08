@@ -173,8 +173,8 @@ input[type="checkbox"]{
     </div> <!-- Container -->
   </div>
 
-<main class="banner">
-			<div class="container">
+<main class="latest_news">
+			<div class="container-fluid">
 				<div class="row justify-content-md-center">					
 					<div class="col-lg-6 ">
             {{-- <h3 class="text-center mb-30"> POLL OF THE DAY</h3> --}}
@@ -239,13 +239,13 @@ input[type="checkbox"]{
 </main>
 
 
-<main class="features_interviews">
+<!--<main class="features_interviews">
 			<div class="container">
 				<div class="row justify-content-md-center">
 					<div class="col-lg-12 text-left">
 				  </div> 
 			</div> 
-		</main>
+		</main>>--
         </section>
 @include('frontend.layout.footertest')
 
