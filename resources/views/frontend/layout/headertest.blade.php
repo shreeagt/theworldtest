@@ -31,6 +31,15 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}?v=1.3" type="text/css">
 	
 	<script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ5LJ6X7Q6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQ5LJ6X7Q6');
+</script>
 
 </head>
 <body id="page-top">
