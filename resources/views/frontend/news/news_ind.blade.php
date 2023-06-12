@@ -28,7 +28,7 @@ time.thumbnail__date-day {
 }
 
 </style>
-<div class="inner_banner">
+<!--<div class="inner_banner">
 			<div class="container">
 				<div class="row">				
 					<div class="col-md-12">
@@ -37,7 +37,7 @@ time.thumbnail__date-day {
 				</div> <!-- Row -->
 			</div> <!-- Container -->
 		</div>
-
+-->
         <section class="latest_news">
                 <div class="container mt-4">
                 <div class="row">

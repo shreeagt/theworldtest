@@ -875,6 +875,7 @@ input[type="checkbox"]{
    });
 </script>
 <script>
+   /*
    (function () {
     const second = 1000,
           minute = second * 60,
@@ -918,6 +919,7 @@ input[type="checkbox"]{
           //seconds
         }, 0)
     }());
+    */
 </script>
 <!-- <script>
    function changeVideo(videoSrc) {

@@ -31,6 +31,15 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}?v=1.3" type="text/css">
 	
 	<script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ5LJ6X7Q6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQ5LJ6X7Q6');
+</script>
 
 </head>
 <body id="page-top">
@@ -38,7 +47,7 @@
 	<div class="fixed-social">
 		<div class="social">
 			<ul>
-				<li> <a href="#" target="_blank"> <i class="fa fa-youtube-play"></i> </a> </li>
+                {{-- <li> <a href="#" target="_blank"> <i class="fa fa-youtube-play"></i> </a> </li>     --}}
 				<li> <a href="https://www.facebook.com/worldtestchampionship23" target="_blank"> <i class="fa fa-facebook"></i> </a> </li>
 				{{-- <li> <a href="#" target="_blank"> <i class="fa fa-twitter"></i> </a> </li> --}}
 				<li> <a href="https://instagram.com/worldtestchampionship23?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"> <i class="fa fa-instagram"></i> </a> </li>
@@ -55,9 +64,9 @@
 					{{-- <h2 class="white">WTC</h2> --}}
 					 <img src="/img/logo.svg" alt="Logo" class="img-fluid center-block logo" /> 
 				</a>
-				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<a class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fa fa-bars" aria-hidden="true"></i>
-				</button>
+				</a>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						@include('frontend.layout.navtest')
